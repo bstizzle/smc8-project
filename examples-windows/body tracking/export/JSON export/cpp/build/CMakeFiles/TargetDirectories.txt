@@ -1,0 +1,3 @@
+/usr/local/zed/samples/body tracking/export/JSON export/cpp/build/CMakeFiles/edit_cache.dir
+/usr/local/zed/samples/body tracking/export/JSON export/cpp/build/CMakeFiles/rebuild_cache.dir
+/usr/local/zed/samples/body tracking/export/JSON export/cpp/build/CMakeFiles/ZED_Bodies_JSON_Export.dir
