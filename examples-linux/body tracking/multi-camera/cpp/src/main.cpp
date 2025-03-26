@@ -23,6 +23,8 @@
 #include "GLViewer.hpp"
 #include "utils.hpp"
 
+using namespace std;
+using namespace sl;
 
 int main(int argc, char **argv) {
 
@@ -182,6 +184,18 @@ int main(int argc, char **argv) {
         }
         // update the 3D view
         viewer.updateBodies(fused_bodies, camera_raw_data, metrics);
+        
+        for (auto& body : fused_bodies.body_list){
+            
+            cout << "ID Corpo: " << body.id << endl;
+            
+            	cout << "Position: " 
+            	<< "X = " << body.position.x << ", "
+            	<< "Y = " << body.position.y << ", "
+            	<< "Z = " << body.position.z << endl;
+            	
+            cout << "------------------------------------------" << endl;
+        }
 
         while (!viewer.isPlaying() && viewer.isAvailable()) {
             sl::sleep_ms(10);

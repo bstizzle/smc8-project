@@ -23,6 +23,10 @@
 #include "GLViewer.hpp"
 #include "utils.hpp"
 
+// Using std and sl namespaces
+using namespace std;
+using namespace sl;
+
 int main(int argc, char **argv)
 {
     if (argc != 2)
@@ -193,7 +197,21 @@ int main(int argc, char **argv)
 
         // Update the viewer with the fused objects and the raw objects
         viewer.updateObjects(fused_objects, camera_raw_data, metrics);
-
+        
+	for (auto& pair : fused_objects){
+	
+	    sl::Objects& objects = pair.second;
+	    
+	    for(auto& object : objects.object_list) {
+		    cout << "ID Corpo: " << object.id << endl;
+		    
+		    cout << "Position: " << object.position << ", " << endl;
+		    	
+		    cout << "------------------------------------------" << endl;
+	    }
+	    
+        }
+        
         while (!viewer.isPlaying() && viewer.isAvailable())
             sl::sleep_ms(10);
     }

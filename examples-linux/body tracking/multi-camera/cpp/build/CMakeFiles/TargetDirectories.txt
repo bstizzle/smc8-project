@@ -1,0 +1,3 @@
+/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/multi-camera/cpp/build/CMakeFiles/rebuild_cache.dir
+/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/multi-camera/cpp/build/CMakeFiles/edit_cache.dir
+/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/multi-camera/cpp/build/CMakeFiles/ZED_BodyFusion.dir
