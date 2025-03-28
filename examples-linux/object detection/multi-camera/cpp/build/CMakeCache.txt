@@ -435,6 +435,9 @@ OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/opencv4
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //The directory containing a CMake configuration file for ZED.
 ZED_DIR:PATH=/usr/local/zed
 
@@ -445,6 +448,12 @@ ZED_ObjectDetectionFusion_BINARY_DIR:STATIC=/home/springtime/Documents/GitHub/sm
 
 //Value Computed by CMake
 ZED_ObjectDetectionFusion_SOURCE_DIR:STATIC=/home/springtime/Documents/GitHub/smc8-project/examples-linux/object detection/multi-camera/cpp
+
+//Path to a library.
+pkgcfg_lib_LO_lo:FILEPATH=/usr/lib/aarch64-linux-gnu/liblo.so
+
+//Path to a library.
+pkgcfg_lib_LO_pthread:FILEPATH=/usr/lib/aarch64-linux-gnu/libpthread.so
 
 
 ########################
@@ -729,6 +738,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/lib/aarch64-linux-gnu/libglut.s
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.5.4()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libOpenGL.so][/usr/lib/aarch64-linux-gnu/libGLX.so][/usr/include][c ][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GLEW_INCLUDE_DIR
@@ -749,6 +760,41 @@ GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
 GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_glut_LIBRARY
 GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
+LO_CFLAGS:INTERNAL=
+LO_CFLAGS_I:INTERNAL=
+LO_CFLAGS_OTHER:INTERNAL=
+LO_FOUND:INTERNAL=1
+LO_INCLUDEDIR:INTERNAL=/usr/include
+LO_INCLUDE_DIRS:INTERNAL=
+LO_LDFLAGS:INTERNAL=-llo;-lpthread
+LO_LDFLAGS_OTHER:INTERNAL=
+LO_LIBDIR:INTERNAL=/usr/lib/aarch64-linux-gnu
+LO_LIBRARIES:INTERNAL=lo;pthread
+LO_LIBRARY_DIRS:INTERNAL=
+LO_LIBS:INTERNAL=
+LO_LIBS_L:INTERNAL=
+LO_LIBS_OTHER:INTERNAL=
+LO_LIBS_PATHS:INTERNAL=
+LO_MODULE_NAME:INTERNAL=liblo
+LO_PREFIX:INTERNAL=/usr
+LO_STATIC_CFLAGS:INTERNAL=
+LO_STATIC_CFLAGS_I:INTERNAL=
+LO_STATIC_CFLAGS_OTHER:INTERNAL=
+LO_STATIC_INCLUDE_DIRS:INTERNAL=
+LO_STATIC_LDFLAGS:INTERNAL=-llo;-lpthread
+LO_STATIC_LDFLAGS_OTHER:INTERNAL=
+LO_STATIC_LIBDIR:INTERNAL=
+LO_STATIC_LIBRARIES:INTERNAL=lo;pthread
+LO_STATIC_LIBRARY_DIRS:INTERNAL=
+LO_STATIC_LIBS:INTERNAL=
+LO_STATIC_LIBS_L:INTERNAL=
+LO_STATIC_LIBS_OTHER:INTERNAL=
+LO_STATIC_LIBS_PATHS:INTERNAL=
+LO_VERSION:INTERNAL=0.30
+LO_liblo_INCLUDEDIR:INTERNAL=
+LO_liblo_LIBDIR:INTERNAL=
+LO_liblo_PREFIX:INTERNAL=
+LO_liblo_VERSION:INTERNAL=
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
@@ -765,4 +811,13 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+__pkg_config_arguments_LO:INTERNAL=REQUIRED;liblo
+__pkg_config_checked_LO:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_LO_lo
+pkgcfg_lib_LO_lo-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_LO_pthread
+pkgcfg_lib_LO_pthread-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/aarch64-linux-gnu
 

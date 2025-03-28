@@ -127,6 +127,11 @@ ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.5.4
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.5.4
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.5.4
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.5.4
+ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libOpenGL.so
+ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libGLX.so
+ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libGLU.so
+ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libglut.so
+ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libGLEW.so
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.5.4
 ZED_ObjectDetectionFusion: /usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.5.4

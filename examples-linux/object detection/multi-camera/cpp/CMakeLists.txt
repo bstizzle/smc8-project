@@ -17,6 +17,10 @@ find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
 SET(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(LO REQUIRED liblo)
+include_directories(${LO_INCLUDE_DIRS})
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${CUDA_INCLUDE_DIRS})
@@ -24,6 +28,8 @@ include_directories(${ZED_INCLUDE_DIRS})
 include_directories(${GLEW_INCLUDE_DIRS})
 include_directories(${GLUT_INCLUDE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+link_directories(${LO_LIBRARY_DIR})
 
 link_directories(${ZED_LIBRARY_DIR})
 link_directories(${CUDA_LIBRARY_DIRS})
@@ -51,7 +57,7 @@ else()
     SET(ZED_LIBS ${ZED_STATIC_LIBRARIES} ${CUDA_CUDA_LIBRARY} ${CUDA_LIBRARY})
 endif()
 
-TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${ZED_LIBS} ${UTILS_LIB} ${SPECIAL_OS_LIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} ${GLEW_LIBRARIES} ${OpenCV_LIBRARIES})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${ZED_LIBS} ${UTILS_LIB} ${SPECIAL_OS_LIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} ${GLEW_LIBRARIES} ${OpenCV_LIBRARIES} ${LO_LIBRARIES})
 
 if(INSTALL_SAMPLES)
     LIST(APPEND SAMPLE_LIST ${PROJECT_NAME})
