@@ -142,19 +142,7 @@ int main(int argc, char **argv) {
             cv::imshow(window_name, image_left_ocv);
 
             key = cv::waitKey(key_wait);
-            
-            for (auto& body : bodies.body_list){
-            
-            cout << "ID Corpo: " << body.id << endl;
-            
-            //	cout << "Coordinate polso destro: " 
-            //	<< "X = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].x << ", "
-            //	<< "Y = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].y << ", "
-            //	<< "Z = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].z << endl;
-            	
-            	cout << "------------------------------------------" << endl;
-            }
-	
+
             if (key == 'q') quit = true;
             if (key == 'm') {
                 if (key_wait > 0) key_wait = 0;
@@ -168,6 +156,18 @@ int main(int argc, char **argv) {
         }
         else
             quit = true;
+        
+        for (auto& body : bodies.body_list) {
+
+            cout << "ID Corpo: " << body.id << endl;
+
+            cout << "Position: "
+                << "X = " << body.position.x << ", "
+                << "Y = " << body.position.y << ", "
+                << "Z = " << body.position.z << endl;
+
+            cout << "------------------------------------------" << endl;
+        }
     }
 
     // Release Bodies
