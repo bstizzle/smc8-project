@@ -1,4 +1,4 @@
-#include <lo/lo.h>
+#include <lo/lo.h> //installed via sudo apt install liblo-dev
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

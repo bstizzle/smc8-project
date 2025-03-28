@@ -4,8 +4,19 @@
 #include <chrono>
 // Callback function for received messages
 int message_handler(const char *path, const char *types, lo_arg **argv, int argc, lo_message msg, void *user_data) {
-    std::cout << "Received message on " << path << ": " << argv[0]->f << std::endl;
+    std::cout << "Received message on " << path << ": " << argv[0]->f << argv[1]->f<< argv[2]->f<< std::endl;
     return 0;
+}
+
+
+int foo_handler(const char *path, const char *types, lo_arg ** argv,
+    int argc, lo_message data, void *user_data)
+{
+/* example showing pulling the argument values out of the argv array */
+printf("foo: %s <-i:%d\n\n", path, argv[0]->i);
+fflush(stdout);
+
+return 0;
 }
 
 int main() {
@@ -18,7 +29,10 @@ int main() {
     }
 
     // Map the "/randomNum" address to the message handler
-    lo_server_thread_add_method(server, "/randomNum", "f", message_handler, nullptr);
+    lo_server_thread_add_method(server, "/objid", "i", foo_handler, nullptr);
+    lo_server_thread_add_method(server, "/coordinateX/coordinateY/coordinateZ", "fff", message_handler, nullptr);
+    //lo_server_thread_add_method(server, "/coordinateY", "f", message_handler, nullptr);
+    //lo_server_thread_add_method(server, "/coordinateZ", "f", message_handler, nullptr);
 
     // Start the server
     lo_server_thread_start(server);
