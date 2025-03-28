@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/local/zed/samples/body tracking/body tracking/cpp/src/GLViewer.cpp" "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o"
-  "/usr/local/zed/samples/body tracking/body tracking/cpp/src/TrackingViewer.cpp" "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o"
-  "/usr/local/zed/samples/body tracking/body tracking/cpp/src/main.cpp" "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o"
+  "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o"
+  "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o"
+  "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

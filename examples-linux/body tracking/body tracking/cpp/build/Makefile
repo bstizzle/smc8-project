@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/usr/local/zed/samples/body tracking/body tracking/cpp"
+CMAKE_SOURCE_DIR = "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/usr/local/zed/samples/body tracking/body tracking/cpp/build"
+CMAKE_BINARY_DIR = "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

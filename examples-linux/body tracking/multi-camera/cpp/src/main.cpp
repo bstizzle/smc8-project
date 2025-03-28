@@ -124,8 +124,8 @@ int main(int argc, char **argv) {
     // as this sample shows how to fuse body detection from the multi camera setup
     // we enable the Body Tracking module with its options
     sl::BodyTrackingFusionParameters body_fusion_init_params;
-    body_fusion_init_params.enable_tracking = true;
-    body_fusion_init_params.enable_body_fitting = !isJetson; // skeletons will looks more natural but requires more computations
+    //body_fusion_init_params.enable_tracking = true;
+    //body_fusion_init_params.enable_body_fitting = !isJetson; // skeletons will looks more natural but requires more computations
     fusion.enableBodyTracking(body_fusion_init_params);
 
     // define fusion behavior 

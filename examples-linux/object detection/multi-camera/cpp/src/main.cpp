@@ -134,6 +134,7 @@ int main(int argc, char **argv)
     sl::ObjectDetectionFusionParameters od_fusion_params;
     od_fusion_params.enable_tracking = false; // We do tracking per camera then fuse only in fusion.
                                               // This takes more resources than tracking in Fusion only but yields more accurate tracking.
+                                              
     std::cout << "Enabling Fused Object detection" << std::endl;
     const sl::FUSION_ERROR_CODE err = fusion.enableObjectDetection(od_fusion_params);
     if (err != sl::FUSION_ERROR_CODE::SUCCESS)

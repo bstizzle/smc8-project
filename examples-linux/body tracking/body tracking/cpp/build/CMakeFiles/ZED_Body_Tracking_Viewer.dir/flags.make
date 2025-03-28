@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/zed/include -I/usr/local/cuda/include -I"/usr/local/zed/samples/body tracking/body tracking/cpp/include" -isystem /usr/include/opencv4 
+CXX_INCLUDES = -I/usr/local/zed/include -I/usr/local/cuda/include -I"/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/include" -isystem /usr/include/opencv4 
 

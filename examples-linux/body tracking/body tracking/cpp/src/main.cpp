@@ -147,10 +147,10 @@ int main(int argc, char **argv) {
             
             cout << "ID Corpo: " << body.id << endl;
             
-            //	cout << "Coordinate polso destro: " 
-            //	<< "X = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].x << ", "
-            //	<< "Y = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].y << ", "
-            //	<< "Z = " << body.keypoint[sl::BODY_34_PARTS::RIGHT_WRIST].z << endl;
+            	cout << "Position: " 
+            	<< "X = " << body.position.x << ", "
+            	<< "Y = " << body.position.y << ", "
+            	<< "Z = " << body.position.z << endl;
             	
             	cout << "------------------------------------------" << endl;
             }

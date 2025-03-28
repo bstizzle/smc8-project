@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/usr/local/zed/samples/body tracking/body tracking/cpp"
+CMAKE_SOURCE_DIR = "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/usr/local/zed/samples/body tracking/body tracking/cpp/build"
+CMAKE_BINARY_DIR = "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ZED_Body_Tracking_Viewer.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/ZED_Body_Tracking_Viewer.dir/flags.make
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o: CMakeFiles/ZED_Body_Tracking_Viewer.dir/flags.make
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o: ../src/GLViewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o -c "/usr/local/zed/samples/body tracking/body tracking/cpp/src/GLViewer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o -c "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp"
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/usr/local/zed/samples/body tracking/body tracking/cpp/src/GLViewer.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.i
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/usr/local/zed/samples/body tracking/body tracking/cpp/src/GLViewer.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.s
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o: CMakeFiles/ZED_Body_Tracking_Viewer.dir/flags.make
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o: ../src/TrackingViewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o -c "/usr/local/zed/samples/body tracking/body tracking/cpp/src/TrackingViewer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o -c "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp"
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/usr/local/zed/samples/body tracking/body tracking/cpp/src/TrackingViewer.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.i
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/usr/local/zed/samples/body tracking/body tracking/cpp/src/TrackingViewer.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.s
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o: CMakeFiles/ZED_Body_Tracking_Viewer.dir/flags.make
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o -c "/usr/local/zed/samples/body tracking/body tracking/cpp/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o -c "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp"
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/usr/local/zed/samples/body tracking/body tracking/cpp/src/main.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp" > CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.i
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/usr/local/zed/samples/body tracking/body tracking/cpp/src/main.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp" -o CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.s
 
 # Object files for target ZED_Body_Tracking_Viewer
 ZED_Body_Tracking_Viewer_OBJECTS = \
@@ -135,7 +135,7 @@ ZED_Body_Tracking_Viewer: /usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.5.4
 ZED_Body_Tracking_Viewer: /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4
 ZED_Body_Tracking_Viewer: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4
 ZED_Body_Tracking_Viewer: CMakeFiles/ZED_Body_Tracking_Viewer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ZED_Body_Tracking_Viewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ZED_Body_Tracking_Viewer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ZED_Body_Tracking_Viewer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,6 +148,6 @@ CMakeFiles/ZED_Body_Tracking_Viewer.dir/clean:
 .PHONY : CMakeFiles/ZED_Body_Tracking_Viewer.dir/clean
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/depend:
-	cd "/usr/local/zed/samples/body tracking/body tracking/cpp/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/usr/local/zed/samples/body tracking/body tracking/cpp" "/usr/local/zed/samples/body tracking/body tracking/cpp" "/usr/local/zed/samples/body tracking/body tracking/cpp/build" "/usr/local/zed/samples/body tracking/body tracking/cpp/build" "/usr/local/zed/samples/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build" "/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/build/CMakeFiles/ZED_Body_Tracking_Viewer.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ZED_Body_Tracking_Viewer.dir/depend
 

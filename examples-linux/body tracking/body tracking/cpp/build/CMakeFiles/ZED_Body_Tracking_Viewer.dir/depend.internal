@@ -3,6 +3,7 @@
 
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o
  ../include/GLViewer.hpp
+ /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp
  /usr/local/cuda/include/builtin_types.h
  /usr/local/cuda/include/channel_descriptor.h
  /usr/local/cuda/include/crt/common_functions.h
@@ -60,10 +61,10 @@ CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/GLViewer.cpp.o
  /usr/local/cuda/include/vector_functions.hpp
  /usr/local/cuda/include/vector_types.h
  /usr/local/zed/include/sl/Camera.hpp
- /usr/local/zed/samples/body tracking/body tracking/cpp/src/GLViewer.cpp
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o
  ../include/GLViewer.hpp
  ../include/TrackingViewer.hpp
+ /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp
  /usr/include/opencv4/opencv2/calib3d.hpp
  /usr/include/opencv4/opencv2/core.hpp
  /usr/include/opencv4/opencv2/core/affine.hpp
@@ -224,10 +225,10 @@ CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/TrackingViewer.cpp.o
  /usr/local/cuda/include/vector_functions.hpp
  /usr/local/cuda/include/vector_types.h
  /usr/local/zed/include/sl/Camera.hpp
- /usr/local/zed/samples/body tracking/body tracking/cpp/src/TrackingViewer.cpp
 CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o
  ../include/GLViewer.hpp
  ../include/TrackingViewer.hpp
+ /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp
  /usr/include/opencv4/opencv2/calib3d.hpp
  /usr/include/opencv4/opencv2/core.hpp
  /usr/include/opencv4/opencv2/core/affine.hpp
@@ -388,4 +389,3 @@ CMakeFiles/ZED_Body_Tracking_Viewer.dir/src/main.cpp.o
  /usr/local/cuda/include/vector_functions.hpp
  /usr/local/cuda/include/vector_types.h
  /usr/local/zed/include/sl/Camera.hpp
- /usr/local/zed/samples/body tracking/body tracking/cpp/src/main.cpp
