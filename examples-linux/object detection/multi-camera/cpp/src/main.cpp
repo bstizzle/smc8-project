@@ -38,7 +38,7 @@ using namespace sl;
 int main(int argc, char **argv)
 {
     // Create an OSC client that sends to localhost on port 5005
-    lo_address target = lo_address_new("192.168.1.101", "5005");
+    lo_address target = lo_address_new("192.168.1.102", "5005");
 
     if (!target) {
         std::cerr << "Failed to create OSC client!" << std::endl;
