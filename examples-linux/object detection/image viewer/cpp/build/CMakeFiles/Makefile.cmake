@@ -11,10 +11,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVModules.cmake"
   "/usr/local/zed/zed-config-version.cmake"
   "/usr/local/zed/zed-config.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -68,5 +64,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ZED_Body_Tracking_Viewer.dir/DependInfo.cmake"
+  "CMakeFiles/ZED_Object_detection_image_viewer.dir/DependInfo.cmake"
   )
