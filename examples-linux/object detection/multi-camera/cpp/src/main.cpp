@@ -17,6 +17,8 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 ///////////////////////////////////////////////////////////////////////////
+//c++ includes
+#include <cmath>
 
 // ZED include
 #include "ClientPublisher.hpp"
@@ -221,7 +223,14 @@ int main(int argc, char **argv)
 	    for(auto& object : objects.object_list) {
 		    cout << "ID Corpo: " << object.id << endl;
 		    
-		    cout << "Position: " << object.position << ", " << endl;
+		    cout << "Position: " << object.position << endl;
+		    cout << "Velocity: " << object.velocity << endl;
+		    
+		    auto vel = sqrt(object.velocity.x*object.velocity.x + object.velocity.y*object.velocity.y + object.velocity.z*object.velocity.z);
+		    
+		    cout << "Abs. Velocity: " << vel << endl;
+		    
+		    cout << "State: " << object.action_state << endl;
 		    	
 		    cout << "------------------------------------------" << endl;
 		    

@@ -42,16 +42,6 @@ opencv2/opencv.hpp
 GLViewer.hpp
 ../include/GLViewer.hpp
 
-/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.cpp
-GLViewer.hpp
-/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.hpp
-random
--
-
-/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.cpp
-TrackingViewer.hpp
-/home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.hpp
-
 /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/main.cpp
 sl/Camera.hpp
 -
@@ -59,6 +49,18 @@ GLViewer.hpp
 /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/GLViewer.hpp
 TrackingViewer.hpp
 /home/springtime/Documents/GitHub/smc8-project/examples-linux/body tracking/body tracking/cpp/src/TrackingViewer.hpp
+lo/lo.h
+-
+iostream
+-
+cstdlib
+-
+ctime
+-
+thread
+-
+chrono
+-
 
 /usr/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

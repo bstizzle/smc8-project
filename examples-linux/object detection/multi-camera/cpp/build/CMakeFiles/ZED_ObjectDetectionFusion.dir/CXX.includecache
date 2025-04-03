@@ -45,6 +45,8 @@ sl/Camera.hpp
 -
 
 /home/springtime/Documents/GitHub/smc8-project/examples-linux/object detection/multi-camera/cpp/src/main.cpp
+cmath
+-
 ClientPublisher.hpp
 /home/springtime/Documents/GitHub/smc8-project/examples-linux/object detection/multi-camera/cpp/src/ClientPublisher.hpp
 GLViewer.hpp
