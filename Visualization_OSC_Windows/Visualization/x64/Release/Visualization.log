@@ -1,0 +1,14 @@
+﻿  visualizer.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': macro redefinition
+  (compiling source file 'visualizer.cpp')
+      C:\Users\danie\vcpkg\installed\x64-windows\include\GLFW\glfw3.h(123,11):
+      see previous definition of 'APIENTRY'
+  
+  Generating code
+  3 of 20 functions (15.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Visualization.vcxproj -> C:\Users\danie\source\repos\Visualization\x64\Release\Visualization.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
