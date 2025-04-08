@@ -11,7 +11,7 @@ int main() {
     std::srand(std::time(nullptr));
 
     // Create an OSC client that sends to localhost on port 5005
-    lo_address target = lo_address_new("192.168.1.101", "5005");
+    lo_address target = lo_address_new("192.168.1.101", "9001");
 
 
     if (!target) {

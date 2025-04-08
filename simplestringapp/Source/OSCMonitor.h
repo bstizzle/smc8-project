@@ -229,7 +229,7 @@ public:
 private:
     //==============================================================================
     juce::Label portNumberLabel{ {}, "UDP Port Number: " };
-    juce::Label portNumberField{ {}, "9002" };
+    juce::Label portNumberField{ {}, "9001" };
     juce::TextButton connectButton{ "Connect" };
     juce::TextButton clearButton{ "Clear" };
     juce::Label connectionStatusLabel;
