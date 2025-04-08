@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "tutorial 5 - spatial mapping/cpp",
+		"source" : "tutorial 5 - spatial mapping/cpp"
+	}
+}

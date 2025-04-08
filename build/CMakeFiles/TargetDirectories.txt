@@ -1,0 +1,29 @@
+/home/ibroto/Documents/GitHub/smc8-project/build/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 1 - hello ZED/cpp/CMakeFiles/ZED_Tutorial_1.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 1 - hello ZED/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 1 - hello ZED/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 2 - image capture/cpp/CMakeFiles/ZED_Tutorial_2.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 2 - image capture/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 2 - image capture/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 3 - depth sensing/cpp/CMakeFiles/ZED_Tutorial_3.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 3 - depth sensing/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 3 - depth sensing/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 4 - positional tracking/cpp/CMakeFiles/ZED_Tutorial_4.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 4 - positional tracking/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 4 - positional tracking/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 5 - spatial mapping/cpp/CMakeFiles/ZED_Tutorial_5.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 5 - spatial mapping/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 5 - spatial mapping/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 6 - object detection/cpp/CMakeFiles/ZED_Tutorial_6.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 6 - object detection/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 6 - object detection/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 7 - sensor data/cpp/CMakeFiles/ZED_Tutorial_7.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 7 - sensor data/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 7 - sensor data/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 8 - body tracking/cpp/CMakeFiles/ZED_Tutorial_8.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 8 - body tracking/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 8 - body tracking/cpp/CMakeFiles/rebuild_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 9 - global localization/cpp/CMakeFiles/ZED_Global_Localization.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 9 - global localization/cpp/CMakeFiles/edit_cache.dir
+/home/ibroto/Documents/GitHub/smc8-project/build/tutorial 9 - global localization/cpp/CMakeFiles/rebuild_cache.dir

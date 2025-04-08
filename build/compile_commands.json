@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 1 - hello ZED/cpp/CMakeFiles/ZED_Tutorial_1.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 1 - hello ZED/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 1 - hello ZED/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 2 - image capture/cpp/CMakeFiles/ZED_Tutorial_2.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 2 - image capture/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 2 - image capture/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 3 - depth sensing/cpp/CMakeFiles/ZED_Tutorial_3.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 3 - depth sensing/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 3 - depth sensing/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 4 - positional tracking/cpp/CMakeFiles/ZED_Tutorial_4.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 4 - positional tracking/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 4 - positional tracking/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 5 - spatial mapping/cpp/CMakeFiles/ZED_Tutorial_5.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 5 - spatial mapping/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 5 - spatial mapping/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 6 - object detection/cpp/CMakeFiles/ZED_Tutorial_6.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 6 - object detection/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 6 - object detection/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 7 - sensor data/cpp/CMakeFiles/ZED_Tutorial_7.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 7 - sensor data/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 7 - sensor data/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -D_DEBUG -I/usr/local/zed/include -g -std=gnu++14 -o tutorial 8 - body tracking/cpp/CMakeFiles/ZED_Tutorial_8.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 8 - body tracking/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 8 - body tracking/cpp/main.cpp"
+},
+{
+  "directory": "/home/ibroto/Documents/GitHub/smc8-project/build",
+  "command": "/usr/bin/g++ -I/usr/local/zed/include -O3 -DNDEBUG -std=gnu++17 -o tutorial 9 - global localization/cpp/CMakeFiles/ZED_Global_Localization.dir/main.cpp.o -c \"/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 9 - global localization/cpp/main.cpp\"",
+  "file": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials/tutorial 9 - global localization/cpp/main.cpp"
+}
+]
