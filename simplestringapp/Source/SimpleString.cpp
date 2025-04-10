@@ -10,7 +10,7 @@
 
 #include <JuceHeader.h>
 #include "SimpleString.h"
-#include "OSCMonitor.h"
+#include "Globals.h"
 
 //==============================================================================
 SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
@@ -193,8 +193,7 @@ void SimpleString::mouseDown (const MouseEvent& e)
     excitationFlag = true;
 }
 
-void SimpleString::strum(float velocity)
+void SimpleString::strum()
 {
-    if (velocity >= 1)
-        excitationFlag = true;
+    excitationFlag = true;
 }

@@ -45,6 +45,7 @@
 
 #pragma once
 #include <JuceHeader.h>
+#include "Globals.h"
 
 //==============================================================================
 class OSCLogListBox : public juce::ListBox,
@@ -91,8 +92,21 @@ public:
 
         if (!message.isEmpty())
         {
+            int counter = 0;
             for (auto* arg = message.begin(); arg != message.end(); ++arg)
+            {
+                if (counter == 3)
+                {
+                    velX = arg->getFloat32();
+                    if (velX >= 1)
+                    {
+                        mySimpleString->strum();
+                    }
+                
+                }
                 addOSCMessageArgument(*arg, level + 1);
+                counter++;
+            }
         }
 
         triggerAsyncUpdate();
@@ -229,7 +243,7 @@ public:
 private:
     //==============================================================================
     juce::Label portNumberLabel{ {}, "UDP Port Number: " };
-    juce::Label portNumberField{ {}, "9001" };
+    juce::Label portNumberField{ {}, "5005" };
     juce::TextButton connectButton{ "Connect" };
     juce::TextButton clearButton{ "Clear" };
     juce::Label connectionStatusLabel;
