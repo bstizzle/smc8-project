@@ -265,7 +265,7 @@ public:
             showConnectionErrorMessage ("Error: could not connect to UDP port 9001.");
 
         // tell the component to listen for OSC messages matching this address:
-        addListener (this, "/juce/rotaryknob");
+        addListener (this, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed");
     }
 
 private:
@@ -273,6 +273,7 @@ private:
     void oscMessageReceived (const OSCMessage& message) override
     {
         if (message.size() == 1 && message[0].isFloat32())
+            DBG("Hello from JUCE! Recieving");
             rotaryKnob.setValue (jlimit (0.0f, 10.0f, message[0].getFloat32()));
     }
 

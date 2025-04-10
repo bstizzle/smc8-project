@@ -10,6 +10,7 @@
 #include "MainComponent.h"
 #include "OSCMonitor.h"
 
+
 //==============================================================================
 class SimpleStringAppApplication  : public juce::JUCEApplication
 {

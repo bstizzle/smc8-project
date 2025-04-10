@@ -10,8 +10,7 @@
 
 #include <JuceHeader.h>
 #include "SimpleString.h"
-#include "OSCMonitor.h"
-
+#include "OSCDemo.h"
 //==============================================================================
 SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
 {
@@ -40,6 +39,8 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
     
     lambdaSq = cSq * k * k / (h * h);
     muSq = kappaSq * k * k / (h * h * h * h);
+
+    OSCReceiverDemo string_reciever;
     
     // Initialise vectors
     uStates = std::vector<std::vector<double>> (3,

@@ -45,6 +45,7 @@
 
 #pragma once
 #include <JuceHeader.h>
+#include "SimpleString.h"
 
 //==============================================================================
 class OSCLogListBox : public juce::ListBox,
@@ -259,6 +260,7 @@ private:
     //==============================================================================
     void oscMessageReceived(const juce::OSCMessage& message) override
     {
+        
         oscLogListBox.addOSCMessage(message);
     }
 
