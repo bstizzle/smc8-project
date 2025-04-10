@@ -28,10 +28,10 @@ int main() {
     //std::cout << "Live ID: " << state.obj_id << ", X: " << state.x << std::endl;
 
     // Keep the server running
-    while (true) {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "Live ID: " << state.obj_id << ", X: " << state.x << std::endl;
-    }
+    //while (true) {
+    //    std::this_thread::sleep_for(std::chrono::seconds(1));
+    //    std::cout << "Live ID: " << state.obj_id << ", X: " << state.x << std::endl;
+    //}
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Red Dot on Black Background");
 
