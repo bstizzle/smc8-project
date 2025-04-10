@@ -1,0 +1,375 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "tutorial 1 - hello ZED/cpp",
+					"jsonFile" : "directory-tutorial 1 - hello ZED.cpp-Debug-e95a9c8bc31ae6555c66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "tutorial 1 - hello ZED/cpp",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "tutorial 2 - image capture/cpp",
+					"jsonFile" : "directory-tutorial 2 - image capture.cpp-Debug-4250538bcacbce403aed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "tutorial 2 - image capture/cpp",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "tutorial 3 - depth sensing/cpp",
+					"jsonFile" : "directory-tutorial 3 - depth sensing.cpp-Debug-e616429d47c7bacd8303.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "tutorial 3 - depth sensing/cpp",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "tutorial 4 - positional tracking/cpp",
+					"jsonFile" : "directory-tutorial 4 - positional tracking.cpp-Debug-dcb0c5680201b8cc2d62.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "tutorial 4 - positional tracking/cpp",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "tutorial 5 - spatial mapping/cpp",
+					"jsonFile" : "directory-tutorial 5 - spatial mapping.cpp-Debug-95cfbf327f8690084f42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "tutorial 5 - spatial mapping/cpp",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "tutorial 6 - object detection/cpp",
+					"jsonFile" : "directory-tutorial 6 - object detection.cpp-Debug-0c567cc49f9acb771140.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "tutorial 6 - object detection/cpp",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "tutorial 7 - sensor data/cpp",
+					"jsonFile" : "directory-tutorial 7 - sensor data.cpp-Debug-61d1e5b7cf657ecbaa95.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "tutorial 7 - sensor data/cpp",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "tutorial 8 - body tracking/cpp",
+					"jsonFile" : "directory-tutorial 8 - body tracking.cpp-Debug-aa542ca739a4c5e54b0b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "tutorial 8 - body tracking/cpp",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "tutorial 9 - global localization/cpp",
+					"jsonFile" : "directory-tutorial 9 - global localization.cpp-Debug-727ee79f44b1e727527f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "tutorial 9 - global localization/cpp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Tutos"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "ZED_Tutorial_1",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ZED_Tutorial_2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "ZED_Tutorial_3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ZED_Tutorial_4",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "ZED_Tutorial_5",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "ZED_Tutorial_6",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "ZED_Tutorial_7",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "ZED_Tutorial_8",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "ZED_Global_Localization",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 9,
+					"id" : "ZED_Global_Localization::@08c6796324acdf0f848a",
+					"jsonFile" : "target-ZED_Global_Localization-Debug-4dc0ed43c406f81b2cde.json",
+					"name" : "ZED_Global_Localization",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ZED_Tutorial_1::@279042abea0b809d4bed",
+					"jsonFile" : "target-ZED_Tutorial_1-Debug-ac15ef0cac95e21716f5.json",
+					"name" : "ZED_Tutorial_1",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ZED_Tutorial_2::@6b90b19e63aa8ed8a548",
+					"jsonFile" : "target-ZED_Tutorial_2-Debug-c19189d4432a72e2dfff.json",
+					"name" : "ZED_Tutorial_2",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ZED_Tutorial_3::@e3ecb6cb21f70419a883",
+					"jsonFile" : "target-ZED_Tutorial_3-Debug-72aed5a9ba6ec07409d0.json",
+					"name" : "ZED_Tutorial_3",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ZED_Tutorial_4::@aca1e5eda6f3e6e057a8",
+					"jsonFile" : "target-ZED_Tutorial_4-Debug-e0767c3b422db8b0b8b2.json",
+					"name" : "ZED_Tutorial_4",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ZED_Tutorial_5::@57184b1329961009c358",
+					"jsonFile" : "target-ZED_Tutorial_5-Debug-d2ce39f637daf44dabbe.json",
+					"name" : "ZED_Tutorial_5",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ZED_Tutorial_6::@ccc73b091948cd673f92",
+					"jsonFile" : "target-ZED_Tutorial_6-Debug-958308df64acd3adf331.json",
+					"name" : "ZED_Tutorial_6",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ZED_Tutorial_7::@2407b84860648c5cc502",
+					"jsonFile" : "target-ZED_Tutorial_7-Debug-020357c17dffc1c55225.json",
+					"name" : "ZED_Tutorial_7",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "ZED_Tutorial_8::@199503aa50ae4608f9f8",
+					"jsonFile" : "target-ZED_Tutorial_8-Debug-32702ed9c887e66c98a1.json",
+					"name" : "ZED_Tutorial_8",
+					"projectIndex" : 8
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ibroto/Documents/GitHub/smc8-project/build",
+		"source" : "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

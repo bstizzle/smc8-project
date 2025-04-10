@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 16
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleStringApp - App", "SimpleStringApp_App.vcxproj", "{A341F61E-BDB3-F565-62A4-F02BBD55A5EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A341F61E-BDB3-F565-62A4-F02BBD55A5EF}.Debug|x64.ActiveCfg = Debug|x64
+		{A341F61E-BDB3-F565-62A4-F02BBD55A5EF}.Debug|x64.Build.0 = Debug|x64
+		{A341F61E-BDB3-F565-62A4-F02BBD55A5EF}.Release|x64.ActiveCfg = Release|x64
+		{A341F61E-BDB3-F565-62A4-F02BBD55A5EF}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

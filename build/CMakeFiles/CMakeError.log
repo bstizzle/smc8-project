@@ -1,0 +1,14 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/ibroto/Documents/GitHub/smc8-project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_ec039 && [1/2] Building C object CMakeFiles/cmTC_ec039.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_ec039
+FAILED: cmTC_ec039 
+: && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=sgemm_  CMakeFiles/cmTC_ec039.dir/CheckFunctionExists.c.o -o cmTC_ec039   && :
+/usr/bin/ld: CMakeFiles/cmTC_ec039.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

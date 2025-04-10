@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "tutorial 7 - sensor data/cpp",
+		"source" : "tutorial 7 - sensor data/cpp"
+	}
+}
