@@ -18,12 +18,13 @@ int main() {
         return 1;
     }
     // Map the "/randomNum" address to the message handler
-    lo_server_thread_add_method(server, "/objid", "i",  get_id, &state);
-    lo_server_thread_add_method(server, "/coordinateX/coordinateY/coordinateZ", "fff",get_coordinates, &state);
+    //lo_server_thread_add_method(server, "/objid", "i",  get_id, &state);
+    //lo_server_thread_add_method(server, "/coordinateX/coordinateY/coordinateZ", "fff",get_coordinates, &state);
+    lo_server_thread_add_method(server, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff",get_data, &state);
 
     // Start the server
     lo_server_thread_start(server);
-    std::cout << "Server listening on port 5005..." << std::endl;
+    std::cout << "Server listening on port 9001..." << std::endl;
     //std::cout << "Live ID: " << state.obj_id << ", X: " << state.x << std::endl;
 
     // Keep the server running
