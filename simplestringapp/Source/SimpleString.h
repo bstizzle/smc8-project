@@ -40,7 +40,7 @@ public:
     void excite();
     void mouseDown (const MouseEvent& e) override;
 
-    void strum(float velocity);
+    void strum();
     
     bool shouldExcite() { return excitationFlag; };
     

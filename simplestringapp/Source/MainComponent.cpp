@@ -1,4 +1,5 @@
 #include "MainComponent.h"
+#include "Globals.h"
 
 //==============================================================================
 MainComponent::MainComponent()
