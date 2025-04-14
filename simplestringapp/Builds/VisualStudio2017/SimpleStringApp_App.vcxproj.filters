@@ -397,6 +397,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Globals.cpp">
+      <Filter>SimpleStringApp\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SimpleString.cpp">
       <Filter>SimpleStringApp\Source</Filter>
     </ClCompile>
@@ -2199,6 +2202,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Globals.h">
+      <Filter>SimpleStringApp\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\OSCMonitor.h">
       <Filter>SimpleStringApp\Source</Filter>
     </ClInclude>

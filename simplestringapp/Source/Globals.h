@@ -11,6 +11,8 @@
 #pragma once
 #include "SimpleString.h"
 
+extern double posX;
 extern double velX;
 
-extern std::unique_ptr<SimpleString> mySimpleString;
+extern std::unique_ptr<SimpleString> string1;
+extern std::unique_ptr<SimpleString> string2;
