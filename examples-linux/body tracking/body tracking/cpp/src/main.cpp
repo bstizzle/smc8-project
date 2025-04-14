@@ -46,9 +46,13 @@ void print(string msg_prefix, ERROR_CODE err_code = ERROR_CODE::SUCCESS, string 
 void parseArgs(int argc, char **argv, InitParameters& param);
 
 int main(int argc, char **argv) {
-
+	auto startTime = std::chrono::high_resolution_clock::now();
+	
     // Create an OSC client that sends to localhost on port 5005
-    lo_address target = lo_address_new("192.168.1.102", "5005");
+    	    // Create an OSC client that sends to localhost on port 5005
+    lo_address target = lo_address_new("192.168.1.100", "5005");
+    lo_address target2 = lo_address_new("192.168.1.101", "9001");
+    lo_address target3 = lo_address_new("192.168.1.102", "9002");
 
     if (!target) {
         std::cerr << "Failed to create OSC client!" << std::endl;
@@ -72,9 +76,11 @@ int main(int argc, char **argv) {
     // Create ZED Bodies
     Camera zed;
     InitParameters init_parameters;
-    init_parameters.camera_resolution = RESOLUTION::AUTO;
+    init_parameters.camera_resolution = RESOLUTION::HD1080;
+    init_parameters.camera_fps = 60;
     init_parameters.depth_mode = isJetson ? DEPTH_MODE::NEURAL_LIGHT : DEPTH_MODE::NEURAL;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP;
+    init_parameters.coordinate_units = UNIT::METER;
 
     parseArgs(argc, argv, init_parameters);
 
@@ -89,7 +95,7 @@ int main(int argc, char **argv) {
     // Enable Positional tracking (mandatory for object detection)
     PositionalTrackingParameters positional_tracking_parameters;
     //If the camera is static, uncomment the following line to have better performances
-    //positional_tracking_parameters.set_as_static = true;
+    positional_tracking_parameters.set_as_static = true;
 
     returned_state = zed.enablePositionalTracking(positional_tracking_parameters);
     if (returned_state != ERROR_CODE::SUCCESS) {
@@ -101,11 +107,12 @@ int main(int argc, char **argv) {
     // Enable the Body tracking module
     BodyTrackingParameters body_tracker_params;
     body_tracker_params.enable_tracking = true; // track people across images flow
-    body_tracker_params.enable_body_fitting = false; // smooth skeletons moves
+    body_tracker_params.enable_body_fitting = true; // smooth skeletons moves
     body_tracker_params.body_format = sl::BODY_FORMAT::BODY_34;
     body_tracker_params.enable_segmentation = true;
-    body_tracker_params.detection_model = isJetson ? BODY_TRACKING_MODEL::HUMAN_BODY_FAST : BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
-    //body_tracker_params.allow_reduced_precision_inference = true;
+    //body_tracker_params.detection_model = isJetson ? BODY_TRACKING_MODEL::HUMAN_BODY_FAST : BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
+    body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_MEDIUM;
+    body_tracker_params.allow_reduced_precision_inference = true;
 
     returned_state = zed.enableBodyTracking(body_tracker_params);
     if (returned_state != ERROR_CODE::SUCCESS) {
@@ -168,17 +175,29 @@ int main(int argc, char **argv) {
             
             for (auto& body : bodies.body_list){
             
-            cout << "ID Corpo: " << body.id << endl;
-            
-            	cout << "Position: " 
-            	<< "X = " << body.position.x << ", "
-            	<< "Y = " << body.position.y << ", "
-            	<< "Z = " << body.position.z << endl;
-            	
-            	cout << "------------------------------------------" << endl;
-            	
-            	lo_send(target, "/objid", "i", body.id);
-		lo_send(target, "/coordinateX/coordinateY/coordinateZ", "fff", body.position.x, body.position.y, body.position.z);
+		
+		auto vel = sqrt(body.velocity.x*body.velocity.x + body.velocity.y*body.velocity.y + body.velocity.z*body.velocity.z);
+		
+	    	cout << "fps: " << init_parameters.camera_fps << endl;
+	    	cout << "res: " << init_parameters.camera_resolution << endl;
+	    	
+			cout << "ID Corpo: " << body.id << endl;
+		    
+		    cout << "Position: " << body.position << endl;
+		    cout << "Velocity: " << body.velocity << endl;
+		    
+		    
+		    
+		    cout << "Abs. Velocity: " << vel << endl;
+		    
+		    cout << "State: " << body.action_state << endl;
+		    	
+		    cout << "------------------------------------------" << endl;
+		    
+        	lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel); 
+		lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
+		lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
+	    		
             }
 	
             if (key == 'q') quit = true;

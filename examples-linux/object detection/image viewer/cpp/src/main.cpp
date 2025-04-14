@@ -45,7 +45,8 @@ void print(string msg_prefix, ERROR_CODE err_code = ERROR_CODE::SUCCESS, string 
 void parseArgs(int argc, char **argv, InitParameters& param);
 
 int main(int argc, char **argv) {
-
+	
+	auto startTime = std::chrono::high_resolution_clock::now();
 #ifdef _SL_JETSON_
     const bool isJetson = true;
 #else
@@ -73,6 +74,8 @@ int main(int argc, char **argv) {
     // Create ZED objects
     Camera zed;
     InitParameters init_parameters;
+    init_parameters.camera_resolution = RESOLUTION::HD1080;
+    init_parameters.camera_fps = 60;
     init_parameters.depth_mode = DEPTH_MODE::NEURAL;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP;
     init_parameters.coordinate_units = UNIT::METER;
@@ -89,7 +92,7 @@ int main(int argc, char **argv) {
     // Enable Positional tracking (mandatory for object detection)
     PositionalTrackingParameters positional_tracking_parameters;
     //If the camera is static, uncomment the following line to have better performances.
-    //positional_tracking_parameters.set_as_static = true;
+    positional_tracking_parameters.set_as_static = true;
     returned_state = zed.enablePositionalTracking(positional_tracking_parameters);
     if (returned_state != ERROR_CODE::SUCCESS) {
         print("enable Positional Tracking", returned_state, "\nExit program.");
@@ -100,7 +103,9 @@ int main(int argc, char **argv) {
     // Enable the Objects detection module
     ObjectDetectionParameters obj_det_params;
     obj_det_params.enable_tracking = true;
-    obj_det_params.detection_model = isJetson ? OBJECT_DETECTION_MODEL::MULTI_CLASS_BOX_FAST : OBJECT_DETECTION_MODEL::MULTI_CLASS_BOX_ACCURATE;
+    //obj_det_params.detection_model = isJetson ? OBJECT_DETECTION_MODEL::MULTI_CLASS_BOX_FAST : OBJECT_DETECTION_MODEL::MULTI_CLASS_BOX_ACCURATE;
+	obj_det_params.detection_model = OBJECT_DETECTION_MODEL::MULTI_CLASS_BOX_MEDIUM;
+	obj_det_params.allow_reduced_precision_inference=true;
 
     returned_state = zed.enableObjectDetection(obj_det_params);
     if (returned_state != ERROR_CODE::SUCCESS) {
@@ -143,12 +148,20 @@ int main(int argc, char **argv) {
             viewer.updateView(image, objects);
             
 	    for(auto& object : objects.object_list) {
-		cout << "ID Corpo: " << object.id << endl;
+	    	auto vel = sqrt(object.velocity.x*object.velocity.x + object.velocity.y*object.velocity.y + object.velocity.z*object.velocity.z);
+	    	//auto duration = std::chrono::high_resolution_clock::now() - startTime;
+	    	
+	    	cout << "fps: " << init_parameters.camera_fps << endl;
+	    	cout << "res: " << init_parameters.camera_resolution << endl;
+	    	
+	    	//if(std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 500)
+	    	//{
+			cout << "ID Corpo: " << object.id << endl;
 		    
 		    cout << "Position: " << object.position << endl;
 		    cout << "Velocity: " << object.velocity << endl;
 		    
-		    auto vel = sqrt(object.velocity.x*object.velocity.x + object.velocity.y*object.velocity.y + object.velocity.z*object.velocity.z);
+		    
 		    
 		    cout << "Abs. Velocity: " << vel << endl;
 		    
@@ -156,35 +169,14 @@ int main(int argc, char **argv) {
 		    	
 		    cout << "------------------------------------------" << endl;
 		   
-		   lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel); 
-		   lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel);
-		   lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel);
-	    
-		    
-		    //lo_send(target2, "/objid", "i", object.id);
-		    //lo_send(target2, "/coordinateX", "f", object.position.x);
-		    //lo_send(target2, "/coordinateZ", "f", object.position.z);
-		    //lo_send(target2, "/velocityX", "f", object.velocity.x);
-		    //lo_send(target2, "/velocityZ", "f", object.velocity.z);
-		    //lo_send(target2, "/speed", "f", vel);		    
-		    
-		    //lo_send(target3, "/objid", "i", object.id);
-		    //lo_send(target3, "/coordinateX", "f", object.position.x);
-		    //lo_send(target3, "/coordinateZ", "f", object.position.z);
-		    //lo_send(target3, "/velocityX", "f", object.velocity.x);
-		    //lo_send(target3, "/velocityZ", "f", object.velocity.z);
-		    //lo_send(target3, "/speed", "f", vel);		    
-		    
-		    
-		    
-		    //lo_send(target, "/coordinateX/coordinateZ", "fff", object.position.x, object.position.y, object.position.z);
-		    //lo_send(target, "/speed", "f", vel);
-		    //lo_send(target2, "/objid", "i", object.id);
-		    //lo_send(target2, "/coordinateX/coordinateY/coordinateZ", "fff", object.position.x, object.position.y, object.position.z);
-		    //lo_send(target3, "/objid", "i", object.id);
-		    //lo_send(target3, "/coordinateX/coordinateY/coordinateZ", "fff", object.position.x, object.position.y, object.position.z);
-	    
-        	}
+		   
+	    		startTime = std::chrono::high_resolution_clock::now();
+        	//}
+        	lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel); 
+		lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel);
+		lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", object.id , object.position.x, object.position.z, object.velocity.x, object.velocity.z, vel);
+	    		
+           }
         }
     }
 
