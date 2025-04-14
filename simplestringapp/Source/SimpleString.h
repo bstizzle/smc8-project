@@ -11,6 +11,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include <chrono>
 
 //==============================================================================
 /*
@@ -73,6 +74,8 @@ private:
     double excitationLoc = 0.5;
     
     bool clamped = true;
+
+    std::chrono::time_point<std::chrono::system_clock> startTime = std::chrono::system_clock::now();
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleString)
 };

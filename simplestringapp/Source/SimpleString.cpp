@@ -11,11 +11,11 @@
 #include <JuceHeader.h>
 #include "SimpleString.h"
 #include "Globals.h"
+#include <chrono>
 
 //==============================================================================
 SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
 {
-
     // Initialise member variables using the parameter set
     L = *parameters.getVarPointer ("L");
     rho = *parameters.getVarPointer ("rho");
@@ -28,6 +28,8 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
     
     // Calculate wave speed (squared)
     cSq = T / (rho * A);
+
+    L = sqrt(cSq) / (2 * 440);
     
     // Calculate stiffness coefficient (squared)
     kappaSq = E * I / (rho * A);
@@ -142,14 +144,12 @@ void SimpleString::calculateScheme()
     for (int l = 2; l < N-1; ++l) // clamped boundaries
         u[0][l] = B0 * u[1][l] + B1 * (u[1][l + 1] + u[1][l - 1]) + B2 * (u[1][l + 2] + u[1][l - 2])
                 + C0 * u[2][l] + C1 * (u[2][l + 1] + u[2][l - 1]);
-    
+    /*
     u[0][1] = Bss * u[1][1] + B1 * (u[1][2] + u[1][0]) + B2 * u[1][3]
             + C0 * u[2][1] + C1 * (u[2][2] + u[2][0]);
     u[0][N-1] = Bss * u[1][N-1] + B1 * (u[1][N] + u[1][N-2]) + B2 * (u[1][N-3])
             + C0 * u[2][N-1] + C1 * (u[2][N] + u[2][N-2]);
-
-
-    
+    */
 }
 
 void SimpleString::updateStates()
@@ -195,5 +195,11 @@ void SimpleString::mouseDown (const MouseEvent& e)
 
 void SimpleString::strum()
 {
-    excitationFlag = true;
+    auto duration = std::chrono::system_clock::now() - startTime;
+    //check if enough time has passed since the last strum was triggered
+    if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 250)
+    {
+        excitationFlag = true;
+        startTime = std::chrono::system_clock::now();
+    }
 }
