@@ -10,6 +10,7 @@
 
 #pragma once
 #include "SimpleString.h"
+#include <chrono>
 
 extern double velX;
 
