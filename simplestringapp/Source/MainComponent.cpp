@@ -34,6 +34,7 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     //// Set the paramters ///
     NamedValueSet parameters;
     
+    
     // parameters you'll use to initialise more than one other parameter should be defined here
     double r = 0.0005;
     
