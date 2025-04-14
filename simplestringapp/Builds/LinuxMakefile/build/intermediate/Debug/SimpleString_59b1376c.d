@@ -498,4 +498,4 @@ build/intermediate/Debug/SimpleString_59b1376c.o: \
  /usr/share/juce/modules/juce_osc/osc/juce_OSCBundle.h \
  /usr/share/juce/modules/juce_osc/osc/juce_OSCReceiver.h \
  /usr/share/juce/modules/juce_osc/osc/juce_OSCSender.h \
- ../../Source/SimpleString.h ../../Source/OSCMonitor.h
+ ../../Source/SimpleString.h ../../Source/Globals.h

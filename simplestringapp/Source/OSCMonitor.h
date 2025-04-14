@@ -83,30 +83,44 @@ public:
     //==============================================================================
     void addOSCMessage(const juce::OSCMessage& message, int level = 0)
     {
-        oscLogList.add(getIndentationString(level)
-            + "- osc message, address = '"
-            + message.getAddressPattern().toString()
-            + "', "
-            + juce::String(message.size())
-            + " argument(s)");
+        //oscLogList.add(getIndentationString(level)
+        //    + "- osc message, address = '"
+        //    + message.getAddressPattern().toString()
+        //    + "', "
+        //    + juce::String(message.size())
+        //    + " argument(s)");
 
         if (!message.isEmpty())
         {
-            int counter = 0;
-            for (auto* arg = message.begin(); arg != message.end(); ++arg)
-            {
-                if (counter == 3)
-                {
-                    velX = arg->getFloat32();
-                    if (velX >= 1)
-                    {
-                        mySimpleString->strum();
-                    }
-                
-                }
-                addOSCMessageArgument(*arg, level + 1);
-                counter++;
+            posX = message[1].getFloat32();
+            velX = message[3].getFloat32();
+
+            if (velX>0.7 && (posX < 1.7 && posX>1.2) ){
+                string2->strum();
+                //oscLogList.add("LOOP2");
             }
+            if (velX>0.7 && (posX  >-2.6 && posX<-0.5) ){
+                string1->strum();
+                //oscLogList.add("LOOP1");
+
+            }
+            //stdout::cout<<velX;
+            //int counter = 0;
+            //for (auto* arg = message.begin(); arg != message.end(); ++arg)
+            //{
+            //    if (counter == 3)
+            //    {
+            //        velX = arg->getFloat32();
+            //        if (velX >= 1)
+            //        {
+            //            string1->strum();
+            //            string2->strum();
+            //        }
+            //    
+            //    }
+            //    addOSCMessageArgument(*arg, level + 1);
+            //    counter++;
+            //}
         }
 
         triggerAsyncUpdate();
@@ -243,7 +257,7 @@ public:
 private:
     //==============================================================================
     juce::Label portNumberLabel{ {}, "UDP Port Number: " };
-    juce::Label portNumberField{ {}, "5005" };
+    juce::Label portNumberField{ {}, "9001" };
     juce::TextButton connectButton{ "Connect" };
     juce::TextButton clearButton{ "Clear" };
     juce::Label connectionStatusLabel;

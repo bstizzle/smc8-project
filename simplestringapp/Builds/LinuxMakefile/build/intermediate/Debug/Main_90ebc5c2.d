@@ -499,4 +499,4 @@ build/intermediate/Debug/Main_90ebc5c2.o: ../../Source/Main.cpp \
  /usr/share/juce/modules/juce_osc/osc/juce_OSCReceiver.h \
  /usr/share/juce/modules/juce_osc/osc/juce_OSCSender.h \
  ../../Source/MainComponent.h ../../Source/SimpleString.h \
- ../../Source/OSCMonitor.h
+ ../../Source/Globals.h ../../Source/OSCMonitor.h

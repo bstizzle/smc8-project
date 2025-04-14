@@ -139,6 +139,7 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Globals.cpp"/>
     <ClCompile Include="..\..\Source\SimpleString.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
@@ -1790,6 +1791,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_osc.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Globals.h"/>
     <ClInclude Include="..\..\Source\OSCMonitor.h"/>
     <ClInclude Include="..\..\Source\SimpleString.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
