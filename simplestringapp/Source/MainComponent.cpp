@@ -47,14 +47,27 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     parameters.set ("sigma0", 2);
     parameters.set ("sigma1", 0.005);
     
+
     //// Initialise an instance of the SimpleString class ////
-    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate);
-    
-    parameters.set ("L", 2);
-    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate);
+    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
+    //parameters.set ("L", 3);
+    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
+    //parameters.set ("L", 2);
+    string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
+    //parameters.set ("L", 1);
+    string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
+    //parameters.set ("L", 0.66);
+    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
+    //parameters.set ("L", 0.33);
+    string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
+
 
     addAndMakeVisible (string1.get()); // add the string to the application
     addAndMakeVisible (string2.get()); // add the string to the application
+    addAndMakeVisible (string3.get()); // add the string to the application
+    addAndMakeVisible (string4.get()); // add the string to the application
+    addAndMakeVisible (string5.get()); // add the string to the application
+    addAndMakeVisible (string6.get()); // add the string to the application
 
     // Call resized again as our components need a sample rate before they can get initialised.
     resized();
@@ -78,22 +91,44 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
 
     // only do control stuff out of the buffer (at least work with flags so that control doesn't interfere with the scheme calculation)
 
-    if (string2->shouldExcite())
-        string2->excite();
-    
+        
     if (string1->shouldExcite())
         string1->excite();
+    if (string2->shouldExcite())
+        string2->excite();
+    if (string3->shouldExcite())
+        string3->excite();
+    if (string4->shouldExcite())
+        string4->excite();
+    if (string5->shouldExcite())
+        string5->excite();
+    if (string6->shouldExcite())
+        string6->excite();
+
         
     for (int i = 0; i < bufferToFill.numSamples; ++i)
     {
-        string2->calculateScheme();
-        string2->updateStates();
-        
         string1->calculateScheme();
         string1->updateStates();
-
+        string2->calculateScheme();
+        string2->updateStates();
+        string3->calculateScheme();
+        string3->updateStates();
+        string4->calculateScheme();
+        string4->updateStates();
+        string5->calculateScheme();
+        string5->updateStates();
+        string6->calculateScheme();
+        string6->updateStates();
         
-        output = (string2->getOutput (0.8) + string1->getOutput (0.8))/2; // get output at 0.8L of the string
+        
+        output = (string1->getOutput (0.8) 
+                    + string2->getOutput (0.8)
+                    + string3->getOutput (0.8)
+                    + string4->getOutput (0.8)
+                    + string5->getOutput (0.8)
+                    + string6->getOutput (0.8)
+                )/6; // get output at 0.8L of the string
         
         for (int channel = 0; channel < numChannels; ++channel)
             curChannel[channel][0][i] = limit(output);
@@ -122,6 +157,14 @@ void MainComponent::resized()
     // put the string in the application
     if (string2 != nullptr)
         string2->setBounds (getLocalBounds());
+    if (string3 != nullptr)
+        string3->setBounds (getLocalBounds());
+    if (string4 != nullptr)
+        string4->setBounds (getLocalBounds());
+    if (string5 != nullptr)
+        string5->setBounds (getLocalBounds());
+    if (string6 != nullptr)
+        string6->setBounds (getLocalBounds());
 }
 
 // limiter

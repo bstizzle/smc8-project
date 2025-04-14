@@ -13,7 +13,11 @@
 #include <chrono>
 
 extern double posX;
-extern double velX;
+extern double abs_velX;
 
 extern std::unique_ptr<SimpleString> string1;
 extern std::unique_ptr<SimpleString> string2;
+extern std::unique_ptr<SimpleString> string3;
+extern std::unique_ptr<SimpleString> string4;
+extern std::unique_ptr<SimpleString> string5;
+extern std::unique_ptr<SimpleString> string6;

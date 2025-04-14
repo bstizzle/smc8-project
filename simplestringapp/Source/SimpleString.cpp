@@ -14,7 +14,7 @@
 #include <chrono>
 
 //==============================================================================
-SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
+SimpleString::SimpleString (NamedValueSet& parameters, double k, double freq) : k (k)
 {
     // Initialise member variables using the parameter set
     L = *parameters.getVarPointer ("L");
@@ -26,11 +26,11 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k) : k (k)
     sigma0 = *parameters.getVarPointer ("sigma0");
     sigma1 = *parameters.getVarPointer ("sigma1");
     
+
     // Calculate wave speed (squared)
     cSq = T / (rho * A);
-
-    L = sqrt(cSq) / (2 * 440);
     
+    L = sqrt(cSq)/(freq*2);
     // Calculate stiffness coefficient (squared)
     kappaSq = E * I / (rho * A);
 

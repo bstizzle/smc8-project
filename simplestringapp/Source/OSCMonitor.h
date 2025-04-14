@@ -83,44 +83,45 @@ public:
     //==============================================================================
     void addOSCMessage(const juce::OSCMessage& message, int level = 0)
     {
-        //oscLogList.add(getIndentationString(level)
-        //    + "- osc message, address = '"
-        //    + message.getAddressPattern().toString()
-        //    + "', "
-        //    + juce::String(message.size())
-        //    + " argument(s)");
+        oscLogList.add(getIndentationString(level)
+            + "- osc message, address = '"
+            + message.getAddressPattern().toString()
+            + "', "
+            + juce::String(message.size())
+            + " argument(s)");
 
         if (!message.isEmpty())
         {
             posX = message[1].getFloat32();
-            velX = message[3].getFloat32();
+            abs_velX = std::abs(message[3].getFloat32());
 
-            if (velX>0.7 && (posX < 1.7 && posX>1.2) ){
-                string2->strum();
+
+
+            if (abs_velX>0.3 && (posX >-2 && posX<-1.7) ){
+                string1->strum();
                 //oscLogList.add("LOOP2");
             }
-            if (velX>0.7 && (posX  >-2.6 && posX<-0.5) ){
-                string1->strum();
+            if (abs_velX>0.3 && (posX  >-1.5 && posX<-1.2) ){
+                string2->strum();
                 //oscLogList.add("LOOP1");
-
             }
-            //stdout::cout<<velX;
-            //int counter = 0;
-            //for (auto* arg = message.begin(); arg != message.end(); ++arg)
-            //{
-            //    if (counter == 3)
-            //    {
-            //        velX = arg->getFloat32();
-            //        if (velX >= 1)
-            //        {
-            //            string1->strum();
-            //            string2->strum();
-            //        }
-            //    
-            //    }
-            //    addOSCMessageArgument(*arg, level + 1);
-            //    counter++;
-            //}
+            if (abs_velX>0.3 && (posX > -1 && posX<-0.7) ){
+                string3->strum();
+                //oscLogList.add("LOOP2");
+            }
+
+            if (abs_velX>0.3 && (posX >-0.5 && posX<-.2) ){
+                string4->strum();
+                //oscLogList.add("LOOP2");
+            }
+            if (abs_velX>0.3 && (posX >0 && posX<.3) ){
+                string5->strum();
+                //oscLogList.add("LOOP2");
+            }
+            if (abs_velX>0.3 && (posX >.5 && posX<0.8) ){
+                string6->strum();
+                //oscLogList.add("LOOP2");
+            }
         }
 
         triggerAsyncUpdate();

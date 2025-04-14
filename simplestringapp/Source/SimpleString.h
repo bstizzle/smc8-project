@@ -19,7 +19,7 @@
 class SimpleString  : public juce::Component
 {
 public:
-    SimpleString (NamedValueSet& parameters, double k);
+    SimpleString (NamedValueSet& parameters, double k, double freq);
     ~SimpleString() override;
 
     void paint (juce::Graphics&) override;
