@@ -83,12 +83,12 @@ public:
     //==============================================================================
     void addOSCMessage(const juce::OSCMessage& message, int level = 0)
     {
-        oscLogList.add(getIndentationString(level)
-            + "- osc message, address = '"
-            + message.getAddressPattern().toString()
-            + "', "
-            + juce::String(message.size())
-            + " argument(s)");
+        //oscLogList.add(getIndentationString(level)
+        //    + "- osc message, address = '"
+        //    + message.getAddressPattern().toString()
+        //    + "', "
+        //    + juce::String(message.size())
+        //    + " argument(s)");
 
         if (!message.isEmpty())
         {
@@ -96,14 +96,12 @@ public:
             velX = message[3].getFloat32();
 
             if (velX>0.7 && (posX < 1.7 && posX>1.2) ){
-                std::cout<<velX;
                 string2->strum();
-                oscLogList.add("LOOP2");
+                //oscLogList.add("LOOP2");
             }
             if (velX>0.7 && (posX  >-2.6 && posX<-0.5) ){
-                std::cout<<velX;
                 string1->strum();
-                oscLogList.add("LOOP1");
+                //oscLogList.add("LOOP1");
 
             }
             //stdout::cout<<velX;

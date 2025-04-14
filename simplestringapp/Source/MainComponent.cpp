@@ -74,40 +74,30 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     float* const channelData2 = numChannels > 1 ? bufferToFill.buffer->getWritePointer (1, bufferToFill.startSample) : nullptr;
 
     float output = 0.0;
-
     std::vector<float* const*> curChannel {&channelData1, &channelData2};
-    
 
+    // only do control stuff out of the buffer (at least work with flags so that control doesn't interfere with the scheme calculation)
 
-    //string 2
     if (string2->shouldExcite())
         string2->excite();
+    
+    if (string1->shouldExcite())
+        string1->excite();
         
     for (int i = 0; i < bufferToFill.numSamples; ++i)
     {
         string2->calculateScheme();
         string2->updateStates();
         
-        output = string2->getOutput (0.8); // get output at 0.8L of the string
-        for (int channel = 0; channel < numChannels; ++channel)
-            curChannel[channel][0][i] = limit(output);
-    }
-
-    //string1
-    // only do control stuff out of the buffer (at least work with flags so that control doesn't interfere with the scheme calculation)
-        if (string1->shouldExcite())
-        string1->excite();
-        
-    for (int i = 0; i < bufferToFill.numSamples; ++i)
-    {
         string1->calculateScheme();
         string1->updateStates();
+
         
-        output = string1->getOutput (0.8); // get output at 0.8L of the string
+        output = (string2->getOutput (0.8) + string1->getOutput (0.8))/2; // get output at 0.8L of the string
+        
         for (int channel = 0; channel < numChannels; ++channel)
             curChannel[channel][0][i] = limit(output);
     }
-
     
 }
 
