@@ -95,7 +95,7 @@ public:
             posX = message[1].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
 
-            if (posX > -2 && posX < -1.7)
+            if (posX > -1.9 && posX < -1.8)
             {
                 //open = 82.41 Hz | 10th fret = 146.83 Hz 
                 tune1 = (message[2].getFloat32() - (-2.7)) * (80.0 - 150.0) / ((-9.0) - (-2.7)) + 150.0;
@@ -106,7 +106,7 @@ public:
                     //oscLogList.add("LOOP2");
                 }
             }
-            if (posX > -1.5 && posX < -1.2)
+            if (posX > -1.4 && posX < -1.3)
             {
                 //open = 110.0 Hz | 10th fret = 196.0 Hz 
                 tune2 = (message[2].getFloat32() - (-2.7)) * (105.0 - 200.0) / ((-9.0) - (-2.7)) + 200.0;
@@ -117,7 +117,7 @@ public:
                     //oscLogList.add("LOOP1");
                 }
             }
-            if (posX > -1 && posX < -0.7)
+            if (posX > -.9 && posX < -.8)
             {
                 //open = 146.8 Hz | 10th fret = 261.63 Hz 
                 tune3 = (message[2].getFloat32() - (-2.7)) * (140.0 - 265.0) / ((-9.0) - (-2.7)) + 265.0;
@@ -128,7 +128,7 @@ public:
                     //oscLogList.add("LOOP2");
                 }
             }
-            if (posX > -0.5 && posX < -.2)
+            if (posX > -.4 && posX < -.3)
             {
                 //open = 196.0 Hz | 10th fret = 349.2 Hz 
                 tune4 = (message[2].getFloat32() - (-2.7)) * (191.0 - 354.0) / ((-9.0) - (-2.7)) + 354.0;
@@ -139,7 +139,7 @@ public:
                     //oscLogList.add("LOOP2");
                 }
             }
-            if (posX > 0 && posX < .3)
+            if (posX > .1 && posX < .2)
             {
                 //open = 246.9 Hz | 10th fret = 440.0 Hz 
                 tune5 = (message[2].getFloat32() - (-2.7)) * (250.0 - 449.0) / ((-9.0) - (-2.7)) + 449.0;
@@ -150,7 +150,7 @@ public:
                     //oscLogList.add("LOOP2");
                 }
             }
-            if (posX > .5 && posX < 0.8)
+            if (posX > .6 && posX < 0.7)
             {
                 //open = 329.6 Hz | 10th fret = 587.3 Hz 
                 tune6 = (message[2].getFloat32() - (-2.7)) * (324.0 - 592.0) / ((-9.0) - (-2.7)) + 592.0;
