@@ -12,7 +12,7 @@
 #include "SimpleString.h"
 #include <chrono>
 
-extern double posX;
+extern float posX;
 extern double abs_velX;
 
 extern std::unique_ptr<SimpleString> string1;
