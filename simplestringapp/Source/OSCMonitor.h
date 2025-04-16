@@ -98,7 +98,7 @@ public:
             if (posX > -1.9 && posX < -1.8)
             {
                 //open = 82.41 Hz | 10th fret = 146.83 Hz 
-                tune1 = (message[2].getFloat32() - (-2.7)) * (80.0 - 150.0) / ((-9.0) - (-2.7)) + 150.0;
+                tune1 = (message[2].getFloat32() - (-2.7)) * (80.0 - 146.83) / ((-9.0) - (-2.7)) + 146.83;
                 //oscLogList.add(juce::String(tune1));
                 string1->tune(tune1);
                 if (abs_velX > 0.3) {
@@ -109,7 +109,7 @@ public:
             if (posX > -1.4 && posX < -1.3)
             {
                 //open = 110.0 Hz | 10th fret = 196.0 Hz 
-                tune2 = (message[2].getFloat32() - (-2.7)) * (105.0 - 200.0) / ((-9.0) - (-2.7)) + 200.0;
+                tune2 = (message[2].getFloat32() - (-2.7)) * (105.0 - 196.0) / ((-9.0) - (-2.7)) + 196.0;
                 //oscLogList.add(juce::String(tune1));
                 string2->tune(tune2);
                 if (abs_velX > 0.3) {
@@ -120,7 +120,7 @@ public:
             if (posX > -.9 && posX < -.8)
             {
                 //open = 146.8 Hz | 10th fret = 261.63 Hz 
-                tune3 = (message[2].getFloat32() - (-2.7)) * (140.0 - 265.0) / ((-9.0) - (-2.7)) + 265.0;
+                tune3 = (message[2].getFloat32() - (-2.7)) * (140.0 - 261.63) / ((-9.0) - (-2.7)) + 261.63;
                 //oscLogList.add(juce::String(tune1));
                 string3->tune(tune3);
                 if (abs_velX > 0.3) {
@@ -131,7 +131,7 @@ public:
             if (posX > -.4 && posX < -.3)
             {
                 //open = 196.0 Hz | 10th fret = 349.2 Hz 
-                tune4 = (message[2].getFloat32() - (-2.7)) * (191.0 - 354.0) / ((-9.0) - (-2.7)) + 354.0;
+                tune4 = (message[2].getFloat32() - (-2.7)) * (191.0 - 349.2) / ((-9.0) - (-2.7)) + 349.2;
                 //oscLogList.add(juce::String(tune1));
                 string4->tune(tune4);
                 if (abs_velX > 0.3) {
@@ -142,7 +142,7 @@ public:
             if (posX > .1 && posX < .2)
             {
                 //open = 246.9 Hz | 10th fret = 440.0 Hz 
-                tune5 = (message[2].getFloat32() - (-2.7)) * (250.0 - 449.0) / ((-9.0) - (-2.7)) + 449.0;
+                tune5 = (message[2].getFloat32() - (-2.7)) * (250.0 - 440.0) / ((-9.0) - (-2.7)) + 440.0;
                 //oscLogList.add(juce::String(tune1));
                 string5->tune(tune5);
                 if (abs_velX > 0.3) {
@@ -153,7 +153,7 @@ public:
             if (posX > .6 && posX < 0.7)
             {
                 //open = 329.6 Hz | 10th fret = 587.3 Hz 
-                tune6 = (message[2].getFloat32() - (-2.7)) * (324.0 - 592.0) / ((-9.0) - (-2.7)) + 592.0;
+                tune6 = (message[2].getFloat32() - (-2.7)) * (324.0 - 587.3) / ((-9.0) - (-2.7)) + 587.3;
                 //oscLogList.add(juce::String(tune1));
                 string6->tune(tune6);
                 if (abs_velX > 0.3) {
