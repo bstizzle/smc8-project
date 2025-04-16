@@ -95,32 +95,71 @@ public:
             posX = message[1].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
 
-            double min_vel = 0.0;
-
-            if (abs_velX>min_vel && (posX >-1.9 && posX<-1.8) ){
-                string1->strum();
-                //oscLogList.add("LOOP2");
+            if (posX > -1.9 && posX < -1.8)
+            {
+                //open = 82.41 Hz | 10th fret = 146.83 Hz 
+                tune1 = (message[2].getFloat32() - (-2.7)) * (80.0 - 150.0) / ((-9.0) - (-2.7)) + 150.0;
+                //oscLogList.add(juce::String(tune1));
+                string1->tune(tune1);
+                if (abs_velX > 0.3) {
+                    string1->strum();
+                    //oscLogList.add("LOOP2");
+                }
             }
-            if (abs_velX>min_vel && (posX  >-1.4 && posX<-1.3) ){
-                string2->strum();
-                //oscLogList.add("LOOP1");
+            if (posX > -1.4 && posX < -1.3)
+            {
+                //open = 110.0 Hz | 10th fret = 196.0 Hz 
+                tune2 = (message[2].getFloat32() - (-2.7)) * (105.0 - 200.0) / ((-9.0) - (-2.7)) + 200.0;
+                //oscLogList.add(juce::String(tune1));
+                string2->tune(tune2);
+                if (abs_velX > 0.3) {
+                    string2->strum();
+                    //oscLogList.add("LOOP1");
+                }
             }
-            if (abs_velX>min_vel && (posX > -0.9 && posX<-0.8) ){
-                string3->strum();
-                //oscLogList.add("LOOP2");
+            if (posX > -.9 && posX < -.8)
+            {
+                //open = 146.8 Hz | 10th fret = 261.63 Hz 
+                tune3 = (message[2].getFloat32() - (-2.7)) * (140.0 - 265.0) / ((-9.0) - (-2.7)) + 265.0;
+                //oscLogList.add(juce::String(tune1));
+                string3->tune(tune3);
+                if (abs_velX > 0.3) {
+                    string3->strum();
+                    //oscLogList.add("LOOP2");
+                }
             }
-
-            if (abs_velX>min_vel && (posX >-0.4 && posX<-.3) ){
-                string4->strum();
-                //oscLogList.add("LOOP2");
+            if (posX > -.4 && posX < -.3)
+            {
+                //open = 196.0 Hz | 10th fret = 349.2 Hz 
+                tune4 = (message[2].getFloat32() - (-2.7)) * (191.0 - 354.0) / ((-9.0) - (-2.7)) + 354.0;
+                //oscLogList.add(juce::String(tune1));
+                string4->tune(tune4);
+                if (abs_velX > 0.3) {
+                    string4->strum();
+                    //oscLogList.add("LOOP2");
+                }
             }
-            if (abs_velX>min_vel && (posX >0.1 && posX<.2) ){
-                string5->strum();
-                //oscLogList.add("LOOP2");
+            if (posX > .1 && posX < .2)
+            {
+                //open = 246.9 Hz | 10th fret = 440.0 Hz 
+                tune5 = (message[2].getFloat32() - (-2.7)) * (250.0 - 449.0) / ((-9.0) - (-2.7)) + 449.0;
+                //oscLogList.add(juce::String(tune1));
+                string5->tune(tune5);
+                if (abs_velX > 0.3) {
+                    string5->strum();
+                    //oscLogList.add("LOOP2");
+                }
             }
-            if (abs_velX>min_vel && (posX >.6 && posX<0.7) ){
-                string6->strum();
-                //oscLogList.add("LOOP2");
+            if (posX > .6 && posX < 0.7)
+            {
+                //open = 329.6 Hz | 10th fret = 587.3 Hz 
+                tune6 = (message[2].getFloat32() - (-2.7)) * (324.0 - 592.0) / ((-9.0) - (-2.7)) + 592.0;
+                //oscLogList.add(juce::String(tune1));
+                string6->tune(tune6);
+                if (abs_velX > 0.3) {
+                    string6->strum();
+                    //oscLogList.add("LOOP2");
+                }
             }
         }
 

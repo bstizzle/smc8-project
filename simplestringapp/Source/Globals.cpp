@@ -21,3 +21,11 @@ std::unique_ptr<SimpleString> string3;
 std::unique_ptr<SimpleString> string4;
 std::unique_ptr<SimpleString> string5;
 std::unique_ptr<SimpleString> string6;
+
+double tune1;
+double tune1;
+double tune2;
+double tune3;
+double tune4;
+double tune5;
+double tune6;
