@@ -157,26 +157,50 @@ void MainComponent::releaseResources()
 
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
+
 {
 }
 
+//void MainComponent::resized()
+//{
+//    // put the string in the application
+//    if (string1 != nullptr)
+//        string1->setBounds (getLocalBounds());
+//    // put the string in the application
+//    if (string2 != nullptr)
+//        string2->setBounds (getLocalBounds());
+//    if (string3 != nullptr)
+//        string3->setBounds (getLocalBounds());
+//    if (string4 != nullptr)
+//        string4->setBounds (getLocalBounds());
+//    if (string5 != nullptr)
+//        string5->setBounds (getLocalBounds());
+//    if (string6 != nullptr)
+//        string6->setBounds (getLocalBounds());
+//}
+
+
 void MainComponent::resized()
 {
-    // put the string in the application
+    auto bounds = getLocalBounds();
+    int numStrings = 6;
+    int stringHeight = bounds.getHeight() / numStrings;
+
     if (string1 != nullptr)
-        string1->setBounds (getLocalBounds());
-    // put the string in the application
+        string1->setBounds(bounds.removeFromTop(stringHeight));
     if (string2 != nullptr)
-        string2->setBounds (getLocalBounds());
+        string2->setBounds(bounds.removeFromTop(stringHeight));
     if (string3 != nullptr)
-        string3->setBounds (getLocalBounds());
+        string3->setBounds(bounds.removeFromTop(stringHeight));
     if (string4 != nullptr)
-        string4->setBounds (getLocalBounds());
+        string4->setBounds(bounds.removeFromTop(stringHeight));
     if (string5 != nullptr)
-        string5->setBounds (getLocalBounds());
+        string5->setBounds(bounds.removeFromTop(stringHeight));
     if (string6 != nullptr)
-        string6->setBounds (getLocalBounds());
+        string6->setBounds(bounds.removeFromTop(stringHeight));
 }
+
+
 
 // limiter
 double MainComponent::limit (double val)
