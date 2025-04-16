@@ -70,8 +70,9 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     addAndMakeVisible (string6.get()); // add the string to the application
 
     // Call resized again as our components need a sample rate before they can get initialised.
-    resized();
     
+    resized();
+
     startTimerHz (15); // start the timer (15 Hz is a nice tradeoff between CPU usage and update speed)
     
 }
@@ -146,28 +147,21 @@ void MainComponent::releaseResources()
 
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
-
 {
+    //g.fillAll(juce::Colours::black); // or whatever your background is
+    // Draw the live OSC point
+    g.setColour(juce::Colours::red);
+    float radius = 5.0f;
+
+    float visual_mapped_x = juce::jmap(0.5f, 0.0f, 1.0f, 0.0f, (float)getWidth());
+    float visual_mapped_y = juce::jmap(posX, -2.2f, 1.0f, 0.0f, (float)getHeight());
+
+    //visual_mapped_x = 400;
+    //visual_mapped_y = 300;
+
+    g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
+    g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
 }
-
-//void MainComponent::resized()
-//{
-//    // put the string in the application
-//    if (string1 != nullptr)
-//        string1->setBounds (getLocalBounds());
-//    // put the string in the application
-//    if (string2 != nullptr)
-//        string2->setBounds (getLocalBounds());
-//    if (string3 != nullptr)
-//        string3->setBounds (getLocalBounds());
-//    if (string4 != nullptr)
-//        string4->setBounds (getLocalBounds());
-//    if (string5 != nullptr)
-//        string5->setBounds (getLocalBounds());
-//    if (string6 != nullptr)
-//        string6->setBounds (getLocalBounds());
-//}
-
 
 void MainComponent::resized()
 {
@@ -187,6 +181,8 @@ void MainComponent::resized()
         string5->setBounds(bounds.removeFromTop(stringHeight));
     if (string6 != nullptr)
         string6->setBounds(bounds.removeFromTop(stringHeight));
+
+
 }
 
 

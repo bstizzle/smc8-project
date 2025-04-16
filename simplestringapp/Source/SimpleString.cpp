@@ -93,8 +93,8 @@ SimpleString::~SimpleString()
 void SimpleString::paint (juce::Graphics& g)
 {
     // clear the background
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-    
+    //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+
     // choose your favourite colour
     g.setColour(Colours::cyan);
     
