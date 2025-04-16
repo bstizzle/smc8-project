@@ -95,30 +95,30 @@ public:
             posX = message[1].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
 
+            double min_vel = 0.0;
 
-
-            if (abs_velX>0.3 && (posX >-2 && posX<-1.7) ){
+            if (abs_velX>min_vel && (posX >-1.9 && posX<-1.8) ){
                 string1->strum();
                 //oscLogList.add("LOOP2");
             }
-            if (abs_velX>0.3 && (posX  >-1.5 && posX<-1.2) ){
+            if (abs_velX>min_vel && (posX  >-1.4 && posX<-1.3) ){
                 string2->strum();
                 //oscLogList.add("LOOP1");
             }
-            if (abs_velX>0.3 && (posX > -1 && posX<-0.7) ){
+            if (abs_velX>min_vel && (posX > -0.9 && posX<-0.8) ){
                 string3->strum();
                 //oscLogList.add("LOOP2");
             }
 
-            if (abs_velX>0.3 && (posX >-0.5 && posX<-.2) ){
+            if (abs_velX>min_vel && (posX >-0.4 && posX<-.3) ){
                 string4->strum();
                 //oscLogList.add("LOOP2");
             }
-            if (abs_velX>0.3 && (posX >0 && posX<.3) ){
+            if (abs_velX>min_vel && (posX >0.1 && posX<.2) ){
                 string5->strum();
                 //oscLogList.add("LOOP2");
             }
-            if (abs_velX>0.3 && (posX >.5 && posX<0.8) ){
+            if (abs_velX>min_vel && (posX >.6 && posX<0.7) ){
                 string6->strum();
                 //oscLogList.add("LOOP2");
             }
