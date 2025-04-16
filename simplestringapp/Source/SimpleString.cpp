@@ -16,6 +16,9 @@
 //==============================================================================
 SimpleString::SimpleString (NamedValueSet& parameters, double k, double freq) : k (k)
 {
+    //tuning parameter
+    pitch = 1.0;
+
     // Initialise member variables using the parameter set
     L = *parameters.getVarPointer ("L");
     rho = *parameters.getVarPointer ("rho");
@@ -202,4 +205,19 @@ void SimpleString::strum()
         excitationFlag = true;
         startTime = std::chrono::system_clock::now();
     }
+}
+
+void SimpleString::tune(double freq)
+{
+    L = sqrt(cSq) / (freq * 2);
+    h = L / N; // recalculate h
+    //recalculate lambda
+    double tunedLambda = cSq * k * k / (h * h);
+
+    B0 = 2.0 - 2.0 * tunedLambda - 6.0 * muSq - 2.0 * S1; // u_l^n
+    Bss = 2.0 - 2.0 * tunedLambda - 5.0 * muSq - 2.0 * S1;
+    B1 = tunedLambda + 4.0 * muSq + S1;
+    B0 *= Adiv;
+    Bss *= Adiv;
+    B1 *= Adiv;
 }

@@ -21,3 +21,10 @@ extern std::unique_ptr<SimpleString> string3;
 extern std::unique_ptr<SimpleString> string4;
 extern std::unique_ptr<SimpleString> string5;
 extern std::unique_ptr<SimpleString> string6;
+
+extern double tune1;
+extern double tune2;
+extern double tune3;
+extern double tune4;
+extern double tune5;
+extern double tune6;
