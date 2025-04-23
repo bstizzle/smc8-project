@@ -13,6 +13,7 @@
 #include <chrono>
 
 float posX;
+float posZ;
 double abs_velX;
 
 std::unique_ptr<SimpleString> string1;
