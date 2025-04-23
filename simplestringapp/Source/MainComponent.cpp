@@ -49,17 +49,28 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     
 
     //// Initialise an instance of the SimpleString class ////
-    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
+    //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
+    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
     //parameters.set ("L", 3);
-    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
+
+    //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
+    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
     //parameters.set ("L", 2);
-    string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
+
+    //string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
+    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
     //parameters.set ("L", 1);
-    string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
+
+    //string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
+    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
     //parameters.set ("L", 0.66);
-    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
+
+    //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
+    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
     //parameters.set ("L", 0.33);
-    string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
+
+    //string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
+    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
 
 
     addAndMakeVisible (string1.get()); // add the string to the application
@@ -70,8 +81,9 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     addAndMakeVisible (string6.get()); // add the string to the application
 
     // Call resized again as our components need a sample rate before they can get initialised.
-    resized();
     
+    resized();
+
     startTimerHz (15); // start the timer (15 Hz is a nice tradeoff between CPU usage and update speed)
     
 }
@@ -147,25 +159,44 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {
+    //g.fillAll(juce::Colours::black); // or whatever your background is
+    // Draw the live OSC point
+    g.setColour(juce::Colours::red);
+    float radius = 5.0f;
+
+    float visual_mapped_x = juce::jmap(0.5f, 0.0f, 1.0f, 0.0f, (float)getWidth());
+    float visual_mapped_y = juce::jmap(posX, -2.2f, 1.0f, 0.0f, (float)getHeight());
+
+    //visual_mapped_x = 400;
+    //visual_mapped_y = 300;
+
+    g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
+    g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
 }
 
 void MainComponent::resized()
 {
-    // put the string in the application
+    auto bounds = getLocalBounds();
+    int numStrings = 6;
+    int stringHeight = bounds.getHeight() / numStrings;
+
     if (string1 != nullptr)
-        string1->setBounds (getLocalBounds());
-    // put the string in the application
+        string1->setBounds(bounds.removeFromTop(stringHeight));
     if (string2 != nullptr)
-        string2->setBounds (getLocalBounds());
+        string2->setBounds(bounds.removeFromTop(stringHeight));
     if (string3 != nullptr)
-        string3->setBounds (getLocalBounds());
+        string3->setBounds(bounds.removeFromTop(stringHeight));
     if (string4 != nullptr)
-        string4->setBounds (getLocalBounds());
+        string4->setBounds(bounds.removeFromTop(stringHeight));
     if (string5 != nullptr)
-        string5->setBounds (getLocalBounds());
+        string5->setBounds(bounds.removeFromTop(stringHeight));
     if (string6 != nullptr)
-        string6->setBounds (getLocalBounds());
+        string6->setBounds(bounds.removeFromTop(stringHeight));
+
+
 }
+
+
 
 // limiter
 double MainComponent::limit (double val)

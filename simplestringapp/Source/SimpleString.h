@@ -42,6 +42,8 @@ public:
     void mouseDown (const MouseEvent& e) override;
 
     void strum();
+
+    void tune(double freq);
     
     bool shouldExcite() { return excitationFlag; };
     
@@ -49,6 +51,8 @@ private:
     
     // Model parameters
     double L, rho, A, T, E, I, cSq, kappaSq, sigma0, sigma1, lambdaSq, muSq, h, k;
+    double stabilityTerm;
+    double pitch;
     
     // Number of intervals (N+1 is number of points including boundaries)
     int N;
