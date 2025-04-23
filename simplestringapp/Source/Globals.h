@@ -15,6 +15,8 @@
 extern float posX;
 extern float posZ;
 
+extern float pluckWidth;
+
 extern double abs_velX;
 
 extern std::unique_ptr<SimpleString> string1;

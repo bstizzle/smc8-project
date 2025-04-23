@@ -100,14 +100,49 @@ public:
             {
                 if(posZ < -5.5)
                 {
-                    //open = 82.41 Hz | 10th fret = 146.83 Hz 
-                    tune1 = (message[2].getFloat32() - (-5.5)) * (80.0 - 146.83) / ((-8.9) - (-2.7)) + 146.83;
-                    //oscLogList.add(juce::String(tune1));
-                    string1->tune(tune1);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune1 = 82.41;
+                                    string1->tune(tune1);
+                                }
+                                else
+                                {
+                                    tune1 = 87.3;
+                                    string1->tune(tune1);
+                                }
+                            }
+                            else
+                            {
+                                tune1 = 92.49;
+                                string1->tune(tune1);
+                            }
+                        }
+                        else
+                        {
+                            tune1 = 97.99;
+                            string1->tune(tune1);
+                        }
+                    }
+                    else
+                    {
+                        tune1 = 103.83;
+                        string1->tune(tune1);
+                        //open = 82.41 Hz | 10th fret = 146.83 Hz 
+                        //tune1 = (message[2].getFloat32() - (-5.5)) * (80.0 - 146.83) / ((-8.9) - (-2.7)) + 146.83;
+                        //oscLogList.add(juce::String(tune1));
+                        //string1->tune(tune1);
+                    }
                 }
-                if(posZ > -5.5 && posZ < -4.0)
+                if(posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string1->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -117,14 +152,49 @@ public:
             {
                 if (posZ < -5.5)
                 {
-                    //open = 110.0 Hz | 10th fret = 196.0 Hz 
-                    tune2 = (message[2].getFloat32() - (-5.5)) * (105.0 - 196.0) / ((-8.9) - (-5.5)) + 196.0;
-                    //oscLogList.add(juce::String(tune1));
-                    string2->tune(tune2);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune2 = 110.0;
+                                    string2->tune(tune2);
+                                }
+                                else
+                                {
+                                    tune2 = 116.54;
+                                    string2->tune(tune2);
+                                }
+                            }
+                            else
+                            {
+                                tune2 = 123.47;
+                                string2->tune(tune2);
+                            }
+                        }
+                        else
+                        {
+                            tune2 = 130.81;
+                            string2->tune(tune2);
+                        }
+                    }
+                    else
+                    {
+                        tune2 = 138.59;
+                        string2->tune(tune2);
+                        //open = 110.0 Hz | 10th fret = 196.0 Hz 
+                        //tune2 = (message[2].getFloat32() - (-5.5)) * (105.0 - 196.0) / ((-8.9) - (-5.5)) + 196.0;
+                        //oscLogList.add(juce::String(tune1));
+                        //string2->tune(tune2);
+                    }
                 }
-                if (posZ > -5.5 && posZ < -4.0)
+                if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string2->strum();
                         //oscLogList.add("LOOP1");
                     }
@@ -134,14 +204,49 @@ public:
             {
                 if (posZ < -5.5)
                 {
-                    //open = 146.8 Hz | 10th fret = 261.63 Hz 
-                    tune3 = (message[2].getFloat32() - (-5.5)) * (140.0 - 261.63) / ((-8.9) - (-5.5)) + 261.63;
-                    //oscLogList.add(juce::String(tune1));
-                    string3->tune(tune3);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune3 = 146.83;
+                                    string3->tune(tune3);
+                                }
+                                else
+                                {
+                                    tune3 = 155.56;
+                                    string3->tune(tune3);
+                                }
+                            }
+                            else
+                            {
+                                tune3 = 164.81;
+                                string3->tune(tune3);
+                            }
+                        }
+                        else
+                        {
+                            tune3 = 174.61;
+                            string3->tune(tune3);
+                        }
+                    }
+                    else
+                    {
+                        tune3 = 185.0;
+                        string3->tune(tune3);
+                        //open = 146.8 Hz | 10th fret = 261.63 Hz 
+                        //tune3 = (message[2].getFloat32() - (-5.5)) * (140.0 - 261.63) / ((-8.9) - (-5.5)) + 261.63;
+                        //oscLogList.add(juce::String(tune1));
+                        //string3->tune(tune3);
+                    }
                 }
-                if (posZ > -5.5 && posZ < -4.0)
+                if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string3->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -151,14 +256,49 @@ public:
             {
                 if (posZ < -5.5)
                 {
-                    //open = 196.0 Hz | 10th fret = 349.2 Hz 
-                    tune4 = (message[2].getFloat32() - (-5.5)) * (191.0 - 349.2) / ((-8.9) - (-5.5)) + 349.2;
-                    //oscLogList.add(juce::String(tune1));
-                    string4->tune(tune4);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune4 = 196.0;
+                                    string4->tune(tune4);
+                                }
+                                else
+                                {
+                                    tune4 = 207.65;
+                                    string4->tune(tune4);
+                                }
+                            }
+                            else
+                            {
+                                tune4 = 220.0;
+                                string4->tune(tune4);
+                            }
+                        }
+                        else
+                        {
+                            tune4 = 233.08;
+                            string4->tune(tune4);
+                        }
+                    }
+                    else
+                    {
+                        tune4 = 246.94;
+                        string4->tune(tune4);
+                        //open = 196.0 Hz | 10th fret = 349.2 Hz 
+                        //tune4 = (message[2].getFloat32() - (-5.5)) * (191.0 - 349.2) / ((-8.9) - (-5.5)) + 349.2;
+                        //oscLogList.add(juce::String(tune1));
+                        //string4->tune(tune4);
+                    }
                 }
-                if (posZ > -5.5 && posZ < -4.0)
+                if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string4->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -168,14 +308,49 @@ public:
             {
                 if (posZ < -5.5)
                 {
-                    //open = 246.9 Hz | 10th fret = 440.0 Hz 
-                    tune5 = (message[2].getFloat32() - (-5.5)) * (250.0 - 440.0) / ((-8.9) - (-5.5)) + 440.0;
-                    //oscLogList.add(juce::String(tune1));
-                    string5->tune(tune5);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune5 = 246.94;
+                                    string5->tune(tune5);
+                                }
+                                else
+                                {
+                                    tune5 = 261.63;
+                                    string5->tune(tune5);
+                                }
+                            }
+                            else
+                            {
+                                tune5 = 277.18;
+                                string5->tune(tune5);
+                            }
+                        }
+                        else
+                        {
+                            tune5 = 293.66;
+                            string5->tune(tune5);
+                        }
+                    }
+                    else
+                    {
+                        tune5 = 311.13;
+                        string5->tune(tune5);
+                        //open = 246.9 Hz | 10th fret = 440.0 Hz 
+                        //tune5 = (message[2].getFloat32() - (-5.5)) * (250.0 - 440.0) / ((-8.9) - (-5.5)) + 440.0;
+                        //oscLogList.add(juce::String(tune1));
+                        //string5->tune(tune5);
+                    }
                 }
-                if (posZ > -5.5 && posZ < -4.0)
+                if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string5->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -185,14 +360,49 @@ public:
             {
                 if (posZ < -5.5)
                 {
-                    //open = 329.6 Hz | 10th fret = 587.3 Hz 
-                    tune6 = (message[2].getFloat32() - (-5.5)) * (324.0 - 587.3) / ((-8.9) - (-5.5)) + 587.3;
-                    //oscLogList.add(juce::String(tune1));
-                    string6->tune(tune6);
+                    if (posZ < -6.18)
+                    {
+                        if (posZ < -6.86)
+                        {
+                            if (posZ < -7.54)
+                            {
+                                if (posZ < -8.22)
+                                {
+                                    tune6 = 329.6;
+                                    string6->tune(tune6);
+                                }
+                                else
+                                {
+                                    tune6 = 349.2;
+                                    string6->tune(tune6);
+                                }
+                            }
+                            else
+                            {
+                                tune6 = 369.99;
+                                string6->tune(tune6);
+                            }
+                        }
+                        else
+                        {
+                            tune6 = 392.0;
+                            string6->tune(tune6);
+                        }
+                    }
+                    else
+                    {
+                        tune6 = 415.3;
+                        string6->tune(tune6);
+                        //open = 329.6 Hz | 10th fret = 587.3 Hz 
+                        //tune6 = (message[2].getFloat32() - (-5.5)) * (324.0 - 587.3) / ((-8.9) - (-5.5)) + 587.3;
+                        //oscLogList.add(juce::String(tune1));
+                        //string6->tune(tune6);
+                    }
                 }
-                if (posZ > -5.5 && posZ < -4.0)
+                if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
+                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string6->strum();
                         //oscLogList.add("LOOP2");
                     }

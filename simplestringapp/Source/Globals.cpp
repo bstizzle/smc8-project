@@ -16,6 +16,8 @@ float posX;
 float posZ;
 double abs_velX;
 
+float pluckWidth;
+
 std::unique_ptr<SimpleString> string1;
 std::unique_ptr<SimpleString> string2;
 std::unique_ptr<SimpleString> string3;
