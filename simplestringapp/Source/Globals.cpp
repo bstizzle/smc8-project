@@ -10,11 +10,20 @@
 
 #include "Globals.h"
 #include "SimpleString.h"
+#include "BodyManager.h"
 #include <chrono>
+
+
+
+
 
 float posX;
 float posZ;
 double abs_velX;
+//int nbrBodies=0;
+//int lowest_id=1;
+BodyManager bodies_dict;
+
 
 std::unique_ptr<SimpleString> string1;
 std::unique_ptr<SimpleString> string2;

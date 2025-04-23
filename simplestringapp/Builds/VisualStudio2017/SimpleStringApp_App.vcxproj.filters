@@ -409,6 +409,9 @@
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>SimpleStringApp\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\BodyManager.cpp">
+      <Filter>SimpleStringApp\Source</Filter>
+    </ClCompile>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <Filter>JUCE Modules\juce_audio_basics\buffers</Filter>
     </ClCompile>
@@ -2212,6 +2215,9 @@
       <Filter>SimpleStringApp\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
+      <Filter>SimpleStringApp\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BodyManager.h">
       <Filter>SimpleStringApp\Source</Filter>
     </ClInclude>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">

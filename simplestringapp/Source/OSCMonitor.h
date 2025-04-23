@@ -91,10 +91,26 @@ public:
             + " argument(s)");
 
         if (!message.isEmpty())
-        {
+        {   
+            //nbrBodies = message[9].getInt32();
             posX = message[1].getFloat32();
             posZ = message[2].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
+            bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
+            int detectedBodies = message[9].getInt32();
+            oscLogList.add(juce::String(detectedBodies));
+            oscLogList.add(juce::String(nbrBodies));
+            oscLogList.add(juce::String(lowest_id));
+
+            //can't be done like this because the missing id migth not be the lowest one
+            //if (detectedBodies<nbrBodies)
+            //{
+            //    for (int i = lowest_id; i < lowest_id+(nbrBodies-detectedBodies); i++) {
+            //        bodies_dict.removeBody(i);
+            //      }
+            //    lowest_id= lowest_id+(nbrBodies-detectedBodies);
+            //}
+            //nbrBodies=detectedBodies;
 
             if (posX > -1.9 && posX < -1.8)
             {
@@ -464,6 +480,5 @@ private:
         connectionStatusLabel.setColour(juce::Label::textColourId, textColour);
         connectionStatusLabel.setJustificationType(juce::Justification::centredRight);
     }
-
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainContentComponent)
 };

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="e0kyNZ" name="SimpleStringApp" projectType="guiapp" useAppConfig="0"
-              displaySplashScreen="1" jucerFormatVersion="1">
+              displaySplashScreen="1" jucerFormatVersion="1" cppLanguageStandard="17">
   <MAINGROUP id="AgxLqn" name="SimpleStringApp">
     <GROUP id="{0186A2E4-C9B7-B38A-373D-CE2196659030}" name="Source">
       <FILE id="UaQp5m" name="Globals.cpp" compile="1" resource="0" file="Source/Globals.cpp"/>
@@ -14,6 +14,8 @@
       <FILE id="XPYA0L" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="ZgQUzY" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
+      <FILE id="DxOCU3" name="BodyManager.cpp" compile="1" resource="0" file="Source/BodyManager.cpp"/>
+      <FILE id="HZMAB8" name="BodyManager.h" compile="0" resource="0" file="Source/BodyManager.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>

@@ -10,12 +10,17 @@
 
 #pragma once
 #include "SimpleString.h"
+#include "BodyManager.h"
 #include <chrono>
+
 
 extern float posX;
 extern float posZ;
-
 extern double abs_velX;
+//extern int nbrBodies;
+//extern int lowest_id;
+
+extern BodyManager bodies_dict;
 
 extern std::unique_ptr<SimpleString> string1;
 extern std::unique_ptr<SimpleString> string2;
