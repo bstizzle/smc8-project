@@ -76,8 +76,8 @@ int main(int argc, char **argv) {
     // Create ZED Bodies
     Camera zed;
     InitParameters init_parameters;
-    init_parameters.camera_resolution = RESOLUTION::HD1080;
-    init_parameters.camera_fps = 60;
+    init_parameters.camera_resolution = RESOLUTION::SVGA;
+    init_parameters.camera_fps = 120;
     init_parameters.depth_mode = isJetson ? DEPTH_MODE::NEURAL_LIGHT : DEPTH_MODE::NEURAL;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP;
     init_parameters.coordinate_units = UNIT::METER;
@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
     body_tracker_params.body_format = sl::BODY_FORMAT::BODY_34;
     body_tracker_params.enable_segmentation = true;
     //body_tracker_params.detection_model = isJetson ? BODY_TRACKING_MODEL::HUMAN_BODY_FAST : BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
-    body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_MEDIUM;
+    body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
     body_tracker_params.allow_reduced_precision_inference = true;
 
     returned_state = zed.enableBodyTracking(body_tracker_params);
@@ -147,7 +147,7 @@ int main(int argc, char **argv) {
     
     // Create ZED Bodies filled in the main loop
     Bodies bodies;
-
+    int detected_bodies = 0;
     // Main Loop
     bool quit = false;
     string window_name = "ZED| 2D View";
@@ -172,6 +172,7 @@ int main(int argc, char **argv) {
             cv::imshow(window_name, image_left_ocv);
 
             key = cv::waitKey(key_wait);
+            detected_bodies = bodies.body_list.size();
             
             for (auto& body : bodies.body_list){
             
@@ -180,11 +181,14 @@ int main(int argc, char **argv) {
 		
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
+	   	cout << "nbr?bodies: " << detected_bodies << endl;
 	    	
 			cout << "ID Corpo: " << body.id << endl;
 		    
 		    cout << "Position: " << body.position << endl;
 		    cout << "Velocity: " << body.velocity << endl;
+		    cout << "Right wrist: " << body.keypoint[7] << endl;
+
 		    
 		    
 		    
@@ -194,9 +198,11 @@ int main(int argc, char **argv) {
 		    	
 		    cout << "------------------------------------------" << endl;
 		    
-        	lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel); 
-		lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
-		lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
+        	lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
+        	lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
+        	lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
+		//lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
+		//lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
 	    		
             }
 	
