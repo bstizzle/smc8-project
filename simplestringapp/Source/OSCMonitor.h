@@ -92,25 +92,21 @@ public:
 
         if (!message.isEmpty())
         {   
-            //nbrBodies = message[9].getInt32();
             posX = message[1].getFloat32();
             posZ = message[2].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
+            
+            //MANAGE IDs
+            //add or update values for specific id
             bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
-            int detectedBodies = message[9].getInt32();
-            oscLogList.add(juce::String(detectedBodies));
-            oscLogList.add(juce::String(nbrBodies));
-            oscLogList.add(juce::String(lowest_id));
+            //update id_list of visible bodies at this moment
+            id_list = {};
+            for (int i = 9; i<message.size(); ++i) {
+                oscLogList.add(juce::String(message[i].getInt32()));
+                id_list.push_back(message[i].getInt32());
+            }
 
-            //can't be done like this because the missing id migth not be the lowest one
-            //if (detectedBodies<nbrBodies)
-            //{
-            //    for (int i = lowest_id; i < lowest_id+(nbrBodies-detectedBodies); i++) {
-            //        bodies_dict.removeBody(i);
-            //      }
-            //    lowest_id= lowest_id+(nbrBodies-detectedBodies);
-            //}
-            //nbrBodies=detectedBodies;
+
 
             if (posX > -1.9 && posX < -1.8)
             {

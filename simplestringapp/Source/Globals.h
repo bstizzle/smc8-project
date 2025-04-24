@@ -17,8 +17,7 @@
 extern float posX;
 extern float posZ;
 extern double abs_velX;
-//extern int nbrBodies;
-//extern int lowest_id;
+extern std::list<int> id_list;
 
 extern BodyManager bodies_dict;
 

@@ -20,8 +20,8 @@
 float posX;
 float posZ;
 double abs_velX;
-//int nbrBodies=0;
-//int lowest_id=1;
+std::list<int> id_list;
+
 BodyManager bodies_dict;
 
 
