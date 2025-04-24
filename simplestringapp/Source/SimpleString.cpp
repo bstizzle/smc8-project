@@ -169,19 +169,19 @@ void SimpleString::excite()
     //// Arbitrary excitation function (raised cosine) ////
     
     // width (in grid points) of the excitation
-    double width = 10;
+    //double width = 10;
     
     // make sure we're not going out of bounds at the left boundary
-    int start = std::max (floor((N+1) * excitationLoc) - floor(width * 0.5), 1.0);
+    int start = std::max (floor((N+1) * excitationLoc) - floor(pluckWidth * 0.5), 1.0);
 
-    for (int l = 0; l < width; ++l)
+    for (int l = 0; l < pluckWidth; ++l)
     {
         // make sure we're not going out of bounds at the right boundary (this does 'cut off' the raised cosine)
         if (l+start > (clamped ? N - 2 : N - 1))
             break;
         
-        u[1][l+start] += 0.5 * (1 - cos(2.0 * double_Pi * l / (width-1.0)));
-        u[2][l+start] += 0.5 * (1 - cos(2.0 * double_Pi * l / (width-1.0)));
+        u[1][l+start] += 0.5 * (1 - cos(2.0 * double_Pi * l / (pluckWidth-1.0)));
+        u[2][l+start] += 0.5 * (1 - cos(2.0 * double_Pi * l / (pluckWidth-1.0)));
     }
     // Disable the excitation flag to only excite once
     excitationFlag = false;

@@ -25,6 +25,8 @@ std::list<int> id_list;
 BodyManager bodies_dict;
 
 
+float pluckWidth;
+
 std::unique_ptr<SimpleString> string1;
 std::unique_ptr<SimpleString> string2;
 std::unique_ptr<SimpleString> string3;

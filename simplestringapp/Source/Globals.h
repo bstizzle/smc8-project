@@ -16,6 +16,7 @@
 
 extern float posX;
 extern float posZ;
+extern float pluckWidth;
 extern double abs_velX;
 extern std::list<int> id_list;
 

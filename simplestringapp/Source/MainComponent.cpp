@@ -50,27 +50,27 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 
     //// Initialise an instance of the SimpleString class ////
     //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
-    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.83);
+    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
     //parameters.set ("L", 3);
 
     //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
-    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
+    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
     //parameters.set ("L", 2);
 
     //string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
-    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 261.63);
+    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
     //parameters.set ("L", 1);
 
     //string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
-    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 349.6);
+    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
     //parameters.set ("L", 0.66);
 
     //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
-    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 440.0);
+    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
     //parameters.set ("L", 0.33);
 
     //string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
-    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 587.3);
+    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
 
 
     addAndMakeVisible (string1.get()); // add the string to the application
