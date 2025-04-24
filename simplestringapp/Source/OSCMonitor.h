@@ -102,7 +102,6 @@ public:
             //update id_list of visible bodies at this moment
             id_list = {};
             for (int i = 9; i<message.size(); ++i) {
-                oscLogList.add(juce::String(message[i].getInt32()));
                 id_list.push_back(message[i].getInt32());
             }
 
