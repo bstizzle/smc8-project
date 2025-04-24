@@ -172,7 +172,12 @@ int main(int argc, char **argv) {
             cv::imshow(window_name, image_left_ocv);
 
             key = cv::waitKey(key_wait);
-            detected_bodies = bodies.body_list.size();
+            detected_bodies =  bodies.body_list.size();
+            list<int> detected_ids = {};
+            for (auto& body : bodies.body_list)
+            {
+            	detected_ids.push_back(body.id);
+            }
             
             for (auto& body : bodies.body_list){
             
@@ -182,25 +187,35 @@ int main(int argc, char **argv) {
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
 	   	cout << "nbr?bodies: " << detected_bodies << endl;
-	    	
-			cout << "ID Corpo: " << body.id << endl;
+		cout << "ID Corpo: " << body.id << endl;
+		cout << "Position: " << body.position << endl;
+		cout << "Velocity: " << body.velocity << endl;
+		cout << "Right wrist: " << body.keypoint[7] << endl;
+		cout << "Abs. Velocity: " << vel << endl;
+		cout << "State: " << body.action_state << endl;    	
+		cout << "------------------------------------------" << endl;
 		    
-		    cout << "Position: " << body.position << endl;
-		    cout << "Velocity: " << body.velocity << endl;
-		    cout << "Right wrist: " << body.keypoint[7] << endl;
-
-		    
-		    
-		    
-		    cout << "Abs. Velocity: " << vel << endl;
-		    
-		    cout << "State: " << body.action_state << endl;
-		    	
-		    cout << "------------------------------------------" << endl;
-		    
-        	lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
-        	lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
-        	lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
+		lo_message msg = lo_message_new();
+		lo_message_add_int32(msg, body.id);
+		lo_message_add_float(msg, body.position.x);
+		lo_message_add_float(msg, body.position.z);
+		lo_message_add_float(msg, body.velocity.x);
+		lo_message_add_float(msg, body.velocity.z);
+		lo_message_add_float(msg, vel);
+		lo_message_add_float(msg, body.keypoint[14].x);
+		lo_message_add_float(msg, body.keypoint[14].y);
+		lo_message_add_float(msg, body.keypoint[14].z);
+		for (int id : detected_ids) {
+        		lo_message_add_int32(msg, id);
+    		}
+    		
+    		lo_send_message(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
+		lo_send_message(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
+		lo_send_message(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
+		   
+        	//lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_ids); 
+        	//lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
+        	//lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
 		//lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
 		//lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
 	    		
