@@ -91,10 +91,22 @@ public:
             + " argument(s)");
 
         if (!message.isEmpty())
-        {
+        {   
             posX = message[1].getFloat32();
             posZ = message[2].getFloat32();
             abs_velX = std::abs(message[3].getFloat32());
+            
+            //MANAGE IDs
+            //add or update values for specific id
+            bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
+            //update id_list of visible bodies at this moment
+            id_list = {};
+            for (int i = 9; i<message.size(); ++i) {
+                oscLogList.add(juce::String(message[i].getInt32()));
+                id_list.push_back(message[i].getInt32());
+            }
+
+
 
             if (posX > -1.9 && posX < -1.8)
             {
@@ -674,6 +686,5 @@ private:
         connectionStatusLabel.setColour(juce::Label::textColourId, textColour);
         connectionStatusLabel.setJustificationType(juce::Justification::centredRight);
     }
-
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainContentComponent)
 };

@@ -158,20 +158,22 @@ void MainComponent::releaseResources()
 
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
-{
+{   
     //g.fillAll(juce::Colours::black); // or whatever your background is
-    // Draw the live OSC point
+    // Draw the live OSC points
     g.setColour(juce::Colours::red);
     float radius = 5.0f;
 
-    float visual_mapped_x = juce::jmap(0.5f, 0.0f, 1.0f, 0.0f, (float)getWidth());
-    float visual_mapped_y = juce::jmap(posX, -2.2f, 1.0f, 0.0f, (float)getHeight());
+    for (int id:id_list) {
 
-    //visual_mapped_x = 400;
-    //visual_mapped_y = 300;
-
-    g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
-    g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
+        BodyData body_data = bodies_dict.getBody(id);
+        float visual_mapped_x = juce::jmap(body_data.posz, -3.5f, -9.2f, 0.0f, (float)getWidth());
+        float visual_mapped_y = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getHeight());
+    
+        g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
+        g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
+        //DBG("ID: " << id << ", velx: " << data.velx << ", posx: " << data.posx);
+    }
 }
 
 void MainComponent::resized()

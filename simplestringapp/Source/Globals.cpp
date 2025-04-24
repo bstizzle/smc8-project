@@ -10,11 +10,20 @@
 
 #include "Globals.h"
 #include "SimpleString.h"
+#include "BodyManager.h"
 #include <chrono>
+
+
+
+
 
 float posX;
 float posZ;
 double abs_velX;
+std::list<int> id_list;
+
+BodyManager bodies_dict;
+
 
 float pluckWidth;
 
