@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
     Camera zed;
     InitParameters init_parameters;
     init_parameters.camera_resolution = RESOLUTION::SVGA;
-    init_parameters.camera_fps = 120;
+    init_parameters.camera_fps = 30;
     init_parameters.depth_mode = isJetson ? DEPTH_MODE::NEURAL_LIGHT : DEPTH_MODE::NEURAL;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP;
     init_parameters.coordinate_units = UNIT::METER;
@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
     body_tracker_params.body_format = sl::BODY_FORMAT::BODY_34;
     body_tracker_params.enable_segmentation = true;
     //body_tracker_params.detection_model = isJetson ? BODY_TRACKING_MODEL::HUMAN_BODY_FAST : BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
-    body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
+    body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_MEDIUM;
     body_tracker_params.allow_reduced_precision_inference = true;
 
     returned_state = zed.enableBodyTracking(body_tracker_params);
@@ -153,6 +153,8 @@ int main(int argc, char **argv) {
     string window_name = "ZED| 2D View";
     int key_wait = 10;
     char key = ' ';
+    
+    float vel = 1.0;
     while (!quit) {
         // Grab images
         auto err = zed.grab();
@@ -178,12 +180,12 @@ int main(int argc, char **argv) {
             {
             	detected_ids.push_back(body.id);
             }
-            
             for (auto& body : bodies.body_list){
             
+		// remove all the console prints for live/production version
 		
-		auto vel = sqrt(body.velocity.x*body.velocity.x + body.velocity.y*body.velocity.y + body.velocity.z*body.velocity.z);
-		
+		//auto vel = sqrt(body.velocity.x*body.velocity.x + body.velocity.y*body.velocity.y + body.velocity.z*body.velocity.z);
+		/*
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
 	   	cout << "nbr?bodies: " << detected_bodies << endl;
@@ -194,7 +196,8 @@ int main(int argc, char **argv) {
 		cout << "Abs. Velocity: " << vel << endl;
 		cout << "State: " << body.action_state << endl;    	
 		cout << "------------------------------------------" << endl;
-		    
+		*/
+		
 		lo_message msg = lo_message_new();
 		lo_message_add_int32(msg, body.id);
 		lo_message_add_float(msg, body.position.x);
