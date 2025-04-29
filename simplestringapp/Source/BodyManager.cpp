@@ -11,7 +11,7 @@ juce::HashMap<int, BodyData>& BodyManager::getBodies()
 
 void BodyManager::addOrUpdateBody(int id, float velx, float posx, float posz)
 {
-    bodies.set(id, BodyData{ velx, posx, posz });
+    bodies.set(id, BodyData{ velx, posx, posz,juce::Colours::red});
 }
 
 BodyData BodyManager::getBody(int id) const
