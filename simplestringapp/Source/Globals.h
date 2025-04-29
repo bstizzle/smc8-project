@@ -16,8 +16,10 @@
 
 extern float posX;
 extern float posZ;
+extern float posY;
 extern float pluckWidth;
 extern double abs_velX;
+extern double abs_velY;
 extern std::list<int> id_list;
 
 extern BodyManager bodies_dict;

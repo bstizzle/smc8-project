@@ -94,14 +94,16 @@ public:
         {   
             posX = message[1].getFloat32();
             posZ = message[2].getFloat32();
-            abs_velX = std::abs(message[3].getFloat32());
+            posY = message[3].getFloat32();
+            abs_velX = std::abs(message[4].getFloat32());
+            abs_velY = std::abs(message[6].getFloat32());
             
             //MANAGE IDs
             //add or update values for specific id
             bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
             //update id_list of visible bodies at this moment
             id_list = {};
-            for (int i = 9; i<message.size(); ++i) {
+            for (int i = 10; i<message.size(); ++i) {
                 id_list.push_back(message[i].getInt32());
             }
 

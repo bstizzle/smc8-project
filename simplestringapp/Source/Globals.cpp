@@ -19,7 +19,9 @@
 
 float posX;
 float posZ;
+float posY;
 double abs_velX;
+double abs_velY;
 std::list<int> id_list;
 
 BodyManager bodies_dict;
