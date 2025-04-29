@@ -19,13 +19,15 @@
 
 float posX;
 float posZ;
+float posY;
 double abs_velX;
+double abs_velY;
 std::list<int> id_list;
 
 BodyManager bodies_dict;
 
 
-std::list<float> xpos_threads= {-1.9, -1.8, -1.4, -1.3, -.9, -.8, -.4,-.3, .1, .2, .6, .7};
+std::list<float> xpos_frets= {-1.9, -1.8, -1.4, -1.3, -.9, -.8, -.4,-.3, .1, .2, .6, .7};
 
 float pluckWidth;
 
