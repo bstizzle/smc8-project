@@ -202,8 +202,10 @@ int main(int argc, char **argv) {
 		lo_message_add_int32(msg, body.id);
 		lo_message_add_float(msg, body.position.x);
 		lo_message_add_float(msg, body.position.z);
+		lo_message_add_float(msg, body.position.y);
 		lo_message_add_float(msg, body.velocity.x);
 		lo_message_add_float(msg, body.velocity.z);
+		lo_message_add_float(msg, body.velocity.y);
 		lo_message_add_float(msg, vel);
 		lo_message_add_float(msg, body.keypoint[14].x);
 		lo_message_add_float(msg, body.keypoint[14].y);
@@ -212,15 +214,9 @@ int main(int argc, char **argv) {
         		lo_message_add_int32(msg, id);
     		}
     		
-    		lo_send_message(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
-		lo_send_message(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
-		lo_send_message(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/ids", msg);
-		   
-        	//lo_send(target, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_ids); 
-        	//lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
-        	//lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed/wristX/wristY/wristZ/nbrBodies", "iffffffffi", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel,body.keypoint[14].x,body.keypoint[14].y,body.keypoint[14].z,detected_bodies); 
-		//lo_send(target2, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
-		//lo_send(target3, "/objid/coordinateX/coordinateZ/velocityX/velocityZ/speed", "ifffff", body.id , body.position.x, body.position.z, body.velocity.x, body.velocity.z, vel);
+    		lo_send_message(target, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
+		lo_send_message(target2, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
+		lo_send_message(target3, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
 	    		
             }
 	
