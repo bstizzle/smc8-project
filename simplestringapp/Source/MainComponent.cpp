@@ -166,11 +166,11 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {   
-    g.setColour (juce::Colours::orange);
-    for (float xpos:mapped_xpos_frets) {
-        juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
-        g.drawLine (line, 2.0f);
-    }
+    //g.setColour (juce::Colours::orange);
+    //for (float xpos:mapped_xpos_frets) {
+    //    juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
+    //    g.drawLine (line, 2.0f);
+    //}
 
 
     
