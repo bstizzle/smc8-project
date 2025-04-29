@@ -19,10 +19,10 @@ MainComponent::MainComponent()
         setAudioChannels (0, 2);
     }
     
-    for (float xpos : xpos_threads)
+    for (float xpos : xpos_frets)
     {
         float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getHeight());
-        mapped_xpos_threads.push_back(mapped);
+        mapped_xpos_frets.push_back(mapped);
     }
 }
 
@@ -166,7 +166,7 @@ void MainComponent::releaseResources()
 void MainComponent::paint (juce::Graphics& g)
 {   
     g.setColour (juce::Colours::orange);
-    for (float xpos:mapped_xpos_threads) {
+    for (float xpos:mapped_xpos_frets) {
         juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
         g.drawLine (line, 2.0f);
     }
