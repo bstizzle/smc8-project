@@ -28,7 +28,10 @@ public:
     double limit (double val); // limiter for your ears
     
     void timerCallback() override;
-    
+
+
+    std::list<float> mapped_xpos_threads;
+
 private:
     //==============================================================================
     // Your private member variables go here...

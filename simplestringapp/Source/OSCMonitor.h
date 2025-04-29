@@ -105,8 +105,6 @@ public:
                 id_list.push_back(message[i].getInt32());
             }
 
-
-
             if (posX > -1.9 && posX < -1.8)
             {
                 if(posZ < -5.5)

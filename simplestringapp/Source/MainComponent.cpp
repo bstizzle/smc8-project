@@ -18,6 +18,12 @@ MainComponent::MainComponent()
         // Specify the number of input and output channels that we want to open
         setAudioChannels (0, 2);
     }
+    
+    for (float xpos : xpos_threads)
+    {
+        float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getHeight());
+        mapped_xpos_threads.push_back(mapped);
+    }
 }
 
 MainComponent::~MainComponent()
@@ -159,6 +165,14 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {   
+    g.setColour (juce::Colours::orange);
+    for (float xpos:mapped_xpos_threads) {
+        juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
+        g.drawLine (line, 2.0f);
+    }
+
+
+    
     //g.fillAll(juce::Colours::black); // or whatever your background is
     // Draw the live OSC points
     g.setColour(juce::Colours::red);
