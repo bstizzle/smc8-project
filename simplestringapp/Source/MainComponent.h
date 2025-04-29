@@ -35,7 +35,5 @@ public:
 private:
     //==============================================================================
     // Your private member variables go here...
-    //std::unique_ptr<SimpleString> mySimpleString;
-    
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent);
 };
