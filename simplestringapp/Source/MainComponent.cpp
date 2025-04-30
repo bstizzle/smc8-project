@@ -19,7 +19,7 @@ MainComponent::MainComponent()
         setAudioChannels (0, 2);
     }
     
-    for (float xpos : xpos_frets)
+    for (float xpos : string_limit)
     {
         float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getHeight());
         mapped_xpos_frets.push_back(mapped);
