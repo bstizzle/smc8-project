@@ -97,13 +97,17 @@ public:
             posY = message[3].getFloat32();
             abs_velX = std::abs(message[4].getFloat32());
             abs_velY = std::abs(message[6].getFloat32());
-            
+            //wrist point ids 8/9/10
+            rWristY = message[9].getFloat32();
+            chestY = message[15].getFloat32();
+
+
             //MANAGE IDs
             //add or update values for specific id
             bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, abs_velY, posX, posZ, posY);
             //update id_list of visible bodies at this moment
             id_list = {};
-            for (int i = 11; i<message.size(); ++i) {
+            for (int i = 17; i<message.size(); ++i) {
                 id_list.push_back(message[i].getInt32());
             }
 
@@ -121,19 +125,29 @@ public:
                                 {
                                     tune1 = 82.41;
                                     string1->tune(tune1);
-                                    if (abs_velY > 0.2)
+
+                                    if (rWristY > chestY)
                                     {
-                                        pluckWidth = 20;
                                         string1->strum();
                                     }
+                                    /*
+                                    if (rWristY < chestY)
+                                    {
+                                        if (pluckPrimer1 = true)
+                                        {
+                                            string1->strum();
+                                            pluckPrimer1 = false;
+                                        }
+                                    }
+                                    */
                                 }
                                 else
                                 {
                                     tune1 = 87.3;
                                     string1->tune(tune1);
-                                    if (abs_velY > 0.2)
+
+                                    if (rWristY > chestY)
                                     {
-                                        pluckWidth = 20;
                                         string1->strum();
                                     }
                                 }
@@ -142,9 +156,9 @@ public:
                             {
                                 tune1 = 92.49;
                                 string1->tune(tune1);
-                                if (abs_velY > 0.2)
+
+                                if (rWristY > chestY)
                                 {
-                                    pluckWidth = 20;
                                     string1->strum();
                                 }
                             }
@@ -153,9 +167,9 @@ public:
                         {
                             tune1 = 97.99;
                             string1->tune(tune1);
-                            if (abs_velY > 0.2)
+
+                            if (rWristY > chestY)
                             {
-                                pluckWidth = 20;
                                 string1->strum();
                             }
                         }
@@ -164,9 +178,9 @@ public:
                     {
                         tune1 = 103.83;
                         string1->tune(tune1);
-                        if (abs_velY > 0.2)
+
+                        if (rWristY > chestY)
                         {
-                            pluckWidth = 20;
                             string1->strum();
                         }
                         //open = 82.41 Hz | 10th fret = 146.83 Hz 
@@ -198,54 +212,29 @@ public:
                                 {
                                     tune2 = 110.0;
                                     string2->tune(tune2);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string2->strum();
-                                    }
                                 }
                                 else
                                 {
                                     tune2 = 116.54;
                                     string2->tune(tune2);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string2->strum();
-                                    }
                                 }
                             }
                             else
                             {
                                 tune2 = 123.47;
                                 string2->tune(tune2);
-                                if (abs_velY > 0.2)
-                                {
-                                    pluckWidth = 20;
-                                    string2->strum();
-                                }
                             }
                         }
                         else
                         {
                             tune2 = 130.81;
                             string2->tune(tune2);
-                            if (abs_velY > 0.2)
-                            {
-                                pluckWidth = 20;
-                                string2->strum();
-                            }
                         }
                     }
                     else
                     {
                         tune2 = 138.59;
                         string2->tune(tune2);
-                        if (abs_velY > 0.2)
-                        {
-                            pluckWidth = 20;
-                            string2->strum();
-                        }
                         //open = 110.0 Hz | 10th fret = 196.0 Hz 
                         //tune2 = (message[2].getFloat32() - (-5.5)) * (105.0 - 196.0) / ((-8.9) - (-5.5)) + 196.0;
                         //oscLogList.add(juce::String(tune1));
@@ -275,54 +264,29 @@ public:
                                 {
                                     tune3 = 146.83;
                                     string3->tune(tune3);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string3->strum();
-                                    }
                                 }
                                 else
                                 {
                                     tune3 = 155.56;
                                     string3->tune(tune3);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string3->strum();
-                                    }
                                 }
                             }
                             else
                             {
                                 tune3 = 164.81;
                                 string3->tune(tune3);
-                                if (abs_velY > 0.2)
-                                {
-                                    pluckWidth = 20;
-                                    string3->strum();
-                                }
                             }
                         }
                         else
                         {
                             tune3 = 174.61;
                             string3->tune(tune3);
-                            if (abs_velY > 0.2)
-                            {
-                                pluckWidth = 20;
-                                string3->strum();
-                            }
                         }
                     }
                     else
                     {
                         tune3 = 185.0;
                         string3->tune(tune3);
-                        if (abs_velY > 0.2)
-                        {
-                            pluckWidth = 20;
-                            string3->strum();
-                        }
                         //open = 146.8 Hz | 10th fret = 261.63 Hz 
                         //tune3 = (message[2].getFloat32() - (-5.5)) * (140.0 - 261.63) / ((-8.9) - (-5.5)) + 261.63;
                         //oscLogList.add(juce::String(tune1));
@@ -352,54 +316,29 @@ public:
                                 {
                                     tune4 = 196.0;
                                     string4->tune(tune4);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string4->strum();
-                                    }
                                 }
                                 else
                                 {
                                     tune4 = 207.65;
                                     string4->tune(tune4);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string4->strum();
-                                    }
                                 }
                             }
                             else
                             {
                                 tune4 = 220.0;
                                 string4->tune(tune4);
-                                if (abs_velY > 0.2)
-                                {
-                                    pluckWidth = 20;
-                                    string4->strum();
-                                }
                             }
                         }
                         else
                         {
                             tune4 = 233.08;
                             string4->tune(tune4);
-                            if (abs_velY > 0.2)
-                            {
-                                pluckWidth = 20;
-                                string4->strum();
-                            }
                         }
                     }
                     else
                     {
                         tune4 = 246.94;
                         string4->tune(tune4);
-                        if (abs_velY > 0.2)
-                        {
-                            pluckWidth = 20;
-                            string4->strum();
-                        }
                         //open = 196.0 Hz | 10th fret = 349.2 Hz 
                         //tune4 = (message[2].getFloat32() - (-5.5)) * (191.0 - 349.2) / ((-8.9) - (-5.5)) + 349.2;
                         //oscLogList.add(juce::String(tune1));
@@ -429,54 +368,29 @@ public:
                                 {
                                     tune5 = 246.94;
                                     string5->tune(tune5);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string5->strum();
-                                    }
                                 }
                                 else
                                 {
                                     tune5 = 261.63;
                                     string5->tune(tune5);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string5->strum();
-                                    }
                                 }
                             }
                             else
                             {
                                 tune5 = 277.18;
                                 string5->tune(tune5);
-                                if (abs_velY > 0.2)
-                                {
-                                    pluckWidth = 20;
-                                    string5->strum();
-                                }
                             }
                         }
                         else
                         {
                             tune5 = 293.66;
                             string5->tune(tune5);
-                            if (abs_velY > 0.2)
-                            {
-                                pluckWidth = 20;
-                                string5->strum();
-                            }
                         }
                     }
                     else
                     {
                         tune5 = 311.13;
                         string5->tune(tune5);
-                        if (abs_velY > 0.2)
-                        {
-                            pluckWidth = 20;
-                            string5->strum();
-                        }
                         //open = 246.9 Hz | 10th fret = 440.0 Hz 
                         //tune5 = (message[2].getFloat32() - (-5.5)) * (250.0 - 440.0) / ((-8.9) - (-5.5)) + 440.0;
                         //oscLogList.add(juce::String(tune1));
@@ -506,54 +420,29 @@ public:
                                 {
                                     tune6 = 329.6;
                                     string6->tune(tune6);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string6->strum();
-                                    }
                                 }
                                 else
                                 {
                                     tune6 = 349.2;
                                     string6->tune(tune6);
-                                    if (abs_velY > 0.2)
-                                    {
-                                        pluckWidth = 20;
-                                        string6->strum();
-                                    }
                                 }
                             }
                             else
                             {
                                 tune6 = 369.99;
                                 string6->tune(tune6);
-                                if (abs_velY > 0.2)
-                                {
-                                    pluckWidth = 20;
-                                    string6->strum();
-                                }
                             }
                         }
                         else
                         {
                             tune6 = 392.0;
                             string6->tune(tune6);
-                            if (abs_velY > 0.2)
-                            {
-                                pluckWidth = 20;
-                                string6->strum();
-                            }
                         }
                     }
                     else
                     {
                         tune6 = 415.3;
                         string6->tune(tune6);
-                        if (abs_velY > 0.2)
-                        {
-                            pluckWidth = 20;
-                            string6->strum();
-                        }
                         //open = 329.6 Hz | 10th fret = 587.3 Hz 
                         //tune6 = (message[2].getFloat32() - (-5.5)) * (324.0 - 587.3) / ((-8.9) - (-5.5)) + 587.3;
                         //oscLogList.add(juce::String(tune1));

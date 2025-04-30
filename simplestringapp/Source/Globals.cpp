@@ -24,6 +24,10 @@ double abs_velX;
 double abs_velY;
 std::list<int> id_list;
 
+float rWristY;
+float chestY;
+bool pluckPrimer1 = false;
+
 BodyManager bodies_dict;
 
 
