@@ -130,16 +130,6 @@ public:
                                     {
                                         string1->strum();
                                     }
-                                    /*
-                                    if (rWristY < chestY)
-                                    {
-                                        if (pluckPrimer1 = true)
-                                        {
-                                            string1->strum();
-                                            pluckPrimer1 = false;
-                                        }
-                                    }
-                                    */
                                 }
                                 else
                                 {
@@ -212,29 +202,49 @@ public:
                                 {
                                     tune2 = 110.0;
                                     string2->tune(tune2);
+                                    if (rWristY > chestY)
+                                    {
+                                        string2->strum();
+                                    }
                                 }
                                 else
                                 {
                                     tune2 = 116.54;
                                     string2->tune(tune2);
+                                    if (rWristY > chestY)
+                                    {
+                                        string2->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune2 = 123.47;
                                 string2->tune(tune2);
+                                if (rWristY > chestY)
+                                {
+                                    string2->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune2 = 130.81;
                             string2->tune(tune2);
+                            if (rWristY > chestY)
+                            {
+                                string2->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune2 = 138.59;
                         string2->tune(tune2);
+                        if (rWristY > chestY)
+                        {
+                            string2->strum();
+                        }
                         //open = 110.0 Hz | 10th fret = 196.0 Hz 
                         //tune2 = (message[2].getFloat32() - (-5.5)) * (105.0 - 196.0) / ((-8.9) - (-5.5)) + 196.0;
                         //oscLogList.add(juce::String(tune1));
@@ -264,29 +274,49 @@ public:
                                 {
                                     tune3 = 146.83;
                                     string3->tune(tune3);
+                                    if (rWristY > chestY)
+                                    {
+                                        string3->strum();
+                                    }
                                 }
                                 else
                                 {
                                     tune3 = 155.56;
                                     string3->tune(tune3);
+                                    if (rWristY > chestY)
+                                    {
+                                        string3->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune3 = 164.81;
                                 string3->tune(tune3);
+                                if (rWristY > chestY)
+                                {
+                                    string3->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune3 = 174.61;
                             string3->tune(tune3);
+                            if (rWristY > chestY)
+                            {
+                                string3->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune3 = 185.0;
                         string3->tune(tune3);
+                        if (rWristY > chestY)
+                        {
+                            string3->strum();
+                        }
                         //open = 146.8 Hz | 10th fret = 261.63 Hz 
                         //tune3 = (message[2].getFloat32() - (-5.5)) * (140.0 - 261.63) / ((-8.9) - (-5.5)) + 261.63;
                         //oscLogList.add(juce::String(tune1));
@@ -316,29 +346,49 @@ public:
                                 {
                                     tune4 = 196.0;
                                     string4->tune(tune4);
+                                    if (rWristY > chestY)
+                                    {
+                                        string4->strum();
+                                    }
                                 }
                                 else
                                 {
                                     tune4 = 207.65;
                                     string4->tune(tune4);
+                                    if (rWristY > chestY)
+                                    {
+                                        string4->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune4 = 220.0;
                                 string4->tune(tune4);
+                                if (rWristY > chestY)
+                                {
+                                    string4->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune4 = 233.08;
                             string4->tune(tune4);
+                            if (rWristY > chestY)
+                            {
+                                string4->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune4 = 246.94;
                         string4->tune(tune4);
+                        if (rWristY > chestY)
+                        {
+                            string4->strum();
+                        }
                         //open = 196.0 Hz | 10th fret = 349.2 Hz 
                         //tune4 = (message[2].getFloat32() - (-5.5)) * (191.0 - 349.2) / ((-8.9) - (-5.5)) + 349.2;
                         //oscLogList.add(juce::String(tune1));
@@ -368,29 +418,49 @@ public:
                                 {
                                     tune5 = 246.94;
                                     string5->tune(tune5);
+                                    if (rWristY > chestY)
+                                    {
+                                        string5->strum();
+                                    }
                                 }
                                 else
                                 {
                                     tune5 = 261.63;
                                     string5->tune(tune5);
+                                    if (rWristY > chestY)
+                                    {
+                                        string5->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune5 = 277.18;
                                 string5->tune(tune5);
+                                if (rWristY > chestY)
+                                {
+                                    string5->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune5 = 293.66;
                             string5->tune(tune5);
+                            if (rWristY > chestY)
+                            {
+                                string5->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune5 = 311.13;
                         string5->tune(tune5);
+                        if (rWristY > chestY)
+                        {
+                            string5->strum();
+                        }
                         //open = 246.9 Hz | 10th fret = 440.0 Hz 
                         //tune5 = (message[2].getFloat32() - (-5.5)) * (250.0 - 440.0) / ((-8.9) - (-5.5)) + 440.0;
                         //oscLogList.add(juce::String(tune1));
@@ -420,29 +490,49 @@ public:
                                 {
                                     tune6 = 329.6;
                                     string6->tune(tune6);
+                                    if (rWristY > chestY)
+                                    {
+                                        string6->strum();
+                                    }
                                 }
                                 else
                                 {
                                     tune6 = 349.2;
                                     string6->tune(tune6);
+                                    if (rWristY > chestY)
+                                    {
+                                        string6->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune6 = 369.99;
                                 string6->tune(tune6);
+                                if (rWristY > chestY)
+                                {
+                                    string6->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune6 = 392.0;
                             string6->tune(tune6);
+                            if (rWristY > chestY)
+                            {
+                                string6->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune6 = 415.3;
                         string6->tune(tune6);
+                        if (rWristY > chestY)
+                        {
+                            string6->strum();
+                        }
                         //open = 329.6 Hz | 10th fret = 587.3 Hz 
                         //tune6 = (message[2].getFloat32() - (-5.5)) * (324.0 - 587.3) / ((-8.9) - (-5.5)) + 587.3;
                         //oscLogList.add(juce::String(tune1));

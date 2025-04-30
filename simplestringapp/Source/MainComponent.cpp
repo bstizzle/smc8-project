@@ -152,9 +152,34 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
                     + string5->getOutput (0.8)
                     + string6->getOutput (0.8)
                 )/6; // get output at 0.8L of the string
+
+        double outputR = (string1->getOutput(0.8)*1.4
+            + string2->getOutput(0.8)*1.2
+            + string3->getOutput(0.8)*1.0
+            + string4->getOutput(0.8)*0.8
+            + string5->getOutput(0.8)*0.6
+            + string6->getOutput(0.8)*0.4
+            ) / 6; // get output at 0.8L of the string
+
+        double outputL = (string1->getOutput(0.8) * 0.4
+            + string2->getOutput(0.8) * 0.6
+            + string3->getOutput(0.8) * 0.8
+            + string4->getOutput(0.8) * 1.0
+            + string5->getOutput(0.8) * 1.2
+            + string6->getOutput(0.8) * 1.4
+            ) / 6; // get output at 0.8L of the string
         
         for (int channel = 0; channel < numChannels; ++channel)
-            curChannel[channel][0][i] = limit(output);
+        {
+            if (channel == 0)
+            {
+                curChannel[channel][0][i] = limit(outputL);
+            }
+            if (channel == 1)
+            {
+                curChannel[channel][0][i] = limit(outputR);
+            }
+        }
     }
     
 }
