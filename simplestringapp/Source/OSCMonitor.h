@@ -107,7 +107,7 @@ public:
                 id_list.push_back(message[i].getInt32());
             }
 
-            if (posX > -1.9 && posX < -1.8)
+            if (posX > string_limit[0] && posX < string_limit[1])
             {
                 if(posZ < -5.5)
                 {
@@ -159,7 +159,7 @@ public:
                     }
                 }
             }
-            if (posX > -1.4 && posX < -1.3)
+            if (posX > string_limit[1] && posX < string_limit[2])
             {
                 if (posZ < -5.5)
                 {
@@ -211,7 +211,7 @@ public:
                     }
                 }
             }
-            if (posX > -.9 && posX < -.8)
+            if (posX > string_limit[2] && posX < string_limit[3])
             {
                 if (posZ < -5.5)
                 {
@@ -263,7 +263,7 @@ public:
                     }
                 }
             }
-            if (posX > -.4 && posX < -.3)
+            if (posX > string_limit[3] && posX < string_limit[4])
             {
                 if (posZ < -5.5)
                 {
@@ -315,7 +315,7 @@ public:
                     }
                 }
             }
-            if (posX > .1 && posX < .2)
+            if (posX > string_limit[4] && posX < string_limit[5])
             {
                 if (posZ < -5.5)
                 {
@@ -367,7 +367,7 @@ public:
                     }
                 }
             }
-            if (posX > .6 && posX < 0.7)
+            if (posX > string_limit[5] && posX < string_limit[6])
             {
                 if (posZ < -5.5)
                 {

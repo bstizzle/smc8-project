@@ -23,6 +23,7 @@ extern double abs_velY;
 extern std::list<int> id_list;
 
 extern BodyManager bodies_dict;
+extern std::vector<float> string_limit;
 extern std::list<float> xpos_frets;
 extern std::list<float> zpos_frets;
 
