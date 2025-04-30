@@ -103,7 +103,7 @@ public:
             bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
             //update id_list of visible bodies at this moment
             id_list = {};
-            for (int i = 10; i<message.size(); ++i) {
+            for (int i = 11; i<message.size(); ++i) {
                 id_list.push_back(message[i].getInt32());
             }
 

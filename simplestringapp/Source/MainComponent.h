@@ -30,7 +30,8 @@ public:
     void timerCallback() override;
 
 
-    std::list<float> mapped_xpos_frets;
+    std::list<float> xmapped_xpos_frets;
+    std::list<float> ymapped_zpos_frets;
 
 private:
     //==============================================================================
