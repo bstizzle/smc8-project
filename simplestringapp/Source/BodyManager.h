@@ -8,8 +8,11 @@
 struct BodyData
 {
     float velx;
+    float vely;
     float posx;
     float posz;
+    float posy;
+    juce::Colour color;
 };
 // Then declare the outer HashMap
 //extern HashMap<String, BodyData> bodies;
@@ -19,7 +22,7 @@ class BodyManager
     public:
         BodyManager();
         juce::HashMap<int, BodyData>& getBodies();// const;// { return bodies_dict; }
-        void addOrUpdateBody(int id, float velx, float posx, float posz);
+        void addOrUpdateBody(int id, float velx, float vely, float posx, float posz, float posy);
         BodyData getBody(int id) const;
         bool hasBody(int id) const;
         void removeBody(int id);

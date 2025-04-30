@@ -97,13 +97,17 @@ public:
             posY = message[3].getFloat32();
             abs_velX = std::abs(message[4].getFloat32());
             abs_velY = std::abs(message[6].getFloat32());
-            
+            //wrist point ids 8/9/10
+            rWristY = message[9].getFloat32();
+            chestY = message[15].getFloat32();
+
+
             //MANAGE IDs
             //add or update values for specific id
-            bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, posX, posZ);
+            bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, abs_velY, posX, posZ, posY);
             //update id_list of visible bodies at this moment
             id_list = {};
-            for (int i = 11; i<message.size(); ++i) {
+            for (int i = 17; i<message.size(); ++i) {
                 id_list.push_back(message[i].getInt32());
             }
 
@@ -121,29 +125,64 @@ public:
                                 {
                                     tune1 = 82.41;
                                     string1->tune(tune1);
+
+                                    if (rWristY > chestY)
+                                    {
+                                        string1->strum();
+                                    }
+                                    /*
+                                    if (rWristY < chestY)
+                                    {
+                                        if (pluckPrimer1 = true)
+                                        {
+                                            string1->strum();
+                                            pluckPrimer1 = false;
+                                        }
+                                    }
+                                    */
                                 }
                                 else
                                 {
                                     tune1 = 87.3;
                                     string1->tune(tune1);
+
+                                    if (rWristY > chestY)
+                                    {
+                                        string1->strum();
+                                    }
                                 }
                             }
                             else
                             {
                                 tune1 = 92.49;
                                 string1->tune(tune1);
+
+                                if (rWristY > chestY)
+                                {
+                                    string1->strum();
+                                }
                             }
                         }
                         else
                         {
                             tune1 = 97.99;
                             string1->tune(tune1);
+
+                            if (rWristY > chestY)
+                            {
+                                string1->strum();
+                            }
                         }
                     }
                     else
                     {
                         tune1 = 103.83;
                         string1->tune(tune1);
+
+                        if (rWristY > chestY)
+                        {
+                            string1->strum();
+                        }
                         //open = 82.41 Hz | 10th fret = 146.83 Hz 
                         //tune1 = (message[2].getFloat32() - (-5.5)) * (80.0 - 146.83) / ((-8.9) - (-2.7)) + 146.83;
                         //oscLogList.add(juce::String(tune1));
