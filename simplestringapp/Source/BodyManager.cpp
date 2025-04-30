@@ -1,7 +1,8 @@
 
 #include "BodyManager.h"
-
+#include <vector>
 BodyManager::BodyManager() {}
+
 
 
 juce::HashMap<int, BodyData>& BodyManager::getBodies()
@@ -37,3 +38,21 @@ void BodyManager::clearAllBodies()
 {
     bodies.clear();
 }
+
+
+
+std::vector<juce::Colour> colourList = {
+    juce::Colours::chocolate,
+    juce::Colours::cyan,
+    juce::Colours::red,
+    juce::Colours::pink,
+    juce::Colours::yellowgreen,
+    juce::Colours::violet,
+    juce::Colours::lime,
+    juce::Colours::whitesmoke,
+};
+
+juce::Colour BodyManager::assign_colour(int id, int nbr_colors = 8){
+    return colourList[id%nbr_colors];
+}
+

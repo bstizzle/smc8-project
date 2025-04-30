@@ -1,6 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h> // Includes JUCE core and containers like juce::HashMap
+//#include <juce_gui_basics/juce_gui_basics.h>
 
 
 // Define a struct to hold velocity and position
@@ -12,7 +13,6 @@ struct BodyData
     float posz;
     float posy;
     juce::Colour color;
-
 };
 // Then declare the outer HashMap
 //extern HashMap<String, BodyData> bodies;
@@ -27,6 +27,8 @@ class BodyManager
         bool hasBody(int id) const;
         void removeBody(int id);
         void clearAllBodies();
+        juce::Colour assign_colour(int id, int nbr_colors);
+
 
     private:
         juce::HashMap<int, BodyData> bodies;

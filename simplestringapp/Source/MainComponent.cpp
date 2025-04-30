@@ -4,7 +4,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    setSize (800, 600);
+    setSize (600, 600);
 
     // Some platforms require permissions to open input channels so request that here
     if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
@@ -19,10 +19,15 @@ MainComponent::MainComponent()
         setAudioChannels (0, 2);
     }
     
-    for (float xpos : xpos_frets)
+    for (float xpos : string_limit)
     {
-        float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getHeight());
-        mapped_xpos_frets.push_back(mapped);
+        float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getWidth());
+        xmapped_xpos_frets.push_back(mapped);
+    }
+    for (float zpos : zpos_frets)
+    {
+        float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
+        ymapped_zpos_frets.push_back(mapped);
     }
 }
 
@@ -166,24 +171,28 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {   
-    //g.setColour (juce::Colours::orange);
-    //for (float xpos:mapped_xpos_frets) {
+    g.setColour (juce::Colours::orange);
+    //for (float xpos:xmapped_xpos_frets) {
     //    juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
     //    g.drawLine (line, 2.0f);
     //}
-
-
+    for (float zpos:ymapped_zpos_frets) {
+        juce::Line<float> line (juce::Point<float> (0.0f, zpos),juce::Point<float> ((float)getWidth(),zpos));
+        g.drawLine (line, 2.0f);
+    }
     
     //g.fillAll(juce::Colours::black); // or whatever your background is
     // Draw the live OSC points
-    g.setColour(juce::Colours::red);
-    float radius = 5.0f;
+    
+    
+    g.setOpacity(0.5);
+    float radius = 10.0f;
 
     for (int id:id_list) {
-
+        g.setColour(bodies_dict.assign_colour(id,4));
         BodyData body_data = bodies_dict.getBody(id);
-        float visual_mapped_x = juce::jmap(body_data.posz, -3.5f, -9.2f, 0.0f, (float)getWidth());
-        float visual_mapped_y = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getHeight());
+        float visual_mapped_y = juce::jmap(body_data.posz, -9.2f, -3.2f, 0.0f,(float)getHeight());
+        float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getWidth());
     
         g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
         g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
@@ -195,20 +204,20 @@ void MainComponent::resized()
 {
     auto bounds = getLocalBounds();
     int numStrings = 6;
-    int stringHeight = bounds.getHeight() / numStrings;
+    int stringZone = bounds.getWidth() / numStrings;
 
     if (string1 != nullptr)
-        string1->setBounds(bounds.removeFromTop(stringHeight));
+        string1->setBounds(bounds.removeFromLeft(stringZone));
     if (string2 != nullptr)
-        string2->setBounds(bounds.removeFromTop(stringHeight));
+        string2->setBounds(bounds.removeFromLeft(stringZone));
     if (string3 != nullptr)
-        string3->setBounds(bounds.removeFromTop(stringHeight));
+        string3->setBounds(bounds.removeFromLeft(stringZone));
     if (string4 != nullptr)
-        string4->setBounds(bounds.removeFromTop(stringHeight));
+        string4->setBounds(bounds.removeFromLeft(stringZone));
     if (string5 != nullptr)
-        string5->setBounds(bounds.removeFromTop(stringHeight));
+        string5->setBounds(bounds.removeFromLeft(stringZone));
     if (string6 != nullptr)
-        string6->setBounds(bounds.removeFromTop(stringHeight));
+        string6->setBounds(bounds.removeFromLeft(stringZone));
 
 
 }
