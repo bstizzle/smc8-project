@@ -162,6 +162,7 @@ void MainComponent::releaseResources()
     // For more details, see the help for AudioProcessor::releaseResources()
 }
 
+
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {   

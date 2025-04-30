@@ -9,6 +9,7 @@ struct BodyData
     float velx;
     float posx;
     float posz;
+    juce::Colour color;
 
 };
 // Then declare the outer HashMap
