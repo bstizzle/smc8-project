@@ -24,6 +24,8 @@ extern std::list<int> id_list;
 
 extern BodyManager bodies_dict;
 extern std::vector<float> string_limit;
+extern std::list<float> xpos_frets;
+extern std::list<float> zpos_frets;
 
 extern std::unique_ptr<SimpleString> string1;
 extern std::unique_ptr<SimpleString> string2;
