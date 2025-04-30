@@ -109,19 +109,28 @@ void SimpleString::paint (juce::Graphics& g)
 Path SimpleString::visualiseState (Graphics& g, double visualScaling)
 {
     // String-boundaries are in the vertical middle of the component
-    double stringBoundaries = getHeight() / 2.0;
-    
+    //double stringBoundaries = getHeight() / 2.0;
+    double stringBoundaries = getWidth() / 2.0;
+
     // initialise path
     Path stringPath;
     
     // start path
-    stringPath.startNewSubPath (0, -u[1][0] * visualScaling + stringBoundaries);
-    
-    double spacing = getWidth() / static_cast<double>(N);
-    double x = spacing;
+    //HORIZoNTAL
+    //stringPath.startNewSubPath (0, -u[1][0] * visualScaling + stringBoundaries);
+    stringPath.startNewSubPath (-u[1][0] * visualScaling + stringBoundaries, 0);
+
+    //HORIZoNTAL
+    //double spacing = getWidth() / static_cast<double>(N);
+    //double x = spacing;
+
+    double spacing = getHeight() / static_cast<double>(N);
+    double y = spacing;
+
     
     for (int l = 1; l <= N; l++) // if you don't save the boundaries use l < N
     {
+        /*HORIZoNTAL
         // Needs to be -u, because a positive u would visually go down
         float newY = -u[1][l] * visualScaling + stringBoundaries;
         
@@ -131,6 +140,20 @@ Path SimpleString::visualiseState (Graphics& g, double visualScaling)
         
         stringPath.lineTo (x, newY);
         x += spacing;
+*/
+
+        //VERTICAL
+        // Needs to be -u, because a positive u would visually go down
+        float newX = -u[1][l] * visualScaling + stringBoundaries;
+
+        // if we get NAN values, make sure that we don't get an exception
+        if (std::isnan(newX))
+            newX = stringBoundaries;
+        
+        stringPath.lineTo (newX, y);
+        y += spacing;
+
+
     }
     // if you don't save the boundaries, and add a stringPath.lineTo (x, getWidth()) here to end the statedrawing
 
