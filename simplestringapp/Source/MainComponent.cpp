@@ -201,7 +201,7 @@ void MainComponent::paint (juce::Graphics& g)
     ymapped_zpos_frets={};
     for (float zpos : zpos_frets)
     {
-        float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
+        float mapped = juce::jmap(zpos, -9.2f, -3.2f,(float)getHeight(),0.0f);
         ymapped_zpos_frets.push_back(mapped);
     }
 
