@@ -223,7 +223,7 @@ void SimpleString::strum()
 {
     auto duration = std::chrono::system_clock::now() - startTime;
     //check if enough time has passed since the last strum was triggered
-    if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 250)
+    if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 1000)
     {
         excitationFlag = true;
         startTime = std::chrono::system_clock::now();

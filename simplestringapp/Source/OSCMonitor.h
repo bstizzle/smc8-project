@@ -94,9 +94,13 @@ public:
 
         if (!message.isEmpty())
         {   
-            posX = message[1].getFloat32();
-            posZ = message[2].getFloat32();
-            posY = message[3].getFloat32();
+            //posX = message[1].getFloat32();
+            //posZ = message[2].getFloat32();
+            //posY = message[3].getFloat32();
+            posX = message[14].getFloat32();
+            posY = message[15].getFloat32();
+            posZ = message[16].getFloat32();
+
             abs_velX = std::abs(message[4].getFloat32());
             abs_velY = std::abs(message[6].getFloat32());
             //wrist point ids 8/9/10
