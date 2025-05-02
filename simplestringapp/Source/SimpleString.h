@@ -75,7 +75,7 @@ private:
     bool excitationFlag = false;
     
     // initialise location of excitation
-    double excitationLoc = 0.5;
+    double excitationLoc = 0.23;
     
     bool clamped = true;
 

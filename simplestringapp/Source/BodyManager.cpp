@@ -1,7 +1,8 @@
 
 #include "BodyManager.h"
-
+#include <vector>
 BodyManager::BodyManager() {}
+
 
 
 juce::HashMap<int, BodyData>& BodyManager::getBodies()
@@ -9,9 +10,9 @@ juce::HashMap<int, BodyData>& BodyManager::getBodies()
     return bodies;
 }
 
-void BodyManager::addOrUpdateBody(int id, float velx, float posx, float posz)
+void BodyManager::addOrUpdateBody(int id, float velx, float vely, float posx, float posz, float posy)
 {
-    bodies.set(id, BodyData{ velx, posx, posz });
+    bodies.set(id, BodyData{ velx, vely, posx, posz, posy, juce::Colours::red});
 }
 
 BodyData BodyManager::getBody(int id) const
@@ -37,3 +38,21 @@ void BodyManager::clearAllBodies()
 {
     bodies.clear();
 }
+
+
+
+std::vector<juce::Colour> colourList = {
+    juce::Colours::chocolate,
+    juce::Colours::cyan,
+    juce::Colours::red,
+    juce::Colours::pink,
+    juce::Colours::yellowgreen,
+    juce::Colours::violet,
+    juce::Colours::lime,
+    juce::Colours::whitesmoke,
+};
+
+juce::Colour BodyManager::assign_colour(int id, int nbr_colors = 8){
+    return colourList[id%nbr_colors];
+}
+

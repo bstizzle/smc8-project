@@ -19,13 +19,20 @@
 
 float posX;
 float posZ;
+float posY;
 double abs_velX;
+double abs_velY;
 std::list<int> id_list;
+
+float rWristY;
+float chestY;
+bool pluckPrimer1 = false;
 
 BodyManager bodies_dict;
 
 
-std::list<float> xpos_frets= {-1.9, -1.8, -1.4, -1.3, -.9, -.8, -.4,-.3, .1, .2, .6, .7};
+std::vector<float> string_limit= {-1.9, -1.4, -.9, -.4, .1, .6, 1.1};
+std::vector<float> zpos_frets= {-4.5, -5.5, -6.5, -7.5, -8.5};
 
 float pluckWidth;
 

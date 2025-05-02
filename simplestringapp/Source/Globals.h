@@ -16,12 +16,19 @@
 
 extern float posX;
 extern float posZ;
+extern float posY;
 extern float pluckWidth;
 extern double abs_velX;
+extern double abs_velY;
 extern std::list<int> id_list;
 
+extern float rWristY;
+extern float chestY;
+extern bool pluckPrimer1;
+
 extern BodyManager bodies_dict;
-extern std::list<float> xpos_frets;
+extern std::vector<float> string_limit;
+extern std::vector<float> zpos_frets;
 
 extern std::unique_ptr<SimpleString> string1;
 extern std::unique_ptr<SimpleString> string2;
