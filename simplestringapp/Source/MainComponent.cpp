@@ -19,16 +19,16 @@ MainComponent::MainComponent()
         setAudioChannels (0, 2);
     }
     
-    for (float xpos : string_limit)
-    {
-        float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getWidth());
-        xmapped_xpos_frets.push_back(mapped);
-    }
-    for (float zpos : zpos_frets)
-    {
-        float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
-        ymapped_zpos_frets.push_back(mapped);
-    }
+    //for (float xpos : string_limit)
+    //{
+    //    float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getWidth());
+    //    xmapped_xpos_frets.push_back(mapped);
+    //}
+    //for (float zpos : zpos_frets)
+    //{
+    //    float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
+    //    ymapped_zpos_frets.push_back(mapped);
+    //}
 }
 
 MainComponent::~MainComponent()
@@ -197,10 +197,14 @@ void MainComponent::releaseResources()
 void MainComponent::paint (juce::Graphics& g)
 {   
     g.setColour (juce::Colours::orange);
-    //for (float xpos:xmapped_xpos_frets) {
-    //    juce::Line<float> line (juce::Point<float> (xpos, 0.0f),juce::Point<float> (xpos, (float)getHeight()));
-    //    g.drawLine (line, 2.0f);
-    //}
+
+    ymapped_zpos_frets={};
+    for (float zpos : zpos_frets)
+    {
+        float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
+        ymapped_zpos_frets.push_back(mapped);
+    }
+
     for (float zpos:ymapped_zpos_frets) {
         juce::Line<float> line (juce::Point<float> (0.0f, zpos),juce::Point<float> ((float)getWidth(),zpos));
         g.drawLine (line, 2.0f);
@@ -216,7 +220,7 @@ void MainComponent::paint (juce::Graphics& g)
     for (int id:id_list) {
         g.setColour(bodies_dict.assign_colour(id,4));
         BodyData body_data = bodies_dict.getBody(id);
-        float visual_mapped_y = juce::jmap(body_data.posz, -9.2f, -3.2f, 0.0f,(float)getHeight());
+        float visual_mapped_y = juce::jmap(body_data.posz, -9.2f, -3.2f, (float)getHeight(),0.0f);
         float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getWidth());
     
         g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);

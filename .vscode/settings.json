@@ -72,7 +72,8 @@
         "valarray": "cpp",
         "__nullptr": "cpp",
         "__split_buffer": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "__node_handle": "cpp"
     },
     "cmake.sourceDirectory": "/home/ibroto/Documents/GitHub/smc8-project/examples-linux/tutorials"
 }
