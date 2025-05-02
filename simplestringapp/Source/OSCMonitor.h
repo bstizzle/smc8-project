@@ -90,6 +90,8 @@ public:
             + juce::String(message.size())
             + " argument(s)");
 
+        pluckWidth = 10;
+
         if (!message.isEmpty())
         {   
             posX = message[1].getFloat32();
@@ -182,7 +184,7 @@ public:
                 if(posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string1->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -254,7 +256,7 @@ public:
                 if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string2->strum();
                         //oscLogList.add("LOOP1");
                     }
@@ -326,7 +328,7 @@ public:
                 if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string3->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -398,7 +400,7 @@ public:
                 if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string4->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -470,7 +472,7 @@ public:
                 if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string5->strum();
                         //oscLogList.add("LOOP2");
                     }
@@ -542,7 +544,7 @@ public:
                 if (posZ > -5.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
-                        pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
+                        //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
                         string6->strum();
                         //oscLogList.add("LOOP2");
                     }
