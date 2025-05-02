@@ -32,8 +32,7 @@ BodyManager bodies_dict;
 
 
 std::vector<float> string_limit= {-1.9, -1.4, -.9, -.4, .1, .6, 1.1};
-std::list<float> xpos_frets= {-1.9, -1.8, -1.4, -1.3, -.9, -.8, -.4,-.3, .1, .2, .6, .7};
-std::list<float> zpos_frets= {-5.5, -6.18, -6.68, -7.54, -8.22};
+std::vector<float> zpos_frets= {-4.5, -5.5, -6.5, -7.5, -8.5};
 
 float pluckWidth;
 

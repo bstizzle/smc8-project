@@ -115,15 +115,15 @@ public:
 
             if (posX > string_limit[0] && posX < string_limit[1])
             {
-                if(posZ < -5.5)
+                if(posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune1 = 82.41;
                                     string1->tune(tune1);
@@ -181,7 +181,7 @@ public:
                         //string1->tune(tune1);
                     }
                 }
-                if(posZ > -5.5 && posZ < -3.4)
+                if(posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -192,15 +192,15 @@ public:
             }
             if (posX > string_limit[1] && posX < string_limit[2])
             {
-                if (posZ < -5.5)
+                if (posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune2 = 110.0;
                                     string2->tune(tune2);
@@ -253,7 +253,7 @@ public:
                         //string2->tune(tune2);
                     }
                 }
-                if (posZ > -5.5 && posZ < -3.4)
+                if (posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -264,15 +264,15 @@ public:
             }
             if (posX > string_limit[2] && posX < string_limit[3])
             {
-                if (posZ < -5.5)
+                if (posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune3 = 146.83;
                                     string3->tune(tune3);
@@ -325,7 +325,7 @@ public:
                         //string3->tune(tune3);
                     }
                 }
-                if (posZ > -5.5 && posZ < -3.4)
+                if (posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -336,15 +336,15 @@ public:
             }
             if (posX > string_limit[3] && posX < string_limit[4])
             {
-                if (posZ < -5.5)
+                if (posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune4 = 196.0;
                                     string4->tune(tune4);
@@ -397,7 +397,7 @@ public:
                         //string4->tune(tune4);
                     }
                 }
-                if (posZ > -5.5 && posZ < -3.4)
+                if (posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -408,15 +408,15 @@ public:
             }
             if (posX > string_limit[4] && posX < string_limit[5])
             {
-                if (posZ < -5.5)
+                if (posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune5 = 246.94;
                                     string5->tune(tune5);
@@ -469,7 +469,7 @@ public:
                         //string5->tune(tune5);
                     }
                 }
-                if (posZ > -5.5 && posZ < -3.4)
+                if (posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -480,15 +480,15 @@ public:
             }
             if (posX > string_limit[5] && posX < string_limit[6])
             {
-                if (posZ < -5.5)
+                if (posZ < zpos_frets[0])
                 {
-                    if (posZ < -6.18)
+                    if (posZ < zpos_frets[1])
                     {
-                        if (posZ < -6.86)
+                        if (posZ < zpos_frets[2])
                         {
-                            if (posZ < -7.54)
+                            if (posZ < zpos_frets[3])
                             {
-                                if (posZ < -8.22)
+                                if (posZ < zpos_frets[4])
                                 {
                                     tune6 = 329.6;
                                     string6->tune(tune6);
@@ -541,7 +541,7 @@ public:
                         //string6->tune(tune6);
                     }
                 }
-                if (posZ > -5.5 && posZ < -3.4)
+                if (posZ > -4.5 && posZ < -3.4)
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
