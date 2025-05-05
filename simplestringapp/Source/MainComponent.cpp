@@ -4,7 +4,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    setSize (600, 600);
+    setSize (1000, 1000);
 
     // Some platforms require permissions to open input channels so request that here
     if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
@@ -19,16 +19,6 @@ MainComponent::MainComponent()
         setAudioChannels (0, 2);
     }
     
-    //for (float xpos : string_limit)
-    //{
-    //    float mapped = juce::jmap(xpos, -2.2f, 1.0f, 0.0f, (float)getWidth());
-    //    xmapped_xpos_frets.push_back(mapped);
-    //}
-    //for (float zpos : zpos_frets)
-    //{
-    //    float mapped = juce::jmap(zpos, -9.2f, -3.2f,0.0f,(float)getHeight());
-    //    ymapped_zpos_frets.push_back(mapped);
-    //}
 }
 
 MainComponent::~MainComponent()
@@ -201,7 +191,7 @@ void MainComponent::paint (juce::Graphics& g)
     ymapped_zpos_frets={};
     for (float zpos : zpos_frets)
     {
-        float mapped = juce::jmap(zpos, -9.2f, -3.2f,(float)getHeight(),0.0f);
+        float mapped = juce::jmap(zpos, -7.5f, -3.2f,(float)getHeight(),0.0f);
         ymapped_zpos_frets.push_back(mapped);
     }
 
@@ -218,9 +208,9 @@ void MainComponent::paint (juce::Graphics& g)
     float radius = 10.0f;
 
     for (int id:id_list) {
-        g.setColour(bodies_dict.assign_colour(id,4));
+        g.setColour(bodies_dict.assign_colour(id,8));
         BodyData body_data = bodies_dict.getBody(id);
-        float visual_mapped_y = juce::jmap(body_data.posz, -9.2f, -3.2f, (float)getHeight(),0.0f);
+        float visual_mapped_y = juce::jmap(body_data.posz, -7.5f, -3.2f, (float)getHeight(),0.0f);
         float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getWidth());
     
         g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
