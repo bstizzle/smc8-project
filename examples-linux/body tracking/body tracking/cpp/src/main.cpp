@@ -52,7 +52,8 @@ int main(int argc, char **argv) {
     	    // Create an OSC client that sends to localhost on port 5005
     lo_address target = lo_address_new("192.168.1.100", "5005");
     lo_address target2 = lo_address_new("192.168.1.101", "9001");
-    lo_address target3 = lo_address_new("192.168.1.102", "9002");
+    lo_address target3 = lo_address_new("192.168.1.108", "9002");
+    lo_address target4 = lo_address_new("192.168.1.107", "9002");
 
     if (!target) {
         std::cerr << "Failed to create OSC client!" << std::endl;
@@ -76,7 +77,7 @@ int main(int argc, char **argv) {
     // Create ZED Bodies
     Camera zed;
     InitParameters init_parameters;
-    init_parameters.camera_resolution = RESOLUTION::SVGA;
+    init_parameters.camera_resolution = RESOLUTION::HD1080;
     init_parameters.camera_fps = 30;
     init_parameters.depth_mode = isJetson ? DEPTH_MODE::NEURAL_LIGHT : DEPTH_MODE::NEURAL;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP;
@@ -109,10 +110,10 @@ int main(int argc, char **argv) {
     body_tracker_params.enable_tracking = true; // track people across images flow
     body_tracker_params.enable_body_fitting = true; // smooth skeletons moves
     body_tracker_params.body_format = sl::BODY_FORMAT::BODY_34;
-    body_tracker_params.enable_segmentation = true;
+    body_tracker_params.enable_segmentation = false;
     //body_tracker_params.detection_model = isJetson ? BODY_TRACKING_MODEL::HUMAN_BODY_FAST : BODY_TRACKING_MODEL::HUMAN_BODY_ACCURATE;
     body_tracker_params.detection_model = BODY_TRACKING_MODEL::HUMAN_BODY_MEDIUM;
-    body_tracker_params.allow_reduced_precision_inference = true;
+    body_tracker_params.allow_reduced_precision_inference = false;
 
     returned_state = zed.enableBodyTracking(body_tracker_params);
     if (returned_state != ERROR_CODE::SUCCESS) {
@@ -127,7 +128,6 @@ int main(int argc, char **argv) {
     float image_aspect_ratio = camera_config.resolution.width / (1.f * camera_config.resolution.height);
     int requested_low_res_w = min(1280, (int)camera_config.resolution.width);
     sl::Resolution display_resolution(requested_low_res_w, requested_low_res_w / image_aspect_ratio);
-
     cv::Mat image_left_ocv(display_resolution.height, display_resolution.width, CV_8UC4, 1);
     Mat image_left(display_resolution, MAT_TYPE::U8_C4, image_left_ocv.data, image_left_ocv.step);
     sl::float2 img_scale(display_resolution.width / (float) camera_config.resolution.width, display_resolution.height / (float) camera_config.resolution.height);
@@ -142,8 +142,8 @@ int main(int argc, char **argv) {
 
     // Configure object detection runtime parameters
     BodyTrackingRuntimeParameters body_tracker_parameters_rt;
-    body_tracker_parameters_rt.detection_confidence_threshold = 40;
-    body_tracker_parameters_rt.skeleton_smoothing = 0.7;
+    body_tracker_parameters_rt.detection_confidence_threshold = 20;
+    body_tracker_parameters_rt.skeleton_smoothing = 0.1;
     
     // Create ZED Bodies filled in the main loop
     Bodies bodies;
@@ -171,8 +171,8 @@ int main(int argc, char **argv) {
 
             //printf("bodies is tracked %d \n", bodies.is_tracked);
             render_2D(image_left_ocv, img_scale, bodies.body_list, bodies.is_tracked);
+            cv::namedWindow(window_name, cv::WINDOW_NORMAL);
             cv::imshow(window_name, image_left_ocv);
-
             key = cv::waitKey(key_wait);
             detected_bodies =  bodies.body_list.size();
             list<int> detected_ids = {};
@@ -185,18 +185,21 @@ int main(int argc, char **argv) {
 		// remove all the console prints for live/production version
 		
 		//auto vel = sqrt(body.velocity.x*body.velocity.x + body.velocity.y*body.velocity.y + body.velocity.z*body.velocity.z);
-		/*
+		
+		
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
 	   	cout << "nbr?bodies: " << detected_bodies << endl;
 		cout << "ID Corpo: " << body.id << endl;
 		cout << "Position: " << body.position << endl;
 		cout << "Velocity: " << body.velocity << endl;
-		cout << "Right wrist: " << body.keypoint[7] << endl;
+		cout << "Right wrist Y: " << body.keypoint[4].y << endl;
+		cout << "Chest Y: " << body.keypoint[1].y << endl;
 		cout << "Abs. Velocity: " << vel << endl;
 		cout << "State: " << body.action_state << endl;    	
 		cout << "------------------------------------------" << endl;
-		*/
+		
+	
 		
 		lo_message msg = lo_message_new();
 		lo_message_add_int32(msg, body.id);
@@ -207,21 +210,45 @@ int main(int argc, char **argv) {
 		lo_message_add_float(msg, body.velocity.z);
 		lo_message_add_float(msg, body.velocity.y);
 		lo_message_add_float(msg, vel);
-		lo_message_add_float(msg, body.keypoint[14].x);
+		lo_message_add_float(msg, body.keypoint[14].x); //right wrist
 		lo_message_add_float(msg, body.keypoint[14].y);
 		lo_message_add_float(msg, body.keypoint[14].z);
 		for (int id : detected_ids) {
         		lo_message_add_int32(msg, id);
     		}
     		
-    		lo_send_message(target, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
-		lo_send_message(target2, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
-		lo_send_message(target3, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/wristX/wristY/wristZ/ids", msg);
+    		lo_message msgBen = lo_message_new();
+    		lo_message_add_int32(msgBen, body.id);
+		lo_message_add_float(msgBen, body.position.x);
+		lo_message_add_float(msgBen, body.position.z);
+		lo_message_add_float(msgBen, body.position.y);
+		lo_message_add_float(msgBen, body.velocity.x);
+		lo_message_add_float(msgBen, body.velocity.z);
+		lo_message_add_float(msgBen, body.velocity.y);
+		lo_message_add_float(msgBen, vel);
+		lo_message_add_float(msgBen, body.keypoint[14].x); //right wrist
+		lo_message_add_float(msgBen, body.keypoint[14].y);
+		lo_message_add_float(msgBen, body.keypoint[14].z);
+		lo_message_add_float(msgBen, body.keypoint[7].x); //left wrist
+		lo_message_add_float(msgBen, body.keypoint[7].y);
+		lo_message_add_float(msgBen, body.keypoint[7].z);
+		lo_message_add_float(msgBen, body.keypoint[1].x); //top-center of chest
+		lo_message_add_float(msgBen, body.keypoint[1].y);
+		lo_message_add_float(msgBen, body.keypoint[1].z);
+		for (int id : detected_ids) {
+        		lo_message_add_int32(msgBen, id);
+    		}
+    		
+    		lo_send_message(target, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/rWristX/rWristY/rWristZ/lWristX/lWristY/lWristZ/chestX/chestY/chestZ/ids", msgBen);
+		lo_send_message(target2, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/rWristX/rWristY/rWristZ/lWristX/lWristY/lWristZ/chestX/chestY/chestZ/ids", msgBen);
+		lo_send_message(target3, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/rWristX/rWristY/rWristZ/lWristX/lWristY/lWristZ/chestX/chestY/chestZ/ids", msgBen);
+		lo_send_message(target4, "/objid/coordinateX/coordinateZ/coordinateY/velocityX/velocityZ/velocityY/speed/rWristX/rWristY/rWristZ/lWristX/lWristY/lWristZ/chestX/chestY/chestZ/ids", msgBen);
 	    		
             }
 	
             if (key == 'q') quit = true;
             if (key == 'm') {
+            
                 if (key_wait > 0) key_wait = 0;
                 else key_wait = 10;
             }
