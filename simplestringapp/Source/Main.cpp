@@ -9,6 +9,7 @@
 #include <JuceHeader.h>
 #include "MainComponent.h"
 #include "OSCMonitor.h"
+#include "AudioRec.h"
 
 //==============================================================================
 class SimpleStringAppApplication  : public juce::JUCEApplication
@@ -28,6 +29,7 @@ public:
 
         mainWindow.reset (new MainWindow (getApplicationName()));
         oscWindow.reset (new OSCWindow("OSCMonitor", new MainContentComponent, *this));
+        recWindow.reset(new RECWindow("AudioRec", new AudioRecordingDemo, *this));
     }
     
     void shutdown() override
@@ -36,6 +38,7 @@ public:
 
         mainWindow = nullptr; // (deletes our window)
         oscWindow = nullptr;
+        recWindow = nullptr;
     }
 
     //==============================================================================
@@ -134,9 +137,45 @@ public:
         JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(OSCWindow)
     };
 
+    class RECWindow : public juce::DocumentWindow
+    {
+    public:
+        RECWindow(const juce::String& name, juce::Component* c, JUCEApplication& a)
+            : DocumentWindow(name, juce::Desktop::getInstance().getDefaultLookAndFeel()
+                .findColour(ResizableWindow::backgroundColourId),
+                juce::DocumentWindow::allButtons),
+            app(a)
+        {
+            setUsingNativeTitleBar(true);
+            setContentOwned(c, true);
+
+#if JUCE_ANDROID || JUCE_IOS
+            setFullScreen(true);
+#else
+            setResizable(true, false);
+            setResizeLimits(300, 250, 10000, 10000);
+            centreWithSize(getWidth(), getHeight());
+#endif
+
+            setVisible(true);
+        }
+
+        void closeButtonPressed() override
+        {
+            app.systemRequestedQuit();
+        }
+
+    private:
+        JUCEApplication& app;
+
+        //==============================================================================
+        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(RECWindow)
+    };
+
 private:
     std::unique_ptr<MainWindow> mainWindow;
     std::unique_ptr<OSCWindow> oscWindow;
+    std::unique_ptr<RECWindow> recWindow;
 };
 
 //==============================================================================
