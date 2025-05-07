@@ -50,10 +50,10 @@ int main(int argc, char **argv) {
 	
     // Create an OSC client that sends to localhost on port 5005
     	    // Create an OSC client that sends to localhost on port 5005
-    lo_address target = lo_address_new("192.168.1.100", "5005");
+    lo_address target = lo_address_new("192.168.1.106", "5005");
     lo_address target2 = lo_address_new("192.168.1.101", "9001");
-    lo_address target3 = lo_address_new("192.168.1.108", "9002");
-    lo_address target4 = lo_address_new("192.168.1.107", "9002");
+    lo_address target3 = lo_address_new("192.168.1.105", "9002");
+    lo_address target4 = lo_address_new("192.168.1.103", "9002");
 
     if (!target) {
         std::cerr << "Failed to create OSC client!" << std::endl;
