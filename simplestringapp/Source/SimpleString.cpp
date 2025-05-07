@@ -29,6 +29,7 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k, double freq) : 
     sigma0 = *parameters.getVarPointer ("sigma0");
     sigma1 = *parameters.getVarPointer ("sigma1");
     
+    
 
     // Calculate wave speed (squared)
     cSq = T / (rho * A);
@@ -99,10 +100,10 @@ void SimpleString::paint (juce::Graphics& g)
     //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
     // choose your favourite colour
-    g.setColour(Colours::cyan);
+    g.setColour(Colours::grey);
     
     // draw the state
-    g.strokePath(visualiseState (g, 100), PathStrokeType(2.0f));
+    g.strokePath(visualiseState (g, 100), PathStrokeType(5.0f));
 
 }
 
