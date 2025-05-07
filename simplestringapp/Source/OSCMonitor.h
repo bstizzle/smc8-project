@@ -190,7 +190,7 @@ public:
                         //string1->tune(tune1);
                     }
                 }
-                if(posZ > -4.5 && posZ < -3.4)
+                if(posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -266,7 +266,7 @@ public:
                         //string2->tune(tune2);
                     }
                 }
-                if (posZ > -4.5 && posZ < -3.4)
+                if (posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -342,7 +342,7 @@ public:
                         //string3->tune(tune3);
                     }
                 }
-                if (posZ > -4.5 && posZ < -3.4)
+                if (posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -418,7 +418,7 @@ public:
                         //string4->tune(tune4);
                     }
                 }
-                if (posZ > -4.5 && posZ < -3.4)
+                if (posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -494,7 +494,7 @@ public:
                         //string5->tune(tune5);
                     }
                 }
-                if (posZ > -4.5 && posZ < -3.4)
+                if (posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -570,7 +570,7 @@ public:
                         //string6->tune(tune6);
                     }
                 }
-                if (posZ > -4.5 && posZ < -3.4)
+                if (posZ < zpos_frets[4])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
