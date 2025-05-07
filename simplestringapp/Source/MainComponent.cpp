@@ -218,7 +218,7 @@ void MainComponent::paint (juce::Graphics& g)
         g.setColour(bodies_dict.assign_colour(id,8));
         BodyData body_data = bodies_dict.getBody(id);
         float visual_mapped_y = juce::jmap(body_data.posz, -7.5f, -3.2f, (float)getHeight(),0.0f);
-        float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getWidth());
+        float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.1f, 0.0f, (float)getWidth());
     
         g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
         g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
