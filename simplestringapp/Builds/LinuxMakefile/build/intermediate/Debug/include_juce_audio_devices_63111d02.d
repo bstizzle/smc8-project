@@ -27,7 +27,6 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ContainerDeletePolicy.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_HeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_MemoryBlock.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_CopyableHeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ReferenceCountedObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ScopedPointer.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_OptionalScopedPointer.h \
@@ -71,7 +70,7 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_HashMap.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_FixedSizeFunction.h \
@@ -87,7 +86,6 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_File.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_DirectoryIterator.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_RangedDirectoryIterator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_NativeFileHandle.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileInputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileOutputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileSearchPath.h \
@@ -97,9 +95,10 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_FileInputSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/logging/juce_FileLogger.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/serialisation/juce_Serialisation.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_BigInteger.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Expression.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Random.h \
@@ -139,7 +138,6 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_Reservoir.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_AndroidDocument.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_AndroidDocumentInputSource.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_OptionsHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_CallbackListenerList.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/messages/juce_MessageManager.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/messages/juce_Message.h \
@@ -230,28 +228,23 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageConvolutionKernel.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageFileFormat.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Typeface.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FontOptions.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Ranges.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_SimpleShapedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_JustifiedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_ShapedText.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_AttributedString.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_GlyphArrangement.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TextLayout.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_CustomTypeface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsContext.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ScaledImage.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_LruCache.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsSoftwareRenderer.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsPostScriptRenderer.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_ImageEffectFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_DropShadowEffect.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_GlowEffect.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Unicode.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/midi_io/juce_MidiDevices.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/midi_io/juce_MidiMessageCollector.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_AudioIODevice.h \
@@ -261,11 +254,10 @@ build/intermediate/Debug/include_juce_audio_devices_63111d02.o: \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/sources/juce_AudioTransportSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_AudioDeviceManager.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_SampleRateHelpers.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_audio_devices/midi_io/juce_MidiDeviceListConnectionBroadcaster.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_audio_devices/midi_io/juce_MidiDevices.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/native/juce_ALSA_linux.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_basics/midi/juce_MidiDataConcatenator.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/native/juce_Midi_linux.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_audio_devices/midi_io/juce_MidiDevices.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_AudioDeviceManager.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_AudioIODevice.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_devices/audio_io/juce_AudioIODeviceType.cpp \

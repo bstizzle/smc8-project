@@ -28,7 +28,6 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ContainerDeletePolicy.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_HeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_MemoryBlock.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_CopyableHeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ReferenceCountedObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ScopedPointer.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_OptionalScopedPointer.h \
@@ -72,7 +71,7 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_HashMap.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_FixedSizeFunction.h \
@@ -88,7 +87,6 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_File.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_DirectoryIterator.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_RangedDirectoryIterator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_NativeFileHandle.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileInputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileOutputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileSearchPath.h \
@@ -98,9 +96,10 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_FileInputSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/logging/juce_FileLogger.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/serialisation/juce_Serialisation.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_BigInteger.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Expression.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Random.h \
@@ -140,7 +139,6 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_Reservoir.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_AndroidDocument.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_AndroidDocumentInputSource.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_OptionsHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_CallbackListenerList.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/juce_events.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/messages/juce_MessageManager.h \
@@ -188,28 +186,23 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageConvolutionKernel.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageFileFormat.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Typeface.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FontOptions.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Ranges.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_SimpleShapedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_JustifiedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_ShapedText.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_AttributedString.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_GlyphArrangement.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TextLayout.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_CustomTypeface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsContext.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ScaledImage.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_LruCache.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsSoftwareRenderer.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsPostScriptRenderer.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_ImageEffectFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_DropShadowEffect.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_GlowEffect.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Unicode.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/juce_data_structures.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/undomanager/juce_UndoableAction.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.h \
@@ -279,16 +272,6 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_StretchableObjectResizer.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_TabbedButtonBar.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_TabbedComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityCellInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTableInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTextInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityValueInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityActions.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityEvent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityRole.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityState.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityHandler.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_Drawable.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_Viewport.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/menus/juce_PopupMenu.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/menus/juce_MenuBarModel.h \
@@ -300,6 +283,7 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativeCoordinatePositioner.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativeParallelogram.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativePointPath.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_Drawable.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableShape.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableComposite.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableImage.h \
@@ -323,6 +307,7 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/buttons/juce_ToolbarButton.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_DropShadower.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_FocusOutline.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_JUCESplashScreen.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/widgets/juce_TreeView.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/windows/juce_TopLevelWindow.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/windows/juce_MessageBoxOptions.h \
@@ -370,6 +355,15 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/lookandfeel/juce_LookAndFeel_V3.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/lookandfeel/juce_LookAndFeel_V4.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/mouse/juce_LassoComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityCellInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTableInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTextInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityValueInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityActions.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityEvent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityRole.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityState.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityHandler.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_XWindowSystem_linux.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_XSymbols_linux.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_FlexItem.h \
@@ -403,9 +397,6 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebBrowserComponent.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_LiveConstantEditor.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AnimatedAppComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/detail/juce_WebControlRelayEvents.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebControlRelays.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebControlParameterIndexReceiver.h \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -1042,138 +1033,157 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /usr/include/gtk-3.0/gtk/gtkplug.h \
  /usr/include/gtk-3.0/gtk/gtkx-autocleanups.h \
  /usr/include/glib-2.0/glib-unix.h \
- /usr/include/webkitgtk-4.1/webkit2/webkit2.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitApplicationInfo.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitDefines.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitAuthenticationRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitCredential.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitSecurityOrigin.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitAutomationSession.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitBackForwardList.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitBackForwardListItem.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitClipboardPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitColorChooserRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitContextMenu.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitContextMenuActions.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitContextMenuItem.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitCookieManager.h \
- /usr/include/libsoup-3.0/libsoup/soup.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth.h \
- /usr/include/libsoup-3.0/libsoup/soup-types.h \
- /usr/include/libsoup-3.0/libsoup/soup-version.h \
- /usr/include/libsoup-3.0/libsoup/soup-status.h \
- /usr/include/libsoup-3.0/libsoup/soup-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-message.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-body.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-method.h \
- /usr/include/libsoup-3.0/libsoup/soup-multipart.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-manager.h \
- /usr/include/libsoup-3.0/libsoup/soup-cache.h \
- /usr/include/libsoup-3.0/libsoup/soup-content-decoder.h \
- /usr/include/libsoup-3.0/libsoup/soup-content-sniffer.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar-db.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar-text.h \
- /usr/include/libsoup-3.0/libsoup/soup-date-utils.h \
- /usr/include/libsoup-3.0/libsoup/soup-enum-types.h \
- /usr/include/libsoup-3.0/libsoup/soup-form.h \
- /usr/include/libsoup-3.0/libsoup/soup-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-enforcer.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-enforcer-db.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-policy.h \
- /usr/include/libsoup-3.0/libsoup/soup-logger.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-metrics.h \
- /usr/include/libsoup-3.0/libsoup/soup-multipart-input-stream.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain-basic.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain-digest.h \
- /usr/include/libsoup-3.0/libsoup/soup-server.h \
- /usr/include/libsoup-3.0/libsoup/soup-uri-utils.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-connection.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket.h \
- /usr/include/libsoup-3.0/libsoup/soup-server-message.h \
- /usr/include/libsoup-3.0/libsoup/soup-session.h \
- /usr/include/libsoup-3.0/libsoup/soup-session-feature.h \
- /usr/include/libsoup-3.0/libsoup/soup-tld.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension-deflate.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension-manager.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitDeviceInfoPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitDownload.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitURIRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitURIResponse.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitEditingCommands.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitEditorState.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitEnumTypes.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitError.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitFaviconDatabase.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitFeature.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitFileChooserRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitFindController.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitFormSubmissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitGeolocationManager.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitGeolocationPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitHitTestResult.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitInputMethodContext.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitInstallMissingMediaPluginsPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitJavascriptResult.h \
- /usr/include/webkitgtk-4.1/jsc/jsc.h \
- /usr/include/webkitgtk-4.1/jsc/JSCClass.h \
- /usr/include/webkitgtk-4.1/jsc/JSCDefines.h \
- /usr/include/webkitgtk-4.1/jsc/JSCValue.h \
- /usr/include/webkitgtk-4.1/jsc/JSCContext.h \
- /usr/include/webkitgtk-4.1/jsc/JSCException.h \
- /usr/include/webkitgtk-4.1/jsc/JSCVirtualMachine.h \
- /usr/include/webkitgtk-4.1/jsc/JSCOptions.h \
- /usr/include/webkitgtk-4.1/jsc/JSCVersion.h \
- /usr/include/webkitgtk-4.1/jsc/JSCWeakValue.h \
- /usr/include/webkitgtk-4.1/jsc/JSCAutocleanups.h \
- /usr/include/webkitgtk-4.1/JavaScriptCore/JSBase.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitMediaKeySystemPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitMemoryPressureSettings.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitMimeInfo.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitNavigationAction.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitNavigationPolicyDecision.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPolicyDecision.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebsitePolicies.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitNetworkProxySettings.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitNotification.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitNotificationPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitOptionMenu.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitOptionMenuItem.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPermissionStateQuery.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPlugin.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPointerLockPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPrintCustomWidget.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitPrintOperation.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebView.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitScriptDialog.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitSettings.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitUserContentManager.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitUserContent.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitUserMessage.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebContext.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitSecurityManager.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitURISchemeRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitURISchemeResponse.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebsiteDataManager.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebsiteData.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebResource.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebViewSessionState.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWindowProperties.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebInspector.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebViewBase.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitResponsePolicyDecision.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitURIUtilities.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitUserContentFilterStore.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitUserMediaPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitVersion.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebExtensionMatchPattern.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
- /usr/include/webkitgtk-4.1/webkit/WebKitAutocleanups.h \
+ /usr/include/webkitgtk-4.0/webkit2/webkit2.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitApplicationInfo.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitDefines.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitAuthenticationRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitCredential.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitSecurityOrigin.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitAutomationSession.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitBackForwardList.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitBackForwardListItem.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitClipboardPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitColorChooserRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitContextMenu.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitContextMenuActions.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitContextMenuItem.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitCookieManager.h \
+ /usr/include/libsoup-2.4/libsoup/soup.h \
+ /usr/include/libsoup-2.4/libsoup/soup-address.h \
+ /usr/include/libsoup-2.4/libsoup/soup-types.h \
+ /usr/include/libsoup-2.4/libsoup/soup-version.h \
+ /usr/include/libsoup-2.4/libsoup/soup-status.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth.h \
+ /usr/include/libsoup-2.4/libsoup/soup-headers.h \
+ /usr/include/libsoup-2.4/libsoup/soup-message.h \
+ /usr/include/libsoup-2.4/libsoup/soup-message-body.h \
+ /usr/include/libsoup-2.4/libsoup/soup-message-headers.h \
+ /usr/include/libsoup-2.4/libsoup/soup-method.h \
+ /usr/include/libsoup-2.4/libsoup/soup-misc.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth-domain.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth-domain-basic.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth-domain-digest.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth-manager.h \
+ /usr/include/libsoup-2.4/libsoup/soup-types.h \
+ /usr/include/libsoup-2.4/libsoup/soup-auth.h \
+ /usr/include/libsoup-2.4/libsoup/soup-cache.h \
+ /usr/include/libsoup-2.4/libsoup/soup-content-decoder.h \
+ /usr/include/libsoup-2.4/libsoup/soup-content-sniffer.h \
+ /usr/include/libsoup-2.4/libsoup/soup-cookie.h \
+ /usr/include/libsoup-2.4/libsoup/soup-cookie-jar.h \
+ /usr/include/libsoup-2.4/libsoup/soup-cookie-jar-db.h \
+ /usr/include/libsoup-2.4/libsoup/soup-cookie-jar-text.h \
+ /usr/include/libsoup-2.4/libsoup/soup-date.h \
+ /usr/include/libsoup-2.4/libsoup/soup-enum-types.h \
+ /usr/include/libsoup-2.4/libsoup/soup-form.h \
+ /usr/include/libsoup-2.4/libsoup/soup-multipart.h \
+ /usr/include/libsoup-2.4/libsoup/soup-hsts-enforcer.h \
+ /usr/include/libsoup-2.4/libsoup/soup-hsts-enforcer-db.h \
+ /usr/include/libsoup-2.4/libsoup/soup-hsts-policy.h \
+ /usr/include/libsoup-2.4/libsoup/soup-logger.h \
+ /usr/include/libsoup-2.4/libsoup/soup-multipart-input-stream.h \
+ /usr/include/libsoup-2.4/libsoup/soup-proxy-resolver.h \
+ /usr/include/libsoup-2.4/libsoup/soup-proxy-resolver-default.h \
+ /usr/include/libsoup-2.4/libsoup/soup-proxy-uri-resolver.h \
+ /usr/include/libsoup-2.4/libsoup/soup-request.h \
+ /usr/include/libsoup-2.4/libsoup/soup-requester.h \
+ /usr/include/libsoup-2.4/libsoup/soup-request-data.h \
+ /usr/include/libsoup-2.4/libsoup/soup-request.h \
+ /usr/include/libsoup-2.4/libsoup/soup-request-file.h \
+ /usr/include/libsoup-2.4/libsoup/soup-request-http.h \
+ /usr/include/libsoup-2.4/libsoup/soup-server.h \
+ /usr/include/libsoup-2.4/libsoup/soup-uri.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket-connection.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket.h \
+ /usr/include/libsoup-2.4/libsoup/soup-session-async.h \
+ /usr/include/libsoup-2.4/libsoup/soup-session.h \
+ /usr/include/libsoup-2.4/libsoup/soup-session-feature.h \
+ /usr/include/libsoup-2.4/libsoup/soup-session-sync.h \
+ /usr/include/libsoup-2.4/libsoup/soup-socket.h \
+ /usr/include/libsoup-2.4/libsoup/soup-tld.h \
+ /usr/include/libsoup-2.4/libsoup/soup-value-utils.h \
+ /usr/include/glib-2.0/gobject/gvaluecollector.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket-extension.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket-extension-deflate.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket-extension.h \
+ /usr/include/libsoup-2.4/libsoup/soup-websocket-extension-manager.h \
+ /usr/include/libsoup-2.4/libsoup/soup-xmlrpc.h \
+ /usr/include/libsoup-2.4/libsoup/soup-xmlrpc-old.h \
+ /usr/include/libsoup-2.4/libsoup/soup-autocleanups.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitDeviceInfoPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitDownload.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitURIRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitURIResponse.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitEditingCommands.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitEditorState.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitEnumTypes.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitError.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitFaviconDatabase.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitFeature.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitFileChooserRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitFindController.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitFormSubmissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitGeolocationManager.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitGeolocationPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitHitTestResult.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitInputMethodContext.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitInstallMissingMediaPluginsPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitJavascriptResult.h \
+ /usr/include/webkitgtk-4.0/jsc/jsc.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCClass.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCDefines.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCValue.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCContext.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCException.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCVirtualMachine.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCOptions.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCVersion.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCWeakValue.h \
+ /usr/include/webkitgtk-4.0/jsc/JSCAutocleanups.h \
+ /usr/include/webkitgtk-4.0/JavaScriptCore/JSBase.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitMediaKeySystemPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitMemoryPressureSettings.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitMimeInfo.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitNavigationAction.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitNavigationPolicyDecision.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPolicyDecision.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebsitePolicies.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitNetworkProxySettings.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitNotification.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitNotificationPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitOptionMenu.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitOptionMenuItem.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPermissionStateQuery.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPlugin.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPointerLockPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPrintCustomWidget.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitPrintOperation.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebView.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitScriptDialog.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitSettings.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitUserContentManager.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitUserContent.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitUserMessage.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebContext.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitSecurityManager.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitURISchemeRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitURISchemeResponse.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebsiteDataManager.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebsiteData.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebResource.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebViewSessionState.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWindowProperties.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebInspector.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebViewBase.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitResponsePolicyDecision.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitURIUtilities.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitUserContentFilterStore.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitUserMediaPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitVersion.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebExtensionMatchPattern.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
+ /usr/include/webkitgtk-4.0/webkit/WebKitAutocleanups.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/documents/juce_FileBasedDocument.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeDocument.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeEditorComponent.cpp \
@@ -1187,12 +1197,11 @@ build/intermediate/Debug/include_juce_gui_extra_6dee1c1a.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_PushNotifications.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_RecentlyOpenedFilesList.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SplashScreen.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/native/juce_SystemTrayIcon_linux.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SystemTrayIconComponent.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_LiveConstantEditor.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AnimatedAppComponent.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebBrowserComponent.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebControlRelays.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_ScopedWindowAssociation_linux.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_extra/native/juce_XEmbedComponent_linux.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/native/juce_WebBrowserComponent_linux.cpp
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/native/juce_WebBrowserComponent_linux.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/native/juce_SystemTrayIcon_linux.cpp

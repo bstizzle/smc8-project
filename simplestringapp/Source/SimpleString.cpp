@@ -100,7 +100,7 @@ void SimpleString::paint (juce::Graphics& g)
     //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
     // choose your favourite colour
-    g.setColour(Colours::grey);
+    g.setColour(Colours::cyan);
     
     // draw the state
     g.strokePath(visualiseState (g, 100), PathStrokeType(5.0f));

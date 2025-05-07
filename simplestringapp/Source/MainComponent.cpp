@@ -186,29 +186,30 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {
-    g.setColour (juce::Colours::orange);
-
     std::vector<float> ymapped_zpos_frets;
     for (float zpos : zpos_frets)
     {
-        float mapped = juce::jmap(zpos, -7.5f, -3.2f,(float)getHeight(),0.0f);
+        float mapped = juce::jmap(zpos, -7.5f, -3.2f, (float)getHeight(), 0.0f);
         ymapped_zpos_frets.push_back(mapped);
     }
 
-    float last_y_pos = 0.0f; // Variabile per memorizzare l'ultima coordinata y
+    // Controlla che ci siano almeno due linee
+    if (ymapped_zpos_frets.size() >= 2)
+    {
+        // Disegna la "nuova" prima linea (bianca)
+        g.setColour (juce::Colours::white);
+        float yPosWhite = ymapped_zpos_frets[1];
+        juce::Line<float> firstLine (juce::Point<float> (0.0f, yPosWhite), juce::Point<float> ((float)getWidth(), yPosWhite));
+        g.drawLine (firstLine, 14.0f);
 
-    // Disegna tutte le linee con il colore predefinito
-    for (float yPos : ymapped_zpos_frets) {
-        juce::Line<float> line (juce::Point<float> (0.0f, yPos), juce::Point<float> ((float)getWidth(), yPos));
-        g.drawLine (line, 5.0f);
-        last_y_pos = yPos; // Aggiorna l'ultima coordinata y
-    }
-
-    // Disegna nuovamente l'ultima linea con un colore diverso
-    if (!ymapped_zpos_frets.empty()) {
-        g.setColour (juce::Colours::white); // Cambia il colore qui (es. blu)
-        juce::Line<float> last_line (juce::Point<float> (0.0f, last_y_pos), juce::Point<float> ((float)getWidth(), last_y_pos));
-        g.drawLine (last_line, 14.0f); // Puoi anche cambiare lo spessore se vuoi
+        // Disegna le linee restanti (arancioni)
+        g.setColour (juce::Colours::orange);
+        for (size_t i = 2; i < ymapped_zpos_frets.size(); ++i)
+        {
+            float yPos = ymapped_zpos_frets[i];
+            juce::Line<float> line (juce::Point<float> (0.0f, yPos), juce::Point<float> ((float)getWidth(), yPos));
+            g.drawLine (line, 5.0f);
+        }
     }
 
     g.setOpacity(0.5);
@@ -224,6 +225,16 @@ void MainComponent::paint (juce::Graphics& g)
         g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
         //DBG("ID: " << id << ", velx: " << data.velx << ", posx: " << data.posx);
     }
+    
+    g.setColour(juce::Colour(32,32,32));
+    juce::Rectangle<int> nut(0, 0, (int)getWidth(), (float)getHeight()*0.25);
+    g.drawRect(nut, 2);  // outline
+    // or
+    g.fillRect(nut);  
+    //g.setColour(juce::Colours::white); // Cambia il colore qui (es. blu)
+    //g.drawRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
+    //g.fillRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
+
 }
 
 void MainComponent::resized()

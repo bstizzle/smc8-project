@@ -28,7 +28,6 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ContainerDeletePolicy.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_HeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_MemoryBlock.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_CopyableHeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ReferenceCountedObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ScopedPointer.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_OptionalScopedPointer.h \
@@ -72,7 +71,7 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_HashMap.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_FixedSizeFunction.h \
@@ -88,7 +87,6 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_File.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_DirectoryIterator.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_RangedDirectoryIterator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_NativeFileHandle.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileInputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileOutputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileSearchPath.h \
@@ -98,9 +96,10 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_FileInputSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/logging/juce_FileLogger.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/serialisation/juce_Serialisation.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_BigInteger.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Expression.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Random.h \
@@ -140,7 +139,6 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_Reservoir.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_AndroidDocument.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_AndroidDocumentInputSource.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_OptionsHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_CallbackListenerList.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/juce_events.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/messages/juce_MessageManager.h \
@@ -188,28 +186,23 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageConvolutionKernel.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageFileFormat.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Typeface.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FontOptions.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Ranges.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_SimpleShapedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_JustifiedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_ShapedText.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_AttributedString.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_GlyphArrangement.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TextLayout.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_CustomTypeface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsContext.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ScaledImage.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_LruCache.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsSoftwareRenderer.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsPostScriptRenderer.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_ImageEffectFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_DropShadowEffect.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_GlowEffect.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Unicode.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/juce_data_structures.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/undomanager/juce_UndoableAction.h \
  /home/ibroto/Documents/JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.h \
@@ -279,16 +272,6 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_StretchableObjectResizer.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_TabbedButtonBar.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_TabbedComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityCellInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTableInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTextInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityValueInterface.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityActions.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityEvent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityRole.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityState.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityHandler.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_Drawable.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_Viewport.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/menus/juce_PopupMenu.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/menus/juce_MenuBarModel.h \
@@ -300,6 +283,7 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativeCoordinatePositioner.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativeParallelogram.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/positioning/juce_RelativePointPath.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_Drawable.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableShape.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableComposite.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/drawables/juce_DrawableImage.h \
@@ -323,6 +307,7 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/buttons/juce_ToolbarButton.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_DropShadower.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_FocusOutline.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/misc/juce_JUCESplashScreen.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/widgets/juce_TreeView.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/windows/juce_TopLevelWindow.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/windows/juce_MessageBoxOptions.h \
@@ -370,6 +355,15 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/lookandfeel/juce_LookAndFeel_V3.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/lookandfeel/juce_LookAndFeel_V4.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/mouse/juce_LassoComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityCellInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTableInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityTextInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/interfaces/juce_AccessibilityValueInterface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityActions.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityEvent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/enums/juce_AccessibilityRole.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityState.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_basics/accessibility/juce_AccessibilityHandler.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_XWindowSystem_linux.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_XSymbols_linux.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_FlexItem.h \
@@ -377,36 +371,6 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_GridItem.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/layout/juce_Grid.h \
  /home/ibroto/Documents/JUCE/modules/juce_gui_basics/native/juce_ScopedDPIAwarenessDisabler.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/juce_gui_extra.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/documents/juce_FileBasedDocument.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeDocument.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeEditorComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeTokeniser.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniser.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniserFunctions.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_XMLCodeTokeniser.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_LuaCodeTokeniser.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_ActiveXControlComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_AndroidViewComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_NSViewComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_UIViewComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_XEmbedComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_HWNDComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AppleRemote.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_BubbleMessageComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_ColourSelector.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_KeyMappingEditorComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_PreferencesPanel.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_PushNotifications.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_RecentlyOpenedFilesList.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SplashScreen.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SystemTrayIconComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebBrowserComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_LiveConstantEditor.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AnimatedAppComponent.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/detail/juce_WebControlRelayEvents.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebControlRelays.h \
- /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebControlParameterIndexReceiver.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_basics/juce_audio_basics.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_basics/buffers/juce_AudioDataConverters.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_basics/buffers/juce_FloatVectorOperations.h \
@@ -489,6 +453,33 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_PluginHostType.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARADebug.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARA_utils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/juce_gui_extra.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/documents/juce_FileBasedDocument.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeDocument.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeEditorComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CodeTokeniser.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniser.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniserFunctions.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_XMLCodeTokeniser.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/code_editor/juce_LuaCodeTokeniser.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_ActiveXControlComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_AndroidViewComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_NSViewComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_UIViewComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_XEmbedComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/embedding/juce_HWNDComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AppleRemote.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_BubbleMessageComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_ColourSelector.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_KeyMappingEditorComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_PreferencesPanel.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_PushNotifications.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_RecentlyOpenedFilesList.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SplashScreen.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_SystemTrayIconComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_WebBrowserComponent.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_LiveConstantEditor.h \
+ /home/ibroto/Documents/JUCE/modules/juce_gui_extra/misc/juce_AnimatedAppComponent.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_FlagCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/format/juce_AudioPluginFormat.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/format/juce_AudioPluginFormatManager.cpp \
@@ -520,6 +511,5 @@ build/intermediate/Debug/include_juce_audio_processors_10c03666.o: \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_PluginHostType.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_AAXClientExtensions.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_VST2ClientExtensions.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/juce_VST3ClientExtensions.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARA_utils.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_audio_processors/format_types/juce_LV2PluginFormat.cpp
