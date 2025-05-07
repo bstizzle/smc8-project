@@ -185,25 +185,32 @@ void MainComponent::releaseResources()
 
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
-{   
+{
     g.setColour (juce::Colours::orange);
 
-    ymapped_zpos_frets={};
+    std::vector<float> ymapped_zpos_frets;
     for (float zpos : zpos_frets)
     {
         float mapped = juce::jmap(zpos, -7.5f, -3.2f,(float)getHeight(),0.0f);
         ymapped_zpos_frets.push_back(mapped);
     }
 
-    for (float zpos:ymapped_zpos_frets) {
-        juce::Line<float> line (juce::Point<float> (0.0f, zpos),juce::Point<float> ((float)getWidth(),zpos));
-        g.drawLine (line, 2.0f);
+    float last_y_pos = 0.0f; // Variabile per memorizzare l'ultima coordinata y
+
+    // Disegna tutte le linee con il colore predefinito
+    for (float yPos : ymapped_zpos_frets) {
+        juce::Line<float> line (juce::Point<float> (0.0f, yPos), juce::Point<float> ((float)getWidth(), yPos));
+        g.drawLine (line, 5.0f);
+        last_y_pos = yPos; // Aggiorna l'ultima coordinata y
     }
-    
-    //g.fillAll(juce::Colours::black); // or whatever your background is
-    // Draw the live OSC points
-    
-    
+
+    // Disegna nuovamente l'ultima linea con un colore diverso
+    if (!ymapped_zpos_frets.empty()) {
+        g.setColour (juce::Colours::white); // Cambia il colore qui (es. blu)
+        juce::Line<float> last_line (juce::Point<float> (0.0f, last_y_pos), juce::Point<float> ((float)getWidth(), last_y_pos));
+        g.drawLine (last_line, 14.0f); // Puoi anche cambiare lo spessore se vuoi
+    }
+
     g.setOpacity(0.5);
     float radius = 10.0f;
 
