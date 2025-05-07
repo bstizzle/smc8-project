@@ -105,7 +105,7 @@ public:
             abs_velY = std::abs(message[6].getFloat32());
             //wrist point ids 8/9/10
             rWristY = message[9].getFloat32();
-            chestY = message[15].getFloat32();
+            chestY = message[15].getFloat32() + 0.08;
 
 
             //MANAGE IDs
