@@ -212,6 +212,13 @@ void MainComponent::paint (juce::Graphics& g)
         }
     }
 
+    g.setColour(juce::Colour(32,32,32));
+    juce::Rectangle<int> nut(0, 0, (int)getWidth(), (float)getHeight()*0.25);
+    g.drawRect(nut, 2);  // outline
+    // or
+    g.fillRect(nut);  
+
+    
     g.setOpacity(0.5);
     float radius = 10.0f;
 
@@ -226,11 +233,7 @@ void MainComponent::paint (juce::Graphics& g)
         //DBG("ID: " << id << ", velx: " << data.velx << ", posx: " << data.posx);
     }
     
-    g.setColour(juce::Colour(32,32,32));
-    juce::Rectangle<int> nut(0, 0, (int)getWidth(), (float)getHeight()*0.25);
-    g.drawRect(nut, 2);  // outline
-    // or
-    g.fillRect(nut);  
+
     //g.setColour(juce::Colours::white); // Cambia il colore qui (es. blu)
     //g.drawRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
     //g.fillRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
