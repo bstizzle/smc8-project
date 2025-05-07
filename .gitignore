@@ -34,3 +34,50 @@
 *.exe
 *.out
 *.app
+
+
+########### gpt version
+# JUCE build folders
+Builds/
+build/
+build-*/
+
+# CMake build artifacts
+CMakeBuild/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled binaries and intermediate files
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+*.out
+*.app
+*.jucer
+
+# Xcode and Visual Studio project files (optional, if using CMake only)
+*.xcworkspace
+*.xcodeproj
+*.vcxproj*
+*.sln
+
+# User/IDE config
+*.user
+*.userprefs
+.idea/
+.vscode/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Backup/temporary files
+*~
+*.swp
