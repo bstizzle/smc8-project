@@ -42,7 +42,7 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     parameters.set ("L", 1);
     parameters.set ("rho", 7850);
     parameters.set ("A", r * r * double_Pi);
-    parameters.set ("T", 299.75);
+    parameters.set ("T", 600);
     parameters.set ("E", 2e11);
     parameters.set ("I", r * r * r * r * double_Pi * 0.25);
     parameters.set ("sigma0", 2);
@@ -50,29 +50,40 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     
 
     //// Initialise an instance of the SimpleString class ////
+    f1 = 101.6; // hand-tuned for E string
     //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
-    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
+    //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
+    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, f1);
     //parameters.set ("L", 3);
 
+    f2 = 134.9; // hand-tuned for A string
     //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
-    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
+    //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
+    string2 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f2);
     //parameters.set ("L", 2);
 
+    f3 = 179.3; // hand-tuned for D string
     //string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
-    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
+    //string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
+    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f3);
     //parameters.set ("L", 1);
 
+    f4 = 237.3; // hand-tuned for G string
     //string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
-    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
+    //string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
+    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f4);
     //parameters.set ("L", 0.66);
 
+    f5 = 295.7; // hand-tuned for B string
     //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
-    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
+    //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
+    string5 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f5);
     //parameters.set ("L", 0.33);
 
+    f6 = 393.1; // hand-tuned for E string
     //string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
-    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
-
+    //string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
+    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f6);
 
     addAndMakeVisible (string1.get()); // add the string to the application
     addAndMakeVisible (string2.get()); // add the string to the application
@@ -135,29 +146,29 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         string6->updateStates();
         
         
-        output = (string1->getOutput (0.8) 
-                    + string2->getOutput (0.8)
-                    + string3->getOutput (0.8)
-                    + string4->getOutput (0.8)
-                    + string5->getOutput (0.8)
-                    + string6->getOutput (0.8)
-                )/6; // get output at 0.8L of the string
+        output = (string1->getOutput (0.73) 
+                    + string2->getOutput (0.73)
+                    + string3->getOutput (0.73)
+                    + string4->getOutput (0.73)
+                    + string5->getOutput (0.73)
+                    + string6->getOutput (0.73)
+                )/6; // get output at 0.73L of the string
 
-        double outputR = (string1->getOutput(0.8)*1.4
-            + string2->getOutput(0.8)*1.2
-            + string3->getOutput(0.8)*1.0
-            + string4->getOutput(0.8)*0.8
-            + string5->getOutput(0.8)*0.6
-            + string6->getOutput(0.8)*0.4
-            ) / 6; // get output at 0.8L of the string
+        double outputR = (string1->getOutput(0.73)*1.4
+            + string2->getOutput(0.73)*1.2
+            + string3->getOutput(0.73)*1.0
+            + string4->getOutput(0.73)*0.8
+            + string5->getOutput(0.73)*0.6
+            + string6->getOutput(0.73)*0.4
+            ) / 6; // get output at 0.73L of the string
 
-        double outputL = (string1->getOutput(0.8) * 0.4
-            + string2->getOutput(0.8) * 0.6
-            + string3->getOutput(0.8) * 0.8
-            + string4->getOutput(0.8) * 1.0
-            + string5->getOutput(0.8) * 1.2
-            + string6->getOutput(0.8) * 1.4
-            ) / 6; // get output at 0.8L of the string
+        double outputL = (string1->getOutput(0.73) * 0.4
+            + string2->getOutput(0.73) * 0.6
+            + string3->getOutput(0.73) * 0.8
+            + string4->getOutput(0.73) * 1.0
+            + string5->getOutput(0.73) * 1.2
+            + string6->getOutput(0.73) * 1.4
+            ) / 6; // get output at 0.73L of the string
         
         for (int channel = 0; channel < numChannels; ++channel)
         {

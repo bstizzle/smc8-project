@@ -129,8 +129,9 @@ public:
                             {
                                 if (posZ < zpos_frets[4])
                                 {                        
-                                    tune1 = 103.83;
+                                    //tune1 = 103.83;
                                     //tune1 = 82.41;
+                                    tune1 = f1;
                                     string1->tune(tune1);
 
                                     if (rWristY > chestY)
@@ -140,8 +141,9 @@ public:
                                 }
                                 else
                                 {
-                                    tune1 = 97.99;
+                                    //tune1 = 97.99;
                                     //tune1 = 87.3;
+                                    tune1 = f1 / 1.05946;
                                     string1->tune(tune1);
 
                                     if (rWristY > chestY)
@@ -152,7 +154,8 @@ public:
                             }
                             else
                             {
-                                tune1 = 92.49;
+                                //tune1 = 92.49;
+                                tune1 = f1 / pow(1.05946,2);
                                 string1->tune(tune1);
 
                                 if (rWristY > chestY)
@@ -163,9 +166,9 @@ public:
                         }
                         else
                         {
-                            tune1 = 87.3;
+                            //tune1 = 87.3;
                             //tune1 = 97.99;
-
+                            tune1 = f1 / pow(1.05946, 3);
                             string1->tune(tune1);
 
                             if (rWristY > chestY)
@@ -176,8 +179,9 @@ public:
                     }
                     else
                     {
-                        tune1 = 82.41;
+                        //tune1 = 82.41;
                         //tune1 = 103.83;
+                        tune1 = f1 / pow(1.05946, 4);
                         string1->tune(tune1);
 
                         if (rWristY > chestY)
@@ -190,7 +194,7 @@ public:
                         //string1->tune(tune1);
                     }
                 }
-                if(posZ < zpos_frets[4])
+                if(posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -212,7 +216,8 @@ public:
                                 if (posZ < zpos_frets[4])
                                 {
                                     //tune2 = 110.0;
-                                    tune2 = 138.59;
+                                    //tune2 = 138.59;
+                                    tune2 = f2;
                                     string2->tune(tune2);
                                     if (rWristY > chestY)
                                     {
@@ -222,7 +227,8 @@ public:
                                 else
                                 {
                                     //tune2 = 116.54;
-                                    tune2 = 130.81;
+                                    //tune2 = 130.81;
+                                    tune2 = f2 / 1.05946;
                                     string2->tune(tune2);
                                     if (rWristY > chestY)
                                     {
@@ -232,7 +238,8 @@ public:
                             }
                             else
                             {
-                                tune2 = 123.47;
+                                //tune2 = 123.47;
+                                tune2 = f2 / pow(1.05946, 2);
                                 string2->tune(tune2);
                                 if (rWristY > chestY)
                                 {
@@ -243,7 +250,8 @@ public:
                         else
                         {
                             //tune2 = 130.81;
-                            tune2 = 116.54;
+                            //tune2 = 116.54;
+                            tune2 = f2 / pow(1.05946, 3);
                             string2->tune(tune2);
                             if (rWristY > chestY)
                             {
@@ -254,7 +262,8 @@ public:
                     else
                     {
                         //tune2 = 138.59;
-                        tune2 = 110.0;
+                        //tune2 = 110.0;
+                        tune2 = f2 / pow(1.05946, 4);
                         string2->tune(tune2);
                         if (rWristY > chestY)
                         {
@@ -266,7 +275,7 @@ public:
                         //string2->tune(tune2);
                     }
                 }
-                if (posZ < zpos_frets[4])
+                if (posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -287,8 +296,9 @@ public:
                             {
                                 if (posZ < zpos_frets[4])
                                 {
-                                    tune3 = 185.0;
+                                    //tune3 = 185.0;
                                     //tune3 = 146.83;
+                                    tune3 = f3;
                                     string3->tune(tune3);
                                     if (rWristY > chestY)
                                     {
@@ -298,7 +308,8 @@ public:
                                 else
                                 {
                                     //tune3 = 155.56;
-                                    tune3 = 174.61;
+                                    //tune3 = 174.61;
+                                    tune3 = f3 / 1.05946;
                                     string3->tune(tune3);
                                     if (rWristY > chestY)
                                     {
@@ -308,7 +319,8 @@ public:
                             }
                             else
                             {
-                                tune3 = 164.81;
+                                //tune3 = 164.81;
+                                tune3 = f3 / pow(1.05946, 2);
                                 string3->tune(tune3);
                                 if (rWristY > chestY)
                                 {
@@ -319,7 +331,8 @@ public:
                         else
                         {
                             //tune3 = 174.61;
-                            tune3 = 155.56;
+                            //tune3 = 155.56;
+                            tune3 = f3 / pow(1.05946, 3);
                             string3->tune(tune3);
                             if (rWristY > chestY)
                             {
@@ -330,7 +343,8 @@ public:
                     else
                     {
                         //tune3 = 185.0;
-                        tune3 = 146.83;
+                        //tune3 = 146.83;
+                        tune3 = f3 / pow(1.05946, 4);
                         string3->tune(tune3);
                         if (rWristY > chestY)
                         {
@@ -342,7 +356,7 @@ public:
                         //string3->tune(tune3);
                     }
                 }
-                if (posZ < zpos_frets[4])
+                if (posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -364,7 +378,8 @@ public:
                                 if (posZ < zpos_frets[4])
                                 {
                                     //tune4 = 196.0;
-                                    tune4 = 246.94;
+                                    //tune4 = 246.94;
+                                    tune4 = f4;
                                     string4->tune(tune4);
                                     if (rWristY > chestY)
                                     {
@@ -374,7 +389,8 @@ public:
                                 else
                                 {
                                     //tune4 = 207.65;
-                                    tune4 = 233.08;
+                                    //tune4 = 233.08;
+                                    tune4 = f4 / 1.05946;
                                     string4->tune(tune4);
                                     if (rWristY > chestY)
                                     {
@@ -384,7 +400,8 @@ public:
                             }
                             else
                             {
-                                tune4 = 220.0;
+                                //tune4 = 220.0;
+                                tune4 = f4 / pow(1.05946, 2);
                                 string4->tune(tune4);
                                 if (rWristY > chestY)
                                 {
@@ -395,7 +412,8 @@ public:
                         else
                         {
                             //tune4 = 233.08;
-                            tune4 = 207.65;
+                            //tune4 = 207.65;
+                            tune4 = f4 / pow(1.05946, 3);
                             string4->tune(tune4);
                             if (rWristY > chestY)
                             {
@@ -406,7 +424,8 @@ public:
                     else
                     {
                         //tune4 = 246.94;
-                        tune4 = 196.0;
+                        //tune4 = 196.0;
+                        tune4 = f4 / pow(1.05946, 4);
                         string4->tune(tune4);
                         if (rWristY > chestY)
                         {
@@ -418,7 +437,7 @@ public:
                         //string4->tune(tune4);
                     }
                 }
-                if (posZ < zpos_frets[4])
+                if (posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -440,7 +459,8 @@ public:
                                 if (posZ < zpos_frets[4])
                                 {
                                     //tune5 = 246.94;
-                                    tune5 = 311.13;
+                                    //tune5 = 311.13;
+                                    tune5 = f5;
                                     string5->tune(tune5);
                                     if (rWristY > chestY)
                                     {
@@ -450,7 +470,8 @@ public:
                                 else
                                 {
                                     //tune5 = 261.63;
-                                    tune5 = 293.66;
+                                    //tune5 = 293.66;
+                                    tune5 = f5 / 1.05946;
                                     string5->tune(tune5);
                                     if (rWristY > chestY)
                                     {
@@ -460,7 +481,8 @@ public:
                             }
                             else
                             {
-                                tune5 = 277.18;
+                                //tune5 = 277.18;
+                                tune5 = f5 / pow(1.05946,2);
                                 string5->tune(tune5);
                                 if (rWristY > chestY)
                                 {
@@ -471,7 +493,8 @@ public:
                         else
                         {
                             //tune5 = 293.66;
-                            tune5 = 261.63;
+                            //tune5 = 261.63;
+                            tune5 = f5 / pow(1.05946, 3);
                             string5->tune(tune5);
                             if (rWristY > chestY)
                             {
@@ -482,7 +505,8 @@ public:
                     else
                     {
                         //tune5 = 311.13;
-                        tune5 = 246.94;
+                        //tune5 = 246.94;
+                        tune5 = f5 / pow(1.05946, 4);
                         string5->tune(tune5);
                         if (rWristY > chestY)
                         {
@@ -494,7 +518,7 @@ public:
                         //string5->tune(tune5);
                     }
                 }
-                if (posZ < zpos_frets[4])
+                if (posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
@@ -516,7 +540,8 @@ public:
                                 if (posZ < zpos_frets[4])
                                 {
                                     //tune6 = 329.6;
-                                    tune6 = 415.3;
+                                    //tune6 = 415.3;
+                                    tune6 = f6;
                                     string6->tune(tune6);
                                     if (rWristY > chestY)
                                     {
@@ -526,7 +551,8 @@ public:
                                 else
                                 {
                                     //tune6 = 349.2;
-                                    tune6 = 392.0;
+                                    //tune6 = 392.0;
+                                    tune6 = f6 / 1.05946;
                                     string6->tune(tune6);
                                     if (rWristY > chestY)
                                     {
@@ -536,7 +562,8 @@ public:
                             }
                             else
                             {
-                                tune6 = 369.99;
+                                //tune6 = 369.99;
+                                tune6 = f6 / pow(1.05946, 2);
                                 string6->tune(tune6);
                                 if (rWristY > chestY)
                                 {
@@ -547,7 +574,8 @@ public:
                         else
                         {
                             //tune6 = 392.0;
-                            tune6 = 349.2;
+                            //tune6 = 349.2;
+                            tune6 = f6 / pow(1.05946, 3);
                             string6->tune(tune6);
                             if (rWristY > chestY)
                             {
@@ -558,7 +586,8 @@ public:
                     else
                     {
                         //tune6 = 415.3;
-                        tune6 = 329.6;
+                        //tune6 = 329.6;
+                        tune6 = f6 / pow(1.05946, 4);
                         string6->tune(tune6);
                         if (rWristY > chestY)
                         {
@@ -570,7 +599,7 @@ public:
                         //string6->tune(tune6);
                     }
                 }
-                if (posZ < zpos_frets[4])
+                if (posZ < zpos_frets[5])
                 {
                     if (abs_velX > 0.2) {
                         //pluckWidth = 30 + ((abs_velX - 0.2) / (1.2 - 0.2)) * (4 - 30);
