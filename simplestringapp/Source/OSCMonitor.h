@@ -110,7 +110,9 @@ public:
 
             //MANAGE IDs
             //add or update values for specific id
-            bodies_dict.addOrUpdateBody(message[0].getInt32(), abs_velX, abs_velY, posX, posZ, posY);
+            int body_id = message[0].getInt32();
+            BodyData prev_state = bodies_dict.getBody(body_id);
+            bodies_dict.addOrUpdateBody(body_id, abs_velX, abs_velY, posX, posZ, posY, prev_state.posx, prev_state.posz);
             //update id_list of visible bodies at this moment
             id_list = {};
             for (int i = 17; i<message.size(); ++i) {
