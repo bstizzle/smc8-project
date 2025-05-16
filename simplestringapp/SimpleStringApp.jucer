@@ -4,6 +4,9 @@
               displaySplashScreen="1" jucerFormatVersion="1" cppLanguageStandard="17">
   <MAINGROUP id="AgxLqn" name="SimpleStringApp">
     <GROUP id="{0186A2E4-C9B7-B38A-373D-CE2196659030}" name="Source">
+      <FILE id="fd5beC" name="AudioLiveScrollingDisplay.h" compile="0" resource="0"
+            file="Source/AudioLiveScrollingDisplay.h"/>
+      <FILE id="swLzQM" name="DemoUtilities.h" compile="0" resource="0" file="Source/DemoUtilities.h"/>
       <FILE id="UaQp5m" name="Globals.cpp" compile="1" resource="0" file="Source/Globals.cpp"/>
       <FILE id="pV7RmT" name="Globals.h" compile="0" resource="0" file="Source/Globals.h"/>
       <FILE id="SJZNyg" name="SimpleString.cpp" compile="1" resource="0"
@@ -16,6 +19,7 @@
             file="Source/MainComponent.cpp"/>
       <FILE id="DxOCU3" name="BodyManager.cpp" compile="1" resource="0" file="Source/BodyManager.cpp"/>
       <FILE id="HZMAB8" name="BodyManager.h" compile="0" resource="0" file="Source/BodyManager.h"/>
+      <FILE id="kfTyFy" name="AudioRec.h" compile="0" resource="0" file="Source/AudioRec.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
