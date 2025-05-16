@@ -46,43 +46,31 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     parameters.set ("E", 2e11);
     parameters.set ("I", r * r * r * r * double_Pi * 0.25);
     parameters.set ("sigma0", 2);
-    parameters.set ("sigma1", 0.005);
+    parameters.set ("sigma1", 0.002);
     
 
     //// Initialise an instance of the SimpleString class ////
-    f1 = 101.6; // hand-tuned for E string
-    //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
-    //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
+    f1 = 101.6; // hand-tuned for E string 4th fret, 'real' freq is 103.8
     string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, f1);
     //parameters.set ("L", 3);
 
-    f2 = 134.9; // hand-tuned for A string
-    //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
-    //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
+    f2 = 134.9; // hand-tuned for A string 4th fret, 'real' freq is 138.59
     string2 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f2);
     //parameters.set ("L", 2);
 
-    f3 = 179.3; // hand-tuned for D string
-    //string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
-    //string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
+    f3 = 179.3; // hand-tuned for D string 4th fret, 'real' freq is 185.0
     string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f3);
     //parameters.set ("L", 1);
 
-    f4 = 237.3; // hand-tuned for G string
-    //string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
-    //string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
+    f4 = 237.3; // hand-tuned for G string 4th fret, 'real' freq is 246.94
     string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f4);
     //parameters.set ("L", 0.66);
 
-    f5 = 295.7; // hand-tuned for B string
-    //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
-    //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
+    f5 = 295.7; // hand-tuned for B string 4th fret, 'real' freq is 311.13
     string5 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f5);
     //parameters.set ("L", 0.33);
 
-    f6 = 393.1; // hand-tuned for E string
-    //string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
-    //string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
+    f6 = 393.1; // hand-tuned for E string 4th fret, 'real' freq is 415.3
     string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f6);
 
     addAndMakeVisible (string1.get()); // add the string to the application
@@ -114,8 +102,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     std::vector<float* const*> curChannel {&channelData1, &channelData2};
 
     // only do control stuff out of the buffer (at least work with flags so that control doesn't interfere with the scheme calculation)
-
-        
     if (string1->shouldExcite())
         string1->excite();
     if (string2->shouldExcite())
@@ -128,7 +114,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         string5->excite();
     if (string6->shouldExcite())
         string6->excite();
-
         
     for (int i = 0; i < bufferToFill.numSamples; ++i)
     {
@@ -145,7 +130,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         string6->calculateScheme();
         string6->updateStates();
         
-        
         output = (string1->getOutput (0.73) 
                     + string2->getOutput (0.73)
                     + string3->getOutput (0.73)
@@ -154,20 +138,20 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
                     + string6->getOutput (0.73)
                 )/6; // get output at 0.73L of the string
 
-        double outputR = (string1->getOutput(0.73)*1.4
-            + string2->getOutput(0.73)*1.2
+        double outputR = (string1->getOutput(0.73)*1.6
+            + string2->getOutput(0.73)*1.3
             + string3->getOutput(0.73)*1.0
-            + string4->getOutput(0.73)*0.8
-            + string5->getOutput(0.73)*0.6
-            + string6->getOutput(0.73)*0.4
+            + string4->getOutput(0.73)*0.7
+            + string5->getOutput(0.73)*0.4
+            + string6->getOutput(0.73)*0.1
             ) / 6; // get output at 0.73L of the string
 
-        double outputL = (string1->getOutput(0.73) * 0.4
-            + string2->getOutput(0.73) * 0.6
-            + string3->getOutput(0.73) * 0.8
+        double outputL = (string1->getOutput(0.73) * 0.1
+            + string2->getOutput(0.73) * 0.4
+            + string3->getOutput(0.73) * 0.7
             + string4->getOutput(0.73) * 1.0
-            + string5->getOutput(0.73) * 1.2
-            + string6->getOutput(0.73) * 1.4
+            + string5->getOutput(0.73) * 1.3
+            + string6->getOutput(0.73) * 1.6
             ) / 6; // get output at 0.73L of the string
         
         for (int channel = 0; channel < numChannels; ++channel)
@@ -228,7 +212,6 @@ void MainComponent::paint (juce::Graphics& g)
     g.drawRect(nut, 2);  // outline
     // or
     g.fillRect(nut);  
-
     
     g.setOpacity(0.5);
     float radius = 10.0f;
@@ -244,11 +227,9 @@ void MainComponent::paint (juce::Graphics& g)
         //DBG("ID: " << id << ", velx: " << data.velx << ", posx: " << data.posx);
     }
     
-
     //g.setColour(juce::Colours::white); // Cambia il colore qui (es. blu)
     //g.drawRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
     //g.fillRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
-
 }
 
 void MainComponent::resized()
@@ -269,8 +250,6 @@ void MainComponent::resized()
         string5->setBounds(bounds.removeFromLeft(stringZone));
     if (string6 != nullptr)
         string6->setBounds(bounds.removeFromLeft(stringZone));
-
-
 }
 
 

@@ -90,7 +90,7 @@ public:
             + juce::String(message.size())
             + " argument(s)");
 
-        pluckWidth = 10;
+        pluckWidth = 14;
 
         if (!message.isEmpty())
         {   
