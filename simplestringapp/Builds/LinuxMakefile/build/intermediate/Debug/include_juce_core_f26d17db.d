@@ -25,7 +25,6 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ContainerDeletePolicy.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_HeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_MemoryBlock.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_CopyableHeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ReferenceCountedObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ScopedPointer.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_OptionalScopedPointer.h \
@@ -69,7 +68,7 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_HashMap.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_FixedSizeFunction.h \
@@ -85,7 +84,6 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_File.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_DirectoryIterator.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_RangedDirectoryIterator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_NativeFileHandle.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileInputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileOutputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileSearchPath.h \
@@ -95,9 +93,10 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_FileInputSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/logging/juce_FileLogger.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/serialisation/juce_Serialisation.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_BigInteger.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Expression.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Random.h \
@@ -137,10 +136,10 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_Reservoir.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_AndroidDocument.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_AndroidDocumentInputSource.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_OptionsHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_CallbackListenerList.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_AbstractFifo.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_ArrayBase.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_ListenerList.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_OwnedArray.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_PropertySet.cpp \
@@ -166,11 +165,6 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ScopeGuard.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/network/juce_MACAddress.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_SharedCode_posix.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_NamedPipe_posix.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/juce_zlib.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zlib.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zconf.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/network/juce_NamedPipe.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/network/juce_Socket.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/network/juce_IPAddress.cpp \
@@ -200,17 +194,20 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/time/juce_Time.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/unit_tests/juce_UnitTest.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/xml/juce_XmlDocument.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/xml/juce_XmlElement.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/juce_GZIPDecompressorInputStream.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zlib.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zconf.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/adler32.c \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zutil.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zlib.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/compress.c \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/crc32.c \
+ /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zutil.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/crc32.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/deflate.c \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/deflate.h \
@@ -224,13 +221,14 @@ build/intermediate/Debug/include_juce_core_f26d17db.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/trees.c \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/trees.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zutil.c \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/gzguts.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/juce_GZIPCompressorOutputStream.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/zip/juce_ZipFile.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileFilter.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_ThreadPriorities_native.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_PlatformTimerListener.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_SharedCode_posix.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_NamedPipe_posix.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_IPAddress_posix.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_CommonFile_linux.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_core/native/juce_Files_linux.cpp \

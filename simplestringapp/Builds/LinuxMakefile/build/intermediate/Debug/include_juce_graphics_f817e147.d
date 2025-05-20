@@ -26,7 +26,6 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ContainerDeletePolicy.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_HeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_MemoryBlock.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_CopyableHeapBlock.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ReferenceCountedObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_ScopedPointer.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_OptionalScopedPointer.h \
@@ -70,7 +69,7 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_ConsoleApplication.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_Variant.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_NamedValueSet.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSON.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSON.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_DynamicObject.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_HashMap.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/containers/juce_FixedSizeFunction.h \
@@ -86,7 +85,6 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_File.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_DirectoryIterator.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_RangedDirectoryIterator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_NativeFileHandle.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileInputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileOutputStream.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_FileSearchPath.h \
@@ -96,9 +94,10 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_WildcardFileFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_FileInputSource.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/logging/juce_FileLogger.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONUtils.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONUtils.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/serialisation/juce_Serialisation.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/json/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_JSONSerialisation.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/javascript/juce_Javascript.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_BigInteger.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Expression.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/maths/juce_Random.h \
@@ -138,7 +137,6 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_core/memory/juce_Reservoir.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/files/juce_AndroidDocument.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/streams/juce_AndroidDocumentInputSource.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/misc/juce_OptionsHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_core/detail/juce_CallbackListenerList.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/juce_events.h \
  /home/ibroto/Documents/JUCE/modules/juce_events/messages/juce_MessageManager.h \
@@ -186,28 +184,23 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageConvolutionKernel.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageFileFormat.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Typeface.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FontOptions.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Ranges.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_SimpleShapedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_JustifiedText.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_ShapedText.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_AttributedString.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_GlyphArrangement.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TextLayout.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_CustomTypeface.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsContext.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ScaledImage.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_LruCache.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_FillType.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsSoftwareRenderer.h \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsPostScriptRenderer.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_ImageEffectFilter.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_DropShadowEffect.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_GlowEffect.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Unicode.h \
  /usr/include/freetype2/ft2build.h \
  /usr/include/freetype2/freetype/config/ftheader.h \
  /usr/include/freetype2/freetype/freetype.h \
@@ -223,62 +216,6 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /usr/include/freetype2/freetype/fterrors.h \
  /usr/include/freetype2/freetype/ftmoderr.h \
  /usr/include/freetype2/freetype/fterrdef.h \
- /usr/include/freetype2/freetype/ftadvanc.h \
- /usr/include/freetype2/freetype/tttables.h \
- /usr/include/freetype2/freetype/ftglyph.h \
- /usr/include/freetype2/freetype/ftcolor.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ft.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-blob.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-common.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-buffer.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-unicode.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-face.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-map.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-set.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-draw.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-paint.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-deprecated.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-shape.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-shape-plan.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-style.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-version.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-color.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-name.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-deprecated.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-font.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-layout.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-math.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-meta.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-metrics.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-shape.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/harfbuzz/hb-ot-var.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SheenBidi.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBAlgorithm.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBBase.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBBidiType.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBCodepointSequence.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBCodepoint.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBGeneralCategory.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBScript.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBParagraph.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBLine.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBRun.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBMirrorLocator.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/sheenbidi/Headers/SBScriptLocator.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/juce_zlib.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zlib.h \
- /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zconf.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FunctionPointerDestructor.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_EventTracing.h \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_UnicodeGenerated.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_UnicodeUtils.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_UnicodeLine.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_UnicodeScript.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_UnicodeBidi.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/unicode/juce_Unicode.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_Colour.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_ColourGradient.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/colour/juce_Colours.cpp \
@@ -290,6 +227,7 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/geometry/juce_PathStrokeType.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/placement/juce_RectanglePlacement.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_GraphicsContext.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsPostScriptRenderer.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/contexts/juce_LowLevelGraphicsSoftwareRenderer.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_Image.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/images/juce_ImageCache.cpp \
@@ -355,6 +293,8 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/jpglib/transupp.c \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/jpglib/transupp.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/juce_PNGLoader.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zlib.h \
+ /home/ibroto/Documents/JUCE/modules/juce_core/zip/zlib/zconf.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/pnglib/png.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/pnglib/pngconf.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/pnglib/pngconf.h \
@@ -380,17 +320,12 @@ build/intermediate/Debug/include_juce_graphics_f817e147.o: \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/image_formats/pnglib/pngwutil.c \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_AttributedString.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Typeface.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_FontOptions.cpp \
+ /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_CustomTypeface.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_Font.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_Ranges.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_SimpleShapedText.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_JustifiedText.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/detail/juce_ShapedText.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_GlyphArrangement.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TextLayout.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_DropShadowEffect.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/effects/juce_GlowEffect.cpp \
- /home/ibroto/Documents/JUCE/modules/juce_graphics/fonts/juce_TypefaceFileCache.h \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_Fonts_freetype.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_Fonts_linux.cpp \
  /home/ibroto/Documents/JUCE/modules/juce_graphics/native/juce_IconHelpers_linux.cpp

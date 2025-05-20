@@ -79,6 +79,8 @@ private:
     
     bool clamped = true;
 
+    double f0;
+
     std::chrono::time_point<std::chrono::system_clock> startTime = std::chrono::system_clock::now();
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleString)

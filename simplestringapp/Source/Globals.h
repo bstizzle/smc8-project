@@ -43,3 +43,10 @@ extern double tune3;
 extern double tune4;
 extern double tune5;
 extern double tune6;
+
+extern double f1;
+extern double f2;
+extern double f3;
+extern double f4;
+extern double f5;
+extern double f6;

@@ -42,37 +42,36 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     parameters.set ("L", 1);
     parameters.set ("rho", 7850);
     parameters.set ("A", r * r * double_Pi);
-    parameters.set ("T", 299.75);
+    parameters.set ("T", 600);
     parameters.set ("E", 2e11);
     parameters.set ("I", r * r * r * r * double_Pi * 0.25);
     parameters.set ("sigma0", 2);
-    parameters.set ("sigma1", 0.005);
+    parameters.set ("sigma1", 0.002);
     
 
     //// Initialise an instance of the SimpleString class ////
-    //string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 82.4);
-    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 103.8);
+    f1 = 101.6; // hand-tuned for E string 4th fret, 'real' freq is 103.8
+    string1 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, f1);
     //parameters.set ("L", 3);
 
-    //string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 110.0);
-    string2 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 138.59);
+    f2 = 134.9; // hand-tuned for A string 4th fret, 'real' freq is 138.59
+    string2 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f2);
     //parameters.set ("L", 2);
 
-    //string3 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 146.8);
-    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 185.0);
+    f3 = 179.3; // hand-tuned for D string 4th fret, 'real' freq is 185.0
+    string3 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f3);
     //parameters.set ("L", 1);
 
-    //string4 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 196.0);
-    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 246.94);
+    f4 = 237.3; // hand-tuned for G string 4th fret, 'real' freq is 246.94
+    string4 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f4);
     //parameters.set ("L", 0.66);
 
-    //string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 246.9);
-    string5 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 311.13);
+    f5 = 295.7; // hand-tuned for B string 4th fret, 'real' freq is 311.13
+    string5 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f5);
     //parameters.set ("L", 0.33);
 
-    //string6 = std::make_unique<SimpleString> (parameters, 1.0 / sampleRate, 329.6);
-    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, 415.3);
-
+    f6 = 393.1; // hand-tuned for E string 4th fret, 'real' freq is 415.3
+    string6 = std::make_unique<SimpleString>(parameters, 1.0 / sampleRate, f6);
 
     addAndMakeVisible (string1.get()); // add the string to the application
     addAndMakeVisible (string2.get()); // add the string to the application
@@ -103,8 +102,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     std::vector<float* const*> curChannel {&channelData1, &channelData2};
 
     // only do control stuff out of the buffer (at least work with flags so that control doesn't interfere with the scheme calculation)
-
-        
     if (string1->shouldExcite())
         string1->excite();
     if (string2->shouldExcite())
@@ -117,7 +114,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         string5->excite();
     if (string6->shouldExcite())
         string6->excite();
-
         
     for (int i = 0; i < bufferToFill.numSamples; ++i)
     {
@@ -134,30 +130,29 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         string6->calculateScheme();
         string6->updateStates();
         
-        
-        output = (string1->getOutput (0.8) 
-                    + string2->getOutput (0.8)
-                    + string3->getOutput (0.8)
-                    + string4->getOutput (0.8)
-                    + string5->getOutput (0.8)
-                    + string6->getOutput (0.8)
-                )/6; // get output at 0.8L of the string
+        output = (string1->getOutput (0.73) 
+                    + string2->getOutput (0.73)
+                    + string3->getOutput (0.73)
+                    + string4->getOutput (0.73)
+                    + string5->getOutput (0.73)
+                    + string6->getOutput (0.73)
+                )/6; // get output at 0.73L of the string
 
-        double outputR = (string1->getOutput(0.8)*1.4
-            + string2->getOutput(0.8)*1.2
-            + string3->getOutput(0.8)*1.0
-            + string4->getOutput(0.8)*0.8
-            + string5->getOutput(0.8)*0.6
-            + string6->getOutput(0.8)*0.4
-            ) / 6; // get output at 0.8L of the string
+        double outputR = (string1->getOutput(0.73)*1.6
+            + string2->getOutput(0.73)*1.3
+            + string3->getOutput(0.73)*1.0
+            + string4->getOutput(0.73)*0.7
+            + string5->getOutput(0.73)*0.4
+            + string6->getOutput(0.73)*0.1
+            ) / 6; // get output at 0.73L of the string
 
-        double outputL = (string1->getOutput(0.8) * 0.4
-            + string2->getOutput(0.8) * 0.6
-            + string3->getOutput(0.8) * 0.8
-            + string4->getOutput(0.8) * 1.0
-            + string5->getOutput(0.8) * 1.2
-            + string6->getOutput(0.8) * 1.4
-            ) / 6; // get output at 0.8L of the string
+        double outputL = (string1->getOutput(0.73) * 0.1
+            + string2->getOutput(0.73) * 0.4
+            + string3->getOutput(0.73) * 0.7
+            + string4->getOutput(0.73) * 1.0
+            + string5->getOutput(0.73) * 1.3
+            + string6->getOutput(0.73) * 1.6
+            ) / 6; // get output at 0.73L of the string
         
         for (int channel = 0; channel < numChannels; ++channel)
         {
@@ -185,24 +180,38 @@ void MainComponent::releaseResources()
 
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
-{   
-    g.setColour (juce::Colours::orange);
-
-    ymapped_zpos_frets={};
+{
+    std::vector<float> ymapped_zpos_frets;
     for (float zpos : zpos_frets)
     {
-        float mapped = juce::jmap(zpos, -7.5f, -3.2f,(float)getHeight(),0.0f);
+        float mapped = juce::jmap(zpos, -7.5f, -3.2f, (float)getHeight(), 0.0f);
         ymapped_zpos_frets.push_back(mapped);
     }
 
-    for (float zpos:ymapped_zpos_frets) {
-        juce::Line<float> line (juce::Point<float> (0.0f, zpos),juce::Point<float> ((float)getWidth(),zpos));
-        g.drawLine (line, 2.0f);
+    // Controlla che ci siano almeno due linee
+    if (ymapped_zpos_frets.size() >= 2)
+    {
+        // Disegna la "nuova" prima linea (bianca)
+        g.setColour (juce::Colours::white);
+        float yPosWhite = ymapped_zpos_frets[1];
+        juce::Line<float> firstLine (juce::Point<float> (0.0f, yPosWhite), juce::Point<float> ((float)getWidth(), yPosWhite));
+        g.drawLine (firstLine, 14.0f);
+
+        // Disegna le linee restanti (arancioni)
+        g.setColour (juce::Colours::orange);
+        for (size_t i = 2; i < ymapped_zpos_frets.size(); ++i)
+        {
+            float yPos = ymapped_zpos_frets[i];
+            juce::Line<float> line (juce::Point<float> (0.0f, yPos), juce::Point<float> ((float)getWidth(), yPos));
+            g.drawLine (line, 5.0f);
+        }
     }
-    
-    //g.fillAll(juce::Colours::black); // or whatever your background is
-    // Draw the live OSC points
-    
+
+    g.setColour(juce::Colour(32,32,32));
+    juce::Rectangle<int> nut(0, 0, (int)getWidth(), (float)getHeight()*0.25);
+    g.drawRect(nut, 2);  // outline
+    // or
+    g.fillRect(nut);  
     
     g.setOpacity(0.5);
     float radius = 10.0f;
@@ -211,12 +220,16 @@ void MainComponent::paint (juce::Graphics& g)
         g.setColour(bodies_dict.assign_colour(id,8));
         BodyData body_data = bodies_dict.getBody(id);
         float visual_mapped_y = juce::jmap(body_data.posz, -7.5f, -3.2f, (float)getHeight(),0.0f);
-        float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.0f, 0.0f, (float)getWidth());
+        float visual_mapped_x = juce::jmap(body_data.posx, -2.2f, 1.3f, 0.0f, (float)getWidth());
     
         g.drawEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2, 0.3);
         g.fillEllipse(visual_mapped_x-radius, visual_mapped_y-radius, radius * 2, radius * 2);
         //DBG("ID: " << id << ", velx: " << data.velx << ", posx: " << data.posx);
     }
+    
+    //g.setColour(juce::Colours::white); // Cambia il colore qui (es. blu)
+    //g.drawRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
+    //g.fillRect(0.0, 0.0, (float)getWidth(), ymapped_zpos_frets, 2); // The last parameter is the thickness
 }
 
 void MainComponent::resized()
@@ -237,8 +250,6 @@ void MainComponent::resized()
         string5->setBounds(bounds.removeFromLeft(stringZone));
     if (string6 != nullptr)
         string6->setBounds(bounds.removeFromLeft(stringZone));
-
-
 }
 
 

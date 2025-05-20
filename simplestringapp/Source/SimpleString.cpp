@@ -18,7 +18,7 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k, double freq) : 
 {
     //tuning parameter
     pitch = 1.0;
-
+    f0 = freq;
     // Initialise member variables using the parameter set
     L = *parameters.getVarPointer ("L");
     rho = *parameters.getVarPointer ("rho");
@@ -28,6 +28,7 @@ SimpleString::SimpleString (NamedValueSet& parameters, double k, double freq) : 
     I = *parameters.getVarPointer ("I");
     sigma0 = *parameters.getVarPointer ("sigma0");
     sigma1 = *parameters.getVarPointer ("sigma1");
+    
     
 
     // Calculate wave speed (squared)
@@ -102,7 +103,7 @@ void SimpleString::paint (juce::Graphics& g)
     g.setColour(Colours::cyan);
     
     // draw the state
-    g.strokePath(visualiseState (g, 100), PathStrokeType(2.0f));
+    g.strokePath(visualiseState (g, 100), PathStrokeType(5.0f));
 
 }
 
@@ -214,6 +215,28 @@ void SimpleString::mouseDown (const MouseEvent& e)
 {
     // Get the excitation location as a ratio between the x-location of the mouse-click and the width of the app
     excitationLoc = e.x / static_cast<double> (getWidth());
+    pluckWidth = 15;
+    
+    double stringPos = e.y / static_cast<double>(getHeight());
+    int tune = f0 / pow(1.05946, 4);
+    if (stringPos > 0.2 && stringPos <= 0.4)
+    {
+        tune = f0 / pow(1.05946, 3);
+    }
+    else if (stringPos > 0.4 && stringPos <= 0.6)
+    {
+        tune = f0 / pow(1.05946, 2);
+    }
+    else if (stringPos > 0.6 && stringPos <= 0.8)
+    {
+        tune = f0 / 1.05946;
+    }
+    else if (stringPos > 0.8 && stringPos <= 1.0)
+    {
+        tune = f0;
+    }
+
+    SimpleString::tune(tune);
     
     // Activate the excitation flag to be used by the MainComponent to excite the string
     excitationFlag = true;
@@ -223,7 +246,7 @@ void SimpleString::strum()
 {
     auto duration = std::chrono::system_clock::now() - startTime;
     //check if enough time has passed since the last strum was triggered
-    if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 1000)
+    if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 1200)
     {
         excitationFlag = true;
         startTime = std::chrono::system_clock::now();
