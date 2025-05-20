@@ -186,19 +186,19 @@ int main(int argc, char **argv) {
 		
 		//auto vel = sqrt(body.velocity.x*body.velocity.x + body.velocity.y*body.velocity.y + body.velocity.z*body.velocity.z);
 		
-		/*
+		
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
 	   	cout << "nbr?bodies: " << detected_bodies << endl;
-		cout << "ID Corpo: " << body.id << endl;
+		cout << "ID: " << body.id << endl;
 		cout << "Position: " << body.position << endl;
 		cout << "Velocity: " << body.velocity << endl;
 		cout << "Right wrist Y: " << body.keypoint[4].y << endl;
 		cout << "Chest Y: " << body.keypoint[1].y << endl;
-		cout << "Abs. Velocity: " << vel << endl;
+		//cout << "Abs. Velocity: " << vel << endl;
 		cout << "State: " << body.action_state << endl;    	
 		cout << "------------------------------------------" << endl;
-		*/
+		
 	
 		/*
 		lo_message msg = lo_message_new();
