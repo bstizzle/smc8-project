@@ -156,13 +156,16 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         
         for (int channel = 0; channel < numChannels; ++channel)
         {
+            // use outputL and R below for panned stereo sound, use regular output for mono
             if (channel == 0)
             {
-                curChannel[channel][0][i] = limit(outputL);
+                //curChannel[channel][0][i] = limit(outputL);
+                curChannel[channel][0][i] = limit(output);
             }
             if (channel == 1)
             {
-                curChannel[channel][0][i] = limit(outputR);
+                //curChannel[channel][0][i] = limit(outputR);
+                curChannel[channel][0][i] = limit(output);
             }
         }
     }
