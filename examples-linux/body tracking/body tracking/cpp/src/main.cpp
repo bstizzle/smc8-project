@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 	
     // Create an OSC client that sends to localhost on port 5005
     	    // Create an OSC client that sends to localhost on port 5005
-    lo_address target = lo_address_new("192.168.1.106", "5005");
+    lo_address target = lo_address_new("192.168.1.100", "9001");
     lo_address target2 = lo_address_new("192.168.1.101", "9001");
     lo_address target3 = lo_address_new("192.168.1.105", "9002");
     lo_address target4 = lo_address_new("192.168.1.103", "9002");
@@ -190,17 +190,17 @@ int main(int argc, char **argv) {
 	    	cout << "fps: " << init_parameters.camera_fps << endl;
 	    	cout << "res: " << init_parameters.camera_resolution << endl;
 	   	cout << "nbr?bodies: " << detected_bodies << endl;
-		cout << "ID Corpo: " << body.id << endl;
+		cout << "ID: " << body.id << endl;
 		cout << "Position: " << body.position << endl;
 		cout << "Velocity: " << body.velocity << endl;
 		cout << "Right wrist Y: " << body.keypoint[4].y << endl;
 		cout << "Chest Y: " << body.keypoint[1].y << endl;
-		cout << "Abs. Velocity: " << vel << endl;
+		//cout << "Abs. Velocity: " << vel << endl;
 		cout << "State: " << body.action_state << endl;    	
 		cout << "------------------------------------------" << endl;
 		
 	
-		
+		/*
 		lo_message msg = lo_message_new();
 		lo_message_add_int32(msg, body.id);
 		lo_message_add_float(msg, body.position.x);
@@ -216,6 +216,7 @@ int main(int argc, char **argv) {
 		for (int id : detected_ids) {
         		lo_message_add_int32(msg, id);
     		}
+    		*/
     		
     		lo_message msgBen = lo_message_new();
     		lo_message_add_int32(msgBen, body.id);

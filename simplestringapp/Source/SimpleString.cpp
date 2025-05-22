@@ -214,16 +214,16 @@ void SimpleString::excite()
 void SimpleString::mouseDown (const MouseEvent& e)
 {
     // Get the excitation location as a ratio between the x-location of the mouse-click and the width of the app
-    excitationLoc = e.x / static_cast<double> (getWidth());
+    //excitationLoc = e.x / static_cast<double> (getWidth());
     pluckWidth = 15;
     
     double stringPos = e.y / static_cast<double>(getHeight());
     int tune = f0 / pow(1.05946, 4);
-    if (stringPos > 0.2 && stringPos <= 0.4)
+    if (stringPos > 0.25 && stringPos <= 0.45)
     {
         tune = f0 / pow(1.05946, 3);
     }
-    else if (stringPos > 0.4 && stringPos <= 0.6)
+    else if (stringPos > 0.45 && stringPos <= 0.6)
     {
         tune = f0 / pow(1.05946, 2);
     }
