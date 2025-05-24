@@ -1,13 +1,3 @@
-/*
-  ==============================================================================
-
-    SimpleString.cpp
-    Created: 12 Feb 2021 1:10:03pm
-    Author:  Silvin Willemsen
-
-  ==============================================================================
-*/
-
 #include <JuceHeader.h>
 #include "SimpleString.h"
 #include "Globals.h"
